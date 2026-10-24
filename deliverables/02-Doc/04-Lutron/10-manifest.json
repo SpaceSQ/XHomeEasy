@@ -1,0 +1,179 @@
+{
+  "brand": "Lutron",
+  "dictionary_layer": "official",
+  "updated_on": "2026-10-21",
+  "item_count": 19,
+  "items": [
+    {
+      "id": "lu-ov-001",
+      "category": "overview",
+      "title": "Lutron 官方门户地图",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/01-overview/portal-map.md",
+      "notes": "assets CDN 公开PDF为主"
+    },
+    {
+      "id": "lu-ov-002",
+      "category": "overview",
+      "title": "Lutron access-gaps",
+      "source_url": "https://support.lutron.com/us/en/product/radiora3/documents",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/01-overview/access-gaps.md",
+      "notes": "support站Incapsula拦截；myLutron登录"
+    },
+    {
+      "id": "lu-prod-001",
+      "category": "products",
+      "title": "RadioRA 3 Getting Started",
+      "source_url": "https://assets.lutron.com/a/documents/radiora3_getting_started_guide.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/ra3-getting-started.pdf",
+      "notes": "入门指南"
+    },
+    {
+      "id": "lu-prod-002",
+      "category": "products",
+      "title": "RadioRA 3 Product Reference",
+      "source_url": "https://assets.lutron.com/a/documents/3672892_radiora3_product_reference_guide.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/ra3-product-ref.pdf",
+      "notes": "处理器/中继/灯带等"
+    },
+    {
+      "id": "lu-prod-003",
+      "category": "products",
+      "title": "RadioRA 3 Architecture",
+      "source_url": "https://assets.lutron.com/a/documents/3686138_radiora3_domestic_architecture.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/ra3-architecture.pdf",
+      "notes": "Type A/X 容量与距离"
+    },
+    {
+      "id": "lu-prod-004",
+      "category": "products",
+      "title": "RA3 Wireless Setup App Note 048804",
+      "source_url": "https://assets.lutron.com/a/documents/048804_ENG.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/ra3-wireless-setup.pdf",
+      "notes": "无线设置应用笔记"
+    },
+    {
+      "id": "lu-prod-005",
+      "category": "products",
+      "title": "HomeWorks Wireless Processor Spec",
+      "source_url": "https://assets.lutron.com/a/documents/3691222_eng.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/hw-wireless-processor.pdf",
+      "notes": "HQP7-RF-2；Clear Connect"
+    },
+    {
+      "id": "lu-prod-006",
+      "category": "products",
+      "title": "HomeWorks QSX Processor Spec",
+      "source_url": "https://assets.lutron.com/a/documents/3691127_eng.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/qsx-processor.pdf",
+      "notes": "HQP7；以太网多处理器"
+    },
+    {
+      "id": "lu-prod-007",
+      "category": "products",
+      "title": "HomeWorks QSX Equipment",
+      "source_url": "https://assets.lutron.com/a/documents/Homeworks_QSX_Equipment.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/qsx-equipment.pdf",
+      "notes": "系统设备清单级"
+    },
+    {
+      "id": "lu-prod-008",
+      "category": "products",
+      "title": "HomeWorks Technical Reference Guide",
+      "source_url": "https://assets.lutron.com/a/documents/366-963h_full.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/homeworks-trg.pdf",
+      "notes": "历史TRG大文件"
+    },
+    {
+      "id": "lu-prod-009",
+      "category": "products",
+      "title": "Caséta Smart Bridge / PRO Spec",
+      "source_url": "https://assets.lutron.com/a/documents/369816_smart_bridge_pro_spec.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/caseta-bridge-pro.pdf",
+      "notes": "L-BDG / L-BDGPRO"
+    },
+    {
+      "id": "lu-prod-010",
+      "category": "products",
+      "title": "Caséta Trade Brochure",
+      "source_url": "https://assets.lutron.com/a/documents/3672499_caseta_brochure.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/lutron/caseta-brochure.pdf",
+      "notes": "产品线宣传"
+    },
+    {
+      "id": "lu-arch-001",
+      "category": "architecture",
+      "title": "Clear Connect / RA3 / HomeWorks 架构摘要",
+      "source_url": "https://assets.lutron.com/a/documents/3686138_radiora3_domestic_architecture.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/03-architecture/clear-connect-ra3-homeworks.md",
+      "notes": "容量与射频距离摘自公开PDF"
+    },
+    {
+      "id": "lu-inst-001",
+      "category": "install",
+      "title": "安装文档索引（安全边界）",
+      "source_url": "https://assets.lutron.com/a/documents/radiora3_getting_started_guide.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/04-install-wiring/install-docs-index.md",
+      "notes": "不入库DIY市电步骤"
+    },
+    {
+      "id": "lu-prog-001",
+      "category": "programming",
+      "title": "Designer / 移交说明",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/05-programming-handover/designer-note.md",
+      "notes": "软件需myLutron"
+    },
+    {
+      "id": "lu-ops-001",
+      "category": "ops",
+      "title": "App / myLutron",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/06-ops-remote/app-mylutron.md",
+      "notes": "业主App；专业侧登录"
+    },
+    {
+      "id": "lu-part-001",
+      "category": "partner",
+      "title": "合作伙伴网络说明",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/07-partner-network/partner-note.md",
+      "notes": "无统一公开地图；结合CEDIA"
+    },
+    {
+      "id": "lu-price-001",
+      "category": "pricing",
+      "title": "公开价格说明",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/08-pricing-public/pricing-note.md",
+      "notes": "无完整MSRP总表"
+    },
+    {
+      "id": "lu-train-001",
+      "category": "training",
+      "title": "培训缺口",
+      "source_url": "https://www.lutron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "04-Lutron/09-training-cert/training-note.md",
+      "notes": "认证多在专业通道"
+    }
+  ]
+}

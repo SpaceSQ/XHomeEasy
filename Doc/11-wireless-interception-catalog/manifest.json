@@ -1,0 +1,45 @@
+{
+  "phase": "E2",
+  "title": "XHomeEasy North America Wireless Interception & Redirect Catalog",
+  "generated_on": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "total_records": 150,
+  "id_range": {
+    "first": "WL001",
+    "last": "WL150"
+  },
+  "counts_by_section": {
+    "01-protocols-and-hubs": 25,
+    "02-wireless-lighting-switches": 35,
+    "03-wireless-security-locks": 35,
+    "04-wireless-climate-shades-yard": 30,
+    "05-smart-appliances-speakers": 25
+  },
+  "corpus": "wireless-intercept.corpus.jsonl",
+  "corpus_sha256": "fc4a954429962accea8298a9f4d3ecfa430c5edeb68f89455da4499cebbd93e1",
+  "handbook": "wireless-intercept-handbook.md",
+  "schema_notes": [
+    "redirect_script_zh required on every record",
+    "HomeKit-native prefer AHomeEasy first; Matter/multi-eco prefer MHomeEasy first",
+    "Lutron Caséta is wireless DIY redirect; HomeWorks is NOT a primary WL entry",
+    "GE Cync is consumer wireless under Savant ownership — distinct from Savant Pro"
+  ],
+  "evidence_tier_counts": {
+    "E1": 11,
+    "E2": 59,
+    "E3": 63,
+    "E4": 17
+  },
+  "status_enum_counts": {
+    "ACTIVE_MAIN": 106,
+    "ACTIVE_NICHE": 42,
+    "LEGACY_MAINTENANCE": 1,
+    "DISCONTINUED": 1
+  },
+  "required_named_coverage_spotchecks": {
+    "Matter": true,
+    "Caseta": true,
+    "Ecobee": true,
+    "HomeWorks_not_primary_WL": true
+  }
+}

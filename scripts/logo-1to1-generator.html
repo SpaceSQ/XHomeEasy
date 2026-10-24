@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>XHomeEasy 方案B原图微调器 — 保持黑红双绞线100%不变，仅加长银灰3D金属斜线</title>
+  <style>
+    body {
+      margin: 0; padding: 32px;
+      background: #0d1015; color: #f0f4f8;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    h2 { margin: 0 0 8px 0; font-size: 20px; font-weight: 600; }
+    p.desc { margin: 0 0 20px 0; color: #94a3b8; font-size: 14px; }
+    .toolbar {
+      display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+      background: #161b24; padding: 14px 22px; border-radius: 12px;
+      border: 1px solid #263042; margin-bottom: 24px;
+    }
+    label { font-size: 13px; color: #cbd5e1; display: flex; align-items: center; gap: 8px; }
+    input[type="range"] { width: 140px; accent-color: #ef4444; }
+    button, .file-btn {
+      background: #2563eb; color: #fff; border: none;
+      padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 500;
+      cursor: pointer; text-decoration: none; display: inline-block;
+    }
+    button.download { background: #dc2626; }
+    .canvas-wrap {
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+      border-radius: 16px; overflow: hidden; border: 1px solid #222938;
+      max-width: 92vw;
+    }
+    canvas { display: block; max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <h2>XHomeEasy / XHomeEng — 在上一版原图基础上仅加长 3D 银灰金属大斜线</h2>
+  <p class="desc">严格锁死原图黑红双绞线、裸铜线头与暗色 PCB 底板，仅将左上与右下 3D 金属斜线沿原角度延伸至 1:1 等长</p>
+
+  <div class="toolbar">
+    <label class="file-btn">
+      1. 载入上一版原图 (方案B优化版)
+      <input type="file" id="imgInput" accept="image/*" style="display:none">
+    </label>
+    <label>
+      2. 金属斜线向两端延伸量: <span id="extVal">100% (1:1 视觉等长)</span>
+      <input type="range" id="extSlider" min="0" max="130" value="100">
+    </label>
+    <label>
+      <input type="checkbox" id="showAlign"> 显示四极 1:1 等长对齐参考线
+    </label>
+    <button class="download" onclick="exportFinalImage()">3. 导出微调后高清成图 (.PNG)</button>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="mainCanvas" width="1408" height="768"></canvas>
+  </div>
+
+<script>
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const imgInput = document.getElementById('imgInput');
+const extSlider = document.getElementById('extSlider');
+const extVal = document.getElementById('extVal');
+const showAlign = document.getElementById('showAlign');
+
+let baseImg = null;
+
+// 针对上一版 1408x768 原图 (watermarked_img_8834088470171361332.jpg) 的精确像素坐标锚点
+// 图标中心约在 (704, 438)
+// 黑红双绞线右上裸铜端头极点: (876, 224)，左下裸铜端头极点: (524, 650)
+// 原图银灰金属斜线左上端头当前止于 (556, 286)，右下端头当前止于 (848, 588)
+// 将左上与右下金属端头沿原斜线向量平移约 54px (100% 档位)，即可与双绞线裸铜端头实现完美 1:1 等长对齐！
+
+function renderAdjusted() {
+  if (!baseImg) return;
+  const W = baseImg.width;
+  const H = baseImg.height;
+  canvas.width = W;
+  canvas.height = H;
+
+  // 1. 100% 原样绘制上一版底图（保证黑红双绞线、裸铜丝、背景与文字分毫不差）
+  ctx.drawImage(baseImg, 0, 0);
+
+  const ratio = parseInt(extSlider.value, 10) / 100;
+  extVal.textContent = `${extSlider.value}%` + (extSlider.value == 100 ? ' (1:1 视觉等长)' : '');
+
+  if (ratio > 0) {
+    // 按原图分辨率自适应缩放比例 (基准 1408x768)
+    const sx = W / 1408;
+    const sy = H / 768;
+
+    // 原图金属斜线的方向单位向量 (从左上指向右下: dx ≈ 0.695, dy ≈ 0.719)
+    const ux = 0.695;
+    const uy = 0.719;
+    const maxShift = 54 * ratio; // 100% 时向两端各延伸 54px (以 1408 宽度为基准)
+
+    // -----------------------------------------------------------------------
+    // A. 左上端 (Top-Left) 银灰 3D 金属斜线无损纹理延展 + 端头重塑
+    //    采样区域避开中心双绞线，仅提取左上段金属中段与左上斜切端头向前推进
+    // -----------------------------------------------------------------------
+    ctx.save();
+    // 建立左上象限安全裁剪蒙版（严格限制在中心红黑双绞线左上侧，绝不触碰双绞线半个像素）
+    ctx.beginPath();
+    ctx.moveTo(460 * sx, 190 * sy);
+    ctx.lineTo(710 * sx, 190 * sy);
+    ctx.lineTo(668 * sx, 382 * sy); // 紧贴双绞线左上缘上方截断
+    ctx.lineTo(460 * sx, 440 * sy);
+    ctx.closePath();
+    ctx.clip();
+
+    // 用金属杆自身的中段拉丝截面多重步进采样，填补延长后的杆身
+    const steps = 18;
+    for (let i = 1; i <= steps; i++) {
+      const shiftX = -ux * (maxShift * (i / steps)) * sx;
+      const shiftY = -uy * (maxShift * (i / steps)) * sy;
+      ctx.drawImage(
+        baseImg,
+        545 * sx, 275 * sy, 135 * sx, 135 * sy,
+        545 * sx + shiftX, 275 * sy + shiftY, 135 * sx, 135 * sy
+      );
+    }
+    ctx.restore();
+
+    // -----------------------------------------------------------------------
+    // B. 右下端 (Bottom-Right) 银灰 3D 金属斜线无损纹理延展 + 棱锥端头推进
+    //    同样严格限制在中心红黑双绞线右下侧之外
+    // -----------------------------------------------------------------------
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(735 * sx, 468 * sy); // 紧贴双绞线右下缘下方起算
+    ctx.lineTo(940 * sx, 420 * sy);
+    ctx.lineTo(940 * sx, 680 * sy);
+    ctx.lineTo(680 * sx, 680 * sy);
+    ctx.closePath();
+    ctx.clip();
+
+    for (let i = 1; i <= steps; i++) {
+      const shiftX = ux * (maxShift * (i / steps)) * sx;
+      const shiftY = uy * (maxShift * (i / steps)) * sy;
+      ctx.drawImage(
+        baseImg,
+        725 * sx, 460 * sy, 145 * sx, 145 * sy,
+        725 * sx + shiftX, 460 * sy + shiftY, 145 * sx, 145 * sy
+      );
+    }
+    ctx.restore();
+  }
+
+  // 可选：绘制 1:1 视觉等长水平与垂直对齐核验线
+  if (showAlign.checked) {
+    const sx = W / 1408;
+    const sy = H / 768;
+    ctx.save();
+    ctx.strokeStyle = '#00f5d4';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([8, 6]);
+    // 顶部水平对齐线 (连接左上金属端头与右上双绞线铜头)
+    ctx.beginPath();
+    ctx.moveTo(500 * sx, 232 * sy);
+    ctx.lineTo(900 * sx, 232 * sy);
+    // 底部水平对齐线 (连接左下双绞线铜头与右下金属端头)
+    ctx.moveTo(500 * sx, 642 * sy);
+    ctx.lineTo(900 * sx, 642 * sy);
+    ctx.stroke();
+    ctx.restore();
+  }
+}
+
+imgInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = new Image();
+    img.onload = () => {
+      baseImg = img;
+      renderAdjusted();
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+extSlider.addEventListener('input', renderAdjusted);
+showAlign.addEventListener('change', renderAdjusted);
+
+function exportFinalImage() {
+  if (!baseImg) {
+    alert('请先点击左上角按钮载入上一版原图！');
+    return;
+  }
+  const prevAlign = showAlign.checked;
+  showAlign.checked = false;
+  renderAdjusted();
+  const a = document.createElement('a');
+  a.download = 'XHomeEasy-Logo-OptionB-1to1-Final.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  showAlign.checked = prevAlign;
+  renderAdjusted();
+}
+</script>
+</body>
+</html>

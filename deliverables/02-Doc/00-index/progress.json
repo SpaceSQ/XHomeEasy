@@ -1,0 +1,74 @@
+{
+  "status": "handoff-packaged-2026-10-21",
+  "phase": "C",
+  "started_on": "2026-10-21",
+  "completed_on": "2026-10-21",
+  "updated_at": "2026-10-21T23:56:40+08:00",
+  "timezone": "Asia/Shanghai",
+  "target_hours": 24,
+  "brands": [
+    "Control4",
+    "Crestron",
+    "Savant",
+    "Lutron"
+  ],
+  "manifest_counts": {
+    "phase_A_official": 80,
+    "phase_B_internet_cases": 30,
+    "phase_C_unified_partners": 1132,
+    "phase_C_control4_file": 1108,
+    "phase_C_crestron_file": 11,
+    "phase_C_savant_file": 10,
+    "phase_C_lutron_file": 13,
+    "fusion_hybrid": 194,
+    "subsystems": 564,
+    "subsystems_unique_urls": 557
+  },
+  "phase_A": "complete",
+  "phase_B": "complete_round1",
+  "phase_C": "complete_sample_not_full_directory",
+  "mac_sync": "deferred_to_parent",
+  "notes": "Phase B: 30 public case/design/experience summaries. Phase C: Control4 E1 metro API sample (~1101 unique) + curated E3/E1 for other brands; CEDIA E2=0; not a complete global directory. Handoff package built 2026-10-21: fusion 194, subsystems 564, channel 1132; Doc copied into deliverables (no nested old tgz).",
+  "fusion_hybrid": {
+    "count": 194,
+    "round2_added": 63,
+    "path": "06-internet-cases/fusion-hybrid/",
+    "europe_mideast_casebook": "06-internet-cases/fusion-hybrid/europe-mideast-casebook.md",
+    "by_region": {
+      "Europe": 70,
+      "MiddleEast": 32,
+      "Other": 92
+    }
+  },
+  "subsystems": {
+    "count": 564,
+    "unique_url_count": 557,
+    "path": "08-subsystems/",
+    "master_corpus": "08-subsystems/00-index/master.corpus.jsonl",
+    "by_category": {
+      "hvac": 140,
+      "ventilation-erv": 84,
+      "luxury-av": 163,
+      "security": 103,
+      "shades-climate-aux": 74
+    }
+  },
+  "handoff_package": {
+    "created_at": "2026-10-21T23:56:24+08:00",
+    "timezone": "Asia/Shanghai",
+    "directory": "/workspace/x-home-easy/deliverables/XHomeEasy-DevHandoff-2026-10-21/",
+    "tarball": "/workspace/x-home-easy/deliverables/XHomeEasy-DevHandoff-2026-10-21.tar.gz",
+    "download_txt": "/workspace/x-home-easy/deliverables/DOWNLOAD.txt",
+    "handoff_doc": "00-交底书-开发部门.md",
+    "sha256": "6865fe4f0b13588db6dfe4c4b49fd8539958b1395a6da3aad1a008ff4735e501",
+    "bytes": 57336999,
+    "includes_suite_related": true,
+    "excludes_legacy_tgz": [
+      "Doc-ABC-2026-10-21.tgz",
+      "Doc-phaseA-2026-10-21.tgz",
+      "Doc-skeleton-2026-10-21.tgz"
+    ],
+    "human_size": "55M",
+    "sha256_note": "Authoritative tarball sha256 is in /workspace/x-home-easy/deliverables/DOWNLOAD.txt after pack."
+  }
+}

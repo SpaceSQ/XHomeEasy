@@ -1,0 +1,13 @@
+{
+  "name": "x-home-easy",
+  "private": true,
+  "type": "module",
+  "description": "X Home Easy — North American wired-estate decision platform",
+  "scripts": {
+    "ingest": "node --experimental-strip-types scripts/ingest-data.ts",
+    "ingest:verify": "node --experimental-strip-types scripts/verify-citations.ts",
+    "test:engine": "node --experimental-strip-types packages/core-engine/src/engine.test.ts",
+    "test:swift": "swift test --package-path packages/apple-engines",
+    "ios:build": "xcodebuild -project apps/apple-client/XHomeEasy.xcodeproj -scheme XHomeEasy -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build"
+  }
+}

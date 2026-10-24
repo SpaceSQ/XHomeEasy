@@ -1,0 +1,87 @@
+{
+  "collected_at": "2026-10-21",
+  "target_per_brand_approx": 20,
+  "target_total_min": 500,
+  "brands_by_category": {
+    "hvac": [
+      "Daikin",
+      "Hitachi",
+      "Mitsubishi Electric",
+      "Carrier",
+      "Trane",
+      "Lennox",
+      "Fujitsu",
+      "LG VRF",
+      "Samsung HVAC",
+      "Bosch Thermotechnology",
+      "York/JCI",
+      "Rheem"
+    ],
+    "ventilation-erv": [
+      "Zehnder",
+      "Broan-NuTone",
+      "Panasonic Ventilation",
+      "RenewAire",
+      "Venmar",
+      "Aprilaire",
+      "UltimateAir",
+      "ERV/HRV generic villa"
+    ],
+    "luxury-av": [
+      "Kaleidescape",
+      "Trinnov",
+      "StormAudio",
+      "Meridian",
+      "Bang & Olufsen",
+      "JBL Synthesis",
+      "Screen Innovations",
+      "Stewart Filmscreen",
+      "Lumagen",
+      "Sonance",
+      "Origin Acoustics",
+      "Triad Speakers",
+      "AudioControl",
+      "Skywalker/Control4 AV ecosystem"
+    ],
+    "security": [
+      "ADT",
+      "Alarm.com",
+      "DSC",
+      "Resideo/Honeywell Home",
+      "Qolsys",
+      "2GIG",
+      "Axis Communications",
+      "Bosch Security",
+      "Parker/residential monitored"
+    ],
+    "shades-climate-aux": [
+      "Somfy",
+      "Hunter Douglas",
+      "Mecho/Mechoshade",
+      "Lutron shades cross-ref",
+      "Pentair",
+      "Jandy",
+      "Hayward",
+      "Spa/pool automation generic"
+    ]
+  },
+  "notes": "品牌清单可在检索中扩展；每条必须有真实可打开的公开 URL。",
+  "progress_2026-10-21": {
+    "security": {
+      "count": 103,
+      "id_range": "SS451-SS553",
+      "path": "08-subsystems/security/"
+    },
+    "shades-climate-aux": {
+      "count": 74,
+      "id_range": "SS561-SS634",
+      "path": "08-subsystems/shades-climate-aux/"
+    },
+    "this_lane_total": 177,
+    "targets": {
+      "security_min": 90,
+      "aux_min": 60,
+      "lane_min": 150
+    }
+  }
+}

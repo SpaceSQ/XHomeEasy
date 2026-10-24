@@ -1,0 +1,67 @@
+{
+  "total_count": 74,
+  "id_range": "SS561-SS634",
+  "by_brand": {
+    "Somfy": 22,
+    "Hunter Douglas": 11,
+    "Pentair": 10,
+    "Jandy": 10,
+    "Lutron": 8,
+    "Hayward": 6,
+    "Mecho": 4,
+    "SpaPilot": 1,
+    "Balboa": 1,
+    "Screen Innovations": 1
+  },
+  "by_tier": {
+    "E1": 46,
+    "E3": 20,
+    "E2": 3,
+    "E4": 5
+  },
+  "by_region": {
+    "NorthAmerica": 42,
+    "Global": 27,
+    "Europe": 3,
+    "Oceania": 2
+  },
+  "by_subsystem": {
+    "pool-automation": 18,
+    "powerview": 9,
+    "shades": 6,
+    "motorized-shades": 4,
+    "sdn": 4,
+    "tahoma": 3,
+    "community": 3,
+    "animeo": 2,
+    "control4-driver": 2,
+    "hopsoft": 2,
+    "screenlogic": 2,
+    "caseta-sonos": 2,
+    "product-guide": 1,
+    "alarmcom": 1,
+    "integrator": 1,
+    "compare": 1,
+    "mechonet": 1,
+    "control4": 1,
+    "lutron": 1,
+    "shades-cross": 1,
+    "install": 1,
+    "spa-automation": 1,
+    "spa-controls": 1,
+    "crestron-driver": 1,
+    "alarmcom-kb": 1,
+    "iaqualink": 1,
+    "crestron": 1,
+    "mylink": 1,
+    "bms": 1
+  },
+  "collected_at": "2026-10-21T23:59:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "paths": {
+    "corpus_md": "/workspace/x-home-easy/Doc/08-subsystems/shades-climate-aux/corpus.md",
+    "corpus_jsonl": "/workspace/x-home-easy/Doc/08-subsystems/shades-climate-aux/corpus.jsonl"
+  },
+  "md_heading_count": 74,
+  "category": "shades-climate-aux"
+}

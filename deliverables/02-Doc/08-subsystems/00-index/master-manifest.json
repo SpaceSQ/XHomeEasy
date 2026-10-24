@@ -1,0 +1,152 @@
+{
+  "collected_at": "2026-10-21T23:33:00+08:00",
+  "total_count": 564,
+  "unique_url_count": 557,
+  "duplicate_url_count": 7,
+  "by_category": {
+    "hvac": 140,
+    "ventilation-erv": 84,
+    "luxury-av": 163,
+    "security": 103,
+    "shades-climate-aux": 74
+  },
+  "by_tier": {
+    "E2": 75,
+    "E1": 401,
+    "E3": 76,
+    "E4": 12
+  },
+  "by_brand_top30": [
+    [
+      "Zehnder",
+      25
+    ],
+    [
+      "Daikin",
+      24
+    ],
+    [
+      "Alarm.com",
+      24
+    ],
+    [
+      "Somfy",
+      24
+    ],
+    [
+      "JBL Synthesis",
+      21
+    ],
+    [
+      "Mitsubishi Electric",
+      19
+    ],
+    [
+      "StormAudio",
+      18
+    ],
+    [
+      "Meridian",
+      18
+    ],
+    [
+      "Kaleidescape",
+      16
+    ],
+    [
+      "Hitachi",
+      15
+    ],
+    [
+      "Resideo",
+      15
+    ],
+    [
+      "Aprilaire",
+      14
+    ],
+    [
+      "Trinnov",
+      14
+    ],
+    [
+      "Screen Innovations",
+      14
+    ],
+    [
+      "RenewAire",
+      13
+    ],
+    [
+      "ADT",
+      12
+    ],
+    [
+      "Qolsys",
+      12
+    ],
+    [
+      "Trane",
+      11
+    ],
+    [
+      "Broan-NuTone",
+      11
+    ],
+    [
+      "Hunter Douglas",
+      11
+    ],
+    [
+      "Fujitsu",
+      10
+    ],
+    [
+      "Bosch Thermotechnology",
+      10
+    ],
+    [
+      "Panasonic Ventilation",
+      10
+    ],
+    [
+      "Procella",
+      10
+    ],
+    [
+      "2GIG",
+      10
+    ],
+    [
+      "Pentair",
+      10
+    ],
+    [
+      "Jandy",
+      10
+    ],
+    [
+      "madVR",
+      9
+    ],
+    [
+      "Axis",
+      9
+    ],
+    [
+      "Samsung HVAC",
+      8
+    ]
+  ],
+  "brand_count": 60,
+  "paths": {
+    "hvac": "/workspace/x-home-easy/Doc/08-subsystems/hvac/",
+    "ventilation-erv": "/workspace/x-home-easy/Doc/08-subsystems/ventilation-erv/",
+    "luxury-av": "/workspace/x-home-easy/Doc/08-subsystems/luxury-av/",
+    "security": "/workspace/x-home-easy/Doc/08-subsystems/security/",
+    "shades-climate-aux": "/workspace/x-home-easy/Doc/08-subsystems/shades-climate-aux/"
+  },
+  "master_jsonl": "/workspace/x-home-easy/Doc/08-subsystems/00-index/master.corpus.jsonl",
+  "target_min": 500,
+  "target_met": true
+}

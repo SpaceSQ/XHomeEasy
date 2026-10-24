@@ -1,0 +1,2912 @@
+# X Home Easy · 别墅 HVAC 子系统方案库
+
+- **主题**：中央空调/热泵/VRF 与四老牌控制层融合
+- **收集日期**：2026-10-21（Asia/Shanghai）
+- **条目数**：140
+- **证据分层**：E1 厂商官方；E2 协会/贸易媒体；E3 集成商/渠道；E4 社区
+- **免责声明**：公开二手资料，供方案建议与本地模型训练；非法律意见、非施工规范。
+
+## 品牌计数
+
+| brand | count |
+|---|---|
+| Daikin | 24 |
+| Mitsubishi Electric | 17 |
+| Hitachi | 15 |
+| Trane | 11 |
+| Fujitsu | 10 |
+| Bosch Thermotechnology | 10 |
+| Aprilaire | 10 |
+| Samsung HVAC | 8 |
+| Lennox | 7 |
+| Carrier | 6 |
+| LG VRF | 6 |
+| Rheem | 6 |
+| York/JCI | 5 |
+| CoolAutomation | 4 |
+| Control4 | 1 |
+
+| **total** | **140** |
+
+---
+
+### SS001 | Chowmain Daikin One+ Control4 driver
+- id: SS001
+- category: hvac
+- brand: Daikin
+- subsystem: VRF thermostat
+- evidence_tier: E2
+- region: Global
+- source_url: https://chowmain.software/drivers/control4-daikin-one
+- source_name: Chowmain Software
+- published: 2024-12
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Daikin One+ 有成熟 Control4 驱动，别墅可由 Control4 做统一气候 UI。
+- summary_zh: 免费 Control4 驱动对接 Daikin One+，支持分体/FIT/VRV/VRV Life，双向设定点、模式、风速与状态反馈。Daikin One+ 有成熟 Control4 驱动，别墅可由 Control4 做统一气候 UI。要点：Control4；One+；双向。来源为Chowmain Software（E2），地域标签 Global，抓取日 2026-10-21。应用提示：优先评估 One++Control4 路径。Daikin One+ 经驱动进入 Control4 的公开证据。
+- key_points:
+  - "Control4"
+  - "One+"
+  - "双向"
+- install_notes: null
+- app_takeaway_zh: 优先评估 One++Control4 路径。
+- training_snippet: Daikin One+ 经驱动进入 Control4 的公开证据。
+
+### SS002 | Daikin DIII-NET/BACnet MS/TP adaptor
+- id: SS002
+- category: hvac
+- brand: Daikin
+- subsystem: BACnet MS/TP
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/products/commercial-systems/commercial-controls/diii-net-bacnet--ms-tp-communication-adaptor
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 四老牌普遍支持 BACnet 恒温器框架，VRV 经此适配器可被中枢监控。
+- summary_zh: 官方适配器转 DIII-NET→BACnet MS/TP，至 4 外机/32 内机，BTL 认证，独立冷暖设定点。四老牌普遍支持 BACnet 恒温器框架，VRV 经此适配器可被中枢监控。要点：BACnet；DIII-NET；BTL。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：多内机别墅用 BACnet 统一接入。安装边界：地址与终端电阻由持证人员完成。
+- key_points:
+  - "BACnet"
+  - "DIII-NET"
+  - "BTL"
+- install_notes: "地址与终端电阻由持证人员完成。"
+- app_takeaway_zh: 多内机别墅用 BACnet 统一接入。
+- training_snippet: 官方 BACnet MS/TP 是开放接入标准路径。
+
+### SS003 | iTM BACnet Server Gateway design guide PDF
+- id: SS003
+- category: hvac
+- brand: Daikin
+- subsystem: BACnet/IP
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/itm-bacnet-server-gateway-option/itmv2-10_bacnetservergatewaydesignguide.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: iTM 作 BACnet/IP 服务器，Crestron/Control4 可作客户端，适合超大宅。
+- summary_zh: DCM014A51 使 iTM 以 BACnet/IP 服务 BMS，至 128 管理点，支持 COV 与双设定点。iTM 作 BACnet/IP 服务器，Crestron/Control4 可作客户端，适合超大宅。要点：iTM；BACnet/IP；128点。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：超大宅优先 iTM+BACnet/IP。公开资料表明 Daikin 的 BACnet/IP 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "iTM"
+  - "BACnet/IP"
+  - "128点"
+- install_notes: null
+- app_takeaway_zh: 超大宅优先 iTM+BACnet/IP。
+- training_snippet: 公开资料表明 Daikin 的 BACnet/IP 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS004 | Daikin One Open API
+- id: SS004
+- category: hvac
+- brand: Daikin
+- subsystem: Open API
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/dakin-one-open-api
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4", "Crestron"]
+- control_layer_fit: Open API 面向 Control4/Crestron 集成商云接入。
+- summary_zh: 以 integratorToken 换 bearer token，对设备 GET/PUT；文档点名 Control4、Crestron。Open API 面向 Control4/Crestron 集成商云接入。要点：OpenAPI；云。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：宽带稳定可用云 API。安装边界：依赖互联网；离线改走 BACnet。
+- key_points:
+  - "OpenAPI"
+  - "云"
+- install_notes: "依赖互联网；离线改走 BACnet。"
+- app_takeaway_zh: 宽带稳定可用云 API。
+- training_snippet: 公开资料表明 Daikin 的 Open API 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS005 | DKN Plus Interface product page
+- id: SS005
+- category: hvac
+- brand: Daikin
+- subsystem: DKN Plus
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/products/commercial-systems/commercial-controls/dkn-plus-interface
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 单内机网关提供 BACnet/Modbus/云，便于四老牌就近接入。
+- summary_zh: AZAI6WSPDKC 支持 BACnet MS/TP、Modbus、Cloud API 与继电器接线，BLE App 配置。单内机网关提供 BACnet/Modbus/云，便于四老牌就近接入。要点：单机网关；DKN。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：改造逐房接入更轻量。公开资料表明 Daikin 的 DKN Plus 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "单机网关"
+  - "DKN"
+- install_notes: null
+- app_takeaway_zh: 改造逐房接入更轻量。
+- training_snippet: 公开资料表明 Daikin 的 DKN Plus 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS006 | BACnet Gateways Overview PDF
+- id: SS006
+- category: hvac
+- brand: Daikin
+- subsystem: BACnet overview
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/dkn-plus-interface/ag-bacnet-gateways-overview.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 官方总览帮助与四老牌 BACnet 框架对齐选型。
+- summary_zh: 对比各 BACnet 网关能力与适用场景。官方总览帮助与四老牌 BACnet 框架对齐选型。要点：选型总览。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：方案书可做网关对比表。公开资料表明 Daikin 的 BACnet overview 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "选型总览"
+- install_notes: null
+- app_takeaway_zh: 方案书可做网关对比表。
+- training_snippet: 公开资料表明 Daikin 的 BACnet overview 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS007 | Daikin One+ installation guide PDF
+- id: SS007
+- category: hvac
+- brand: Daikin
+- subsystem: One+ install
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/daikin-one-/daikinone-plusinstallationguide.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 正确安装 One+ 是上层驱动可用的前提。
+- summary_zh: 覆盖接线、配对与调试流程。正确安装 One+ 是上层驱动可用的前提。要点：安装。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：联调前置：暖通调试完成。安装边界：强电仅限持证暖通。本条收录品牌「Daikin」子系统「One+ install」公开页面《Daikin One+ installation guide PDF》，供别墅有线智能家居控制层融合方案与本地模型训练检索。
+- key_points:
+  - "安装"
+- install_notes: "强电仅限持证暖通。"
+- app_takeaway_zh: 联调前置：暖通调试完成。
+- training_snippet: 公开资料表明 Daikin 的 One+ install 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS008 | Intesis Daikin HVAC to Home Automation
+- id: SS008
+- category: hvac
+- brand: Daikin
+- subsystem: Intesis HA
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in770air00so000-wmp-dai-daikin-hvac-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Intesis WMP+免费 C4 驱动是全球别墅常见路径。
+- summary_zh: 直连 DIII-NET，扫描内机，ASCII/WMP 对接 Control4 等。Intesis WMP+免费 C4 驱动是全球别墅常见路径。要点：Intesis；WMP；SDDP。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Daikin / Intesis HA」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "Intesis"
+  - "WMP"
+  - "SDDP"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / Intesis HA」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS009 | CoolAutomation partner Crestron guide
+- id: SS009
+- category: hvac
+- brand: Daikin
+- subsystem: CoolAutomation Crestron
+- evidence_tier: E1
+- region: Global
+- source_url: https://coolautomation.com/partner/crestron
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: CoolMaster 统一含大金 VRF，Crestron Home 可用原生扩展或 BACnet。
+- summary_zh: 分步说明 VRF/分体接入与 BACnet 恒温器或原生扩展配置。CoolMaster 统一含大金 VRF，Crestron Home 可用原生扩展或 BACnet。要点：CoolMaster；Crestron Home。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：Crestron 别墅优先统一网关。安装边界：冷媒总线按厂商规范。
+- key_points:
+  - "CoolMaster"
+  - "Crestron Home"
+- install_notes: "冷媒总线按厂商规范。"
+- app_takeaway_zh: Crestron 别墅优先统一网关。
+- training_snippet: 公开资料表明 Daikin 的 CoolAutomation Crestron 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS010 | Crestron Integrated Partner CoolAutomation
+- id: SS010
+- category: hvac
+- brand: Daikin
+- subsystem: Crestron partner
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.crestron.com/Partners/Integrated-Partners/CoolAutomation?ext=.
+- source_name: Crestron
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: Crestron 官方认可多品牌 VRF 网关伙伴。
+- summary_zh: 伙伴页描述双向监控与简化 BACnet 复杂度。Crestron 官方认可多品牌 VRF 网关伙伴。要点：官方伙伴。来源为Crestron（E1），地域标签 Global，抓取日 2026-10-21。应用提示：引用官方背书提信任。公开资料表明 Daikin 的 Crestron partner 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "官方伙伴"
+- install_notes: null
+- app_takeaway_zh: 引用官方背书提信任。
+- training_snippet: 公开资料表明 Daikin 的 Crestron partner 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS011 | 大金中国中央空气湿度专题
+- id: SS011
+- category: hvac
+- brand: Daikin
+- subsystem: China comfort
+- evidence_tier: E1
+- region: China
+- source_url: https://www.daikin-china.com.cn/newha/humidity
+- source_name: 大金中国
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 中国别墅大金空地新一体，上层可接四老牌/KNX。
+- summary_zh: 公开湿度与舒适控制方案，强调协同。中国别墅大金空地新一体，上层可接四老牌/KNX。要点：中国；空地新。来源为大金中国（E1），地域标签 China，抓取日 2026-10-21。应用提示：将「Daikin / China comfort」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 China comfort 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "中国"
+  - "空地新"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / China comfort」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 China comfort 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS012 | Intesis 大金→BACnet 中文数据表
+- id: SS012
+- category: hvac
+- brand: Daikin
+- subsystem: Intesis BACnet CN
+- evidence_tier: E1
+- region: China
+- source_url: https://media.hms-networks.com/image/upload/v1747982698/Documents/Generated_Datasheets/Production/zh/hms-IN770AIR00SO000_BAC_DAI-zh-%E5%A4%A7%E9%87%91HVAC%E5%88%B0BACnet--IP%E5%92%8CMS--TP%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 中文 BACnet 资料便于挂到 Crestron/Control4 对象树。
+- summary_zh: 直连 DIII-NET，BACnet/IP 与 MS/TP，含 HRV。中文 BACnet 资料便于挂到 Crestron/Control4 对象树。要点：中文；BACnet；HRV。来源为HMS/Intesis（E1），地域标签 China，抓取日 2026-10-21。应用提示：国内方案书直接引用。公开资料表明 Daikin 的 Intesis BACnet CN 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "中文"
+  - "BACnet"
+  - "HRV"
+- install_notes: null
+- app_takeaway_zh: 国内方案书直接引用。
+- training_snippet: 公开资料表明 Daikin 的 Intesis BACnet CN 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS013 | CoolAutomation VRF integration tips
+- id: SS013
+- category: hvac
+- brand: Daikin
+- subsystem: VRF tips
+- evidence_tier: E2
+- region: Global
+- source_url: https://coolautomation.com/blog/11-tips-for-integrating-vrf-hvac-systems
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron", "Control4"]
+- control_layer_fit: 实践提示适用于以四老牌为 UI 的 VRF 项目。
+- summary_zh: 勿映射从机、单设定点、回风温需房间传感器、开放协议等。实践提示适用于以四老牌为 UI 的 VRF 项目。要点：坑点；传感器。来源为CoolAutomation（E2），地域标签 Global，抓取日 2026-10-21。应用提示：可转 APP 检查清单。安装边界：经验文非规范。本条收录品牌「Daikin」子系统「VRF tips」公开页面《CoolAutomation VRF integration tips》，供别墅有线智能家居控制层融合方案与本地模型训练检索。
+- key_points:
+  - "坑点"
+  - "传感器"
+- install_notes: "经验文非规范。"
+- app_takeaway_zh: 可转 APP 检查清单。
+- training_snippet: 公开资料表明 Daikin 的 VRF tips 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS014 | CEDIA BMS Control for HVAC
+- id: SS014
+- category: hvac
+- brand: Daikin
+- subsystem: CEDIA BMS
+- evidence_tier: E2
+- region: Global
+- source_url: https://cedia.org/en-us/smart-home-professionals/news/bms-control-for-hvac-systems
+- source_name: CEDIA
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 行业协会论证住宅 BMS 控制 HVAC 的价值。
+- summary_zh: 讨论协议、分区、调试与跨工种协作。行业协会论证住宅 BMS 控制 HVAC 的价值。要点：CEDIA；BMS。来源为CEDIA（E2），地域标签 Global，抓取日 2026-10-21。应用提示：将「Daikin / CEDIA BMS」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 CEDIA BMS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "CEDIA"
+  - "BMS"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / CEDIA BMS」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 CEDIA BMS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS015 | CEDIA podcast BMS HVAC complexities
+- id: SS015
+- category: hvac
+- brand: Daikin
+- subsystem: CEDIA podcast
+- evidence_tier: E2
+- region: Global
+- source_url: https://cedia.org/smart-home-professionals/podcasts/bms-control-for-hvac-systems-the-complexities-of-successful-integration
+- source_name: CEDIA
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 播客补充流程与沟通类部署经验。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 深入讨论成功对接 HVAC 的流程难点。播客补充流程与沟通类部署经验。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：播客；流程。来源为CEDIA（E2），地域标签 Global，抓取日 2026-10-21。应用提示：设计阶段纳入暖通承包商。公开资料表明 Daikin 的 CEDIA podcast 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "播客"
+  - "流程"
+- install_notes: null
+- app_takeaway_zh: 设计阶段纳入暖通承包商。
+- training_snippet: 公开资料表明 Daikin 的 CEDIA podcast 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS016 | Daikin VRV controls engineering data PDF
+- id: SS016
+- category: hvac
+- brand: Daikin
+- subsystem: Engineering data
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/dkn-plus-interface/em-vrvcontrolsengineeringdata.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 工程数据供四老牌点表与容量规划。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 详述 VRV 控制接口能力。工程数据供四老牌点表与容量规划。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：工程数据。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / Engineering data」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 Engineering data 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "工程数据"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / Engineering data」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 Engineering data 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS017 | Daikin One+ submittal data sheet
+- id: SS017
+- category: hvac
+- brand: Daikin
+- subsystem: SDS
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/daikin-one-/sds--dtst-cwbsa-ni-b.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: SDS 便于 BOM 写入后由四老牌驱动。
+- summary_zh: 送审规格数据表。SDS 便于 BOM 写入后由四老牌驱动。要点：SDS。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / SDS」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 SDS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "SDS"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / SDS」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 SDS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS018 | Daikin DZK zoning kit manual
+- id: SS018
+- category: hvac
+- brand: Daikin
+- subsystem: DZK
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/dzk-zoning-kit/mi_dzk-4_en.pdf
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 分区风阀常与四老牌离家/归家场景联动。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 说明风阀分区安装与控制逻辑。分区风阀常与四老牌离家/归家场景联动。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：分区；风阀。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：场景映射到分区设定。安装边界：风管施工属暖通。
+- key_points:
+  - "分区"
+  - "风阀"
+- install_notes: "风管施工属暖通。"
+- app_takeaway_zh: 场景映射到分区设定。
+- training_snippet: 公开资料表明 Daikin 的 DZK 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS019 | CoolAutomation meets Crestron Home blog
+- id: SS019
+- category: hvac
+- brand: Daikin
+- subsystem: CoolAuto blog
+- evidence_tier: E2
+- region: Global
+- source_url: https://coolautomation.com/blog/streamlined-hvac-integration-coolautomation-meets-crestron-home
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 说明 Crestron Home 用统一网关覆盖大金等。
+- summary_zh: 介绍简化集成路径与体验。说明 Crestron Home 用统一网关覆盖大金等。要点：叙事。来源为CoolAutomation（E2），地域标签 Global，抓取日 2026-10-21。应用提示：将「Daikin / CoolAuto blog」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 CoolAuto blog 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "叙事"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / CoolAuto blog」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 CoolAuto blog 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS020 | CoolMaster product line overview
+- id: SS020
+- category: hvac
+- brand: Daikin
+- subsystem: CoolMaster line
+- evidence_tier: E1
+- region: Global
+- source_url: https://coolautomation.com/products/coolmaster-product-line
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4", "Crestron", "Savant", "Lutron"]
+- control_layer_fit: CoolMaster 服务多家有线中枢，是气候通用接入层。
+- summary_zh: 介绍对多品牌 VRF 统一接入能力。CoolMaster 服务多家有线中枢，是气候通用接入层。要点：CoolMaster；多平台。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：模板：VRF→CoolMaster→四老牌。公开资料表明 Daikin 的 CoolMaster line 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "CoolMaster"
+  - "多平台"
+- install_notes: null
+- app_takeaway_zh: 模板：VRF→CoolMaster→四老牌。
+- training_snippet: 公开资料表明 Daikin 的 CoolMaster line 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS021 | Intesis Hitachi VRF to HA up to 64
+- id: SS021
+- category: hvac
+- brand: Hitachi
+- subsystem: Intesis 64
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in770air00mo000-wmp-hit-hitachi-vrf-systems-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 官方对接 Control4，免费驱动+SDDP。
+- summary_zh: M 许可至 64 内机，H-Link，扫描导入，UL 认证。官方对接 Control4，免费驱动+SDDP。要点：H-Link；64；SDDP。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：日立别墅首选标准化接入。安装边界：H-Link 按日立规范。
+- key_points:
+  - "H-Link"
+  - "64"
+  - "SDDP"
+- install_notes: "H-Link 按日立规范。"
+- app_takeaway_zh: 日立别墅首选标准化接入。
+- training_snippet: 公开资料表明 Hitachi 的 Intesis 64 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS022 | Intesis Hitachi VRF to HA up to 16
+- id: SS022
+- category: hvac
+- brand: Hitachi
+- subsystem: Intesis 16
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in770air00so000-wmp-hit-hitachi-vrf-systems-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 中型别墅用 S 许可。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 至 16 内机，功能同 M 版。中型别墅用 S 许可。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：16内机。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / Intesis 16」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 Intesis 16 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "16内机"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / Intesis 16」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Intesis 16 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS023 | Intesis IN770 Hitachi user manual
+- id: SS023
+- category: hvac
+- brand: Hitachi
+- subsystem: Manual
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/docs/default-source/products/intesis/manuals-and-guides---manuals/user-manual-in770hitxxxo000.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 多协议含 BACnet/KNX/HA，四老牌可接入。
+- summary_zh: 信号表与 SET/CHN/GET 命令详解。多协议含 BACnet/KNX/HA，四老牌可接入。要点：信号表；多协议。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：点表映射引用信号名。安装边界：安装仅供持证人员。本条收录品牌「Hitachi」子系统「Manual」公开页面《Intesis IN770 Hitachi user manual》，供别墅有线智能家居控制层融合方案与本地模型训练检索。
+- key_points:
+  - "信号表"
+  - "多协议"
+- install_notes: "安装仅供持证人员。"
+- app_takeaway_zh: 点表映射引用信号名。
+- training_snippet: 公开资料表明 Hitachi 的 Manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS024 | Hitachi HA user manual legacy
+- id: SS024
+- category: hvac
+- brand: Hitachi
+- subsystem: WMP legacy
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.idx.co.za/wp-content/uploads/2021/01/hitachi-home-auto-user-manual.pdf
+- source_name: Intesis mirror
+- published: 2021
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: WMP 如何把日立暴露给家居中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 功能、容量与以太网连接。WMP 如何把日立暴露给家居中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：WMP；遗留。来源为Intesis mirror（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / WMP legacy」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 WMP legacy 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "WMP"
+  - "遗留"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / WMP legacy」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 WMP legacy 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS025 | Legrand HVAC Hitachi MyHOME
+- id: SS025
+- category: hvac
+- brand: Hitachi
+- subsystem: Legrand
+- evidence_tier: E2
+- region: Europe
+- source_url: https://www.legrandintegratedsolutions.com/products/hvac-hitachi
+- source_name: Legrand
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 证明日立常作有线住宅子系统，可类比四老牌。
+- summary_zh: MyHOME 管理设定点/模式/风速。证明日立常作有线住宅子系统，可类比四老牌。要点：MyHOME；欧洲。来源为Legrand（E2），地域标签 Europe，抓取日 2026-10-21。应用提示：将「Hitachi / Legrand」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 Legrand 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "MyHOME"
+  - "欧洲"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / Legrand」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Legrand 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS026 | 海信日立商务产品页
+- id: SS026
+- category: hvac
+- brand: Hitachi
+- subsystem: China
+- evidence_tier: E1
+- region: China
+- source_url: https://new.hisensehitachi.com/businessProduct/index_1226.html
+- source_name: 海信日立
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 中国日立集控/网关可再接有线中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 展示中央空调与控制产品线。中国日立集控/网关可再接有线中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：中国日立。来源为海信日立（E1），地域标签 China，抓取日 2026-10-21。应用提示：将「Hitachi / China」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 China 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "中国日立"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / China」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 China 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS027 | CoolMaster supported VRF manufacturers
+- id: SS027
+- category: hvac
+- brand: Hitachi
+- subsystem: CoolMaster brands
+- evidence_tier: E1
+- region: Global
+- source_url: https://support.coolautomation.com/hc/en-us/articles/4817824902813-CoolMaster-Supported-VRF-Manufacturers-Configuration-Specification
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 列表含日立，统一网关进四老牌。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 品牌与配置规格矩阵。列表含日立，统一网关进四老牌。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：兼容表。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / CoolMaster brands」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 CoolMaster brands 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "兼容表"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / CoolMaster brands」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 CoolMaster brands 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS028 | CoolAutomation integration devices
+- id: SS028
+- category: hvac
+- brand: Hitachi
+- subsystem: CoolAuto devices
+- evidence_tier: E1
+- region: Global
+- source_url: https://coolautomation.com/integration-devices
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 网关族服务日立等，上层接有线中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: CoolMaster/CoolPlug 统一 HVAC。网关族服务日立等，上层接有线中枢。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：设备族。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / CoolAuto devices」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 CoolAuto devices 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "设备族"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / CoolAuto devices」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 CoolAuto devices 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS029 | CoolAutomation home automation solutions
+- id: SS029
+- category: hvac
+- brand: Hitachi
+- subsystem: CoolAuto HA
+- evidence_tier: E1
+- region: Global
+- source_url: https://coolautomation.com/home-automation
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4", "Crestron", "Savant", "Lutron"]
+- control_layer_fit: 面向多家家居自动化平台。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: VRF 到家居自动化路径。面向多家家居自动化平台。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：多平台。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：营销与技术方案共用。公开资料表明 Hitachi 的 CoolAuto HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "多平台"
+- install_notes: null
+- app_takeaway_zh: 营销与技术方案共用。
+- training_snippet: 公开资料表明 Hitachi 的 CoolAuto HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS030 | Central controllers parallel to CoolAutomation
+- id: SS030
+- category: hvac
+- brand: Hitachi
+- subsystem: Parallel
+- evidence_tier: E1
+- region: Global
+- source_url: https://support.coolautomation.com/hc/en-us/articles/31207896688285-Central-controllers-connection-VRF-manufacturers-in-parallel-to-CoolAutomation-device
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 保留厂家线控+中枢时需正确并联。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 并联拓扑注意点。保留厂家线控+中枢时需正确并联。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：并联；总线。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / Parallel」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：错误并联可致通信故障。
+- key_points:
+  - "并联"
+  - "总线"
+- install_notes: "错误并联可致通信故障。"
+- app_takeaway_zh: 将「Hitachi / Parallel」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Parallel 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS031 | Intesis compatibility check how-to
+- id: SS031
+- category: hvac
+- brand: Hitachi
+- subsystem: Compat tool
+- evidence_tier: E1
+- region: Global
+- source_url: https://support.hms-networks.com/hc/en-us/articles/11540477111826-How-to-check-if-my-climatization-system-is-compatible-with-Intesis-products
+- source_name: HMS Support
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 集成前确认机型兼容。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 兼容性工具使用说明。集成前确认机型兼容。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：兼容工具。来源为HMS Support（E1），地域标签 Global，抓取日 2026-10-21。应用提示：先查兼容→网关→驱动。公开资料表明 Hitachi 的 Compat tool 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "兼容工具"
+- install_notes: null
+- app_takeaway_zh: 先查兼容→网关→驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Compat tool 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS032 | Chowmain Intesis Control4 driver
+- id: SS032
+- category: hvac
+- brand: Hitachi
+- subsystem: Chowmain
+- evidence_tier: E2
+- region: Global
+- source_url: https://chowmain.software/drivers/control4-intesis
+- source_name: Chowmain Software
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 一驱动覆盖日立等多品牌网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 免费 Intesis HVAC Gateway 驱动。一驱动覆盖日立等多品牌网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：通用驱动。来源为Chowmain Software（E2），地域标签 Global，抓取日 2026-10-21。应用提示：统一装 Intesis 驱动。公开资料表明 Hitachi 的 Chowmain 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "通用驱动"
+- install_notes: null
+- app_takeaway_zh: 统一装 Intesis 驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Chowmain 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS033 | Chowmain Intesis driver KB
+- id: SS033
+- category: hvac
+- brand: Hitachi
+- subsystem: Chowmain KB
+- evidence_tier: E2
+- region: Global
+- source_url: https://help.chowmain.software/portal/en/kb/driver-support/control4/intesis
+- source_name: Chowmain Software
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 排障日立经 Intesis 进 Control4。
+- summary_zh: 驱动支持信息汇总。排障日立经 Intesis 进 Control4。要点：KB。来源为Chowmain Software（E2），地域标签 Global，抓取日 2026-10-21。应用提示：将「Hitachi / Chowmain KB」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Hitachi 的 Chowmain KB 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "KB"
+- install_notes: null
+- app_takeaway_zh: 将「Hitachi / Chowmain KB」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Chowmain KB 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS034 | 中弘中央空调网关方案
+- id: SS034
+- category: hvac
+- brand: Hitachi
+- subsystem: Zhonghong
+- evidence_tier: E3
+- region: China
+- source_url: https://zhonghongtech.cn/solution-01.php
+- source_name: 中弘数字
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 国内第三方网关转协议后上层仍可用有线中枢。
+- summary_zh: 多品牌协议转换方案。国内第三方网关转协议后上层仍可用有线中枢。要点：国产网关。来源为中弘数字（E3），地域标签 China，抓取日 2026-10-21。应用提示：将「Hitachi / Zhonghong」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：需验证协议版本。
+- key_points:
+  - "国产网关"
+- install_notes: "需验证协议版本。"
+- app_takeaway_zh: 将「Hitachi / Zhonghong」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Hitachi 的 Zhonghong 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS035 | 信锐室外机网关文档入口
+- id: SS035
+- category: hvac
+- brand: Hitachi
+- subsystem: Sundray
+- evidence_tier: E3
+- region: China
+- source_url: https://support.sundray.com/productDocument/read?category_id=6510&product_id=25&version_id=1031
+- source_name: 信锐
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 物联网网关侧面证明多联机可被集控。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 产品文档目录含室外机网关。物联网网关侧面证明多联机可被集控。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：IoT网关。来源为信锐（E3），地域标签 China，抓取日 2026-10-21。应用提示：控制体验仍建议四老牌 UI。公开资料表明 Hitachi 的 Sundray 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "IoT网关"
+- install_notes: null
+- app_takeaway_zh: 控制体验仍建议四老牌 UI。
+- training_snippet: 公开资料表明 Hitachi 的 Sundray 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS036 | Intesis City Multi to Home Automation
+- id: SS036
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: City Multi HA
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in770air00mo000-wmp-mit-mitsubishi-electric-city-multi-systems-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 官方至 100 groups，免费 C4 驱动，别墅 City Multi 进四老牌。
+- summary_zh: 经中央控制器以太网接入，扫描组，UL 认证，MAPS 配置。官方至 100 groups，免费 C4 驱动，别墅 City Multi 进四老牌。要点：City Multi；100组；SDDP。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：大别墅用 M 许可。公开资料表明 Mitsubishi Electric 的 City Multi HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "City Multi"
+  - "100组"
+  - "SDDP"
+- install_notes: null
+- app_takeaway_zh: 大别墅用 M 许可。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 City Multi HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS037 | Onesight Intesis City Multi HA datasheet PDF
+- id: SS037
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: City Multi PDF
+- evidence_tier: E1
+- region: Global
+- source_url: https://onesight.solutions/wp-content/uploads/2023/07/Mitsubishi-Electric-City-Multi-systems-to-Home-Automation-Application.pdf
+- source_name: Onesight/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4", "Crestron"]
+- control_layer_fit: 数据表列出 Control4/Crestron 等驱动下载。
+- summary_zh: 双向监控、扫描、外机信号、多 TCP 客户端。数据表列出 Control4/Crestron 等驱动下载。要点：驱动列表。来源为Onesight/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：驱动下载清单可写入 BOM。公开资料表明 Mitsubishi Electric 的 City Multi PDF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "驱动列表"
+- install_notes: null
+- app_takeaway_zh: 驱动下载清单可写入 BOM。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 City Multi PDF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS038 | Crestron Mitsubishi G50 Group module help PDF
+- id: SS038
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Crestron G50
+- evidence_tier: E1
+- region: Global
+- source_url: https://applicationmarket.crestron.com/content/Help/Mitsubishi/Mitsubishi_G50_Group_Help.pdf
+- source_name: Crestron
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 原生 Crestron 模块控 G50 组（含 Lossnay），延迟约 12s 需注意。
+- summary_zh: 每模块一 Group，至 50 模块；经以太网到 G50，M-Net 到机组。原生 Crestron 模块控 G50 组（含 Lossnay），延迟约 12s 需注意。要点：G50；12s延迟；Lossnay组。来源为Crestron（E1），地域标签 Global，抓取日 2026-10-21。应用提示：场景设计避免连发指令。安装边界：命令在 12s 窗口内会被丢弃。
+- key_points:
+  - "G50"
+  - "12s延迟"
+  - "Lossnay组"
+- install_notes: "命令在 12s 窗口内会被丢弃。"
+- app_takeaway_zh: 场景设计避免连发指令。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Crestron G50 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS039 | Mitsubishi AE-200A centralized controller
+- id: SS039
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: AE-200
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.mitsubishipro.com/products/AE-200A
+- source_name: Mitsubishi Electric Trane
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: AE-200A 支持 BACnet，四老牌可作 BACnet 客户端。
+- summary_zh: 集中控制器产品页：监控、能耗、日程与扩展。AE-200A 支持 BACnet，四老牌可作 BACnet 客户端。要点：AE-200；BACnet。来源为Mitsubishi Electric Trane（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：别墅群/大宅用 AE-200 作气候服务器。公开资料表明 Mitsubishi Electric 的 AE-200 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "AE-200"
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: 别墅群/大宅用 AE-200 作气候服务器。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 AE-200 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS040 | AE-200A firmware update press release
+- id: SS040
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: AE-200 firmware
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.mitsubishicomfort.com/press-releases/mitsubishi-electric-ae-200a-centralized-controller-firmware-update-advances-building-monitoring-and-control-capabilities
+- source_name: Mitsubishi Electric HVAC US
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 固件增强监控能力，利于与中枢深度集成。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 新闻稿说明固件推进楼宇监控与控制。固件增强监控能力，利于与中枢深度集成。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：固件；监控。来源为Mitsubishi Electric HVAC US（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：集成前确认固件版本。公开资料表明 Mitsubishi Electric 的 AE-200 firmware 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "固件"
+  - "监控"
+- install_notes: null
+- app_takeaway_zh: 集成前确认固件版本。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 AE-200 firmware 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS041 | Building Connect+ platform announcement
+- id: SS041
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Building Connect+
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.mitsubishicomfort.com/press-releases/mitsubishi-electric-trane-hvac-us-introduces-building-connect
+- source_name: Mitsubishi Electric HVAC US
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 云/连接平台可与 BACnet 设备协同，上层仍可用有线中枢做场景。
+- summary_zh: 介绍 Building Connect+ 连接与监控能力。云/连接平台可与 BACnet 设备协同，上层仍可用有线中枢做场景。要点：云平台；BACnet。来源为Mitsubishi Electric HVAC US（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：混合：本地中枢+厂商云。公开资料表明 Mitsubishi Electric 的 Building Connect+ 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "云平台"
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: 混合：本地中枢+厂商云。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Building Connect+ 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS042 | Building Connect+ advancements PR
+- id: SS042
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Building Connect+ adv
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.mitsubishicomfort.com/press-releases/mitsubishi-electric-trane-hvac-us-announces-advancements-to-building-connect-platform
+- source_name: Mitsubishi Electric HVAC US
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 平台演进说明可持续集成路径。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 公告平台能力增强。平台演进说明可持续集成路径。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：平台演进。来源为Mitsubishi Electric HVAC US（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：长期维护考虑厂商平台。公开资料表明 Mitsubishi Electric 的 Building Connect+ adv 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "平台演进"
+- install_notes: null
+- app_takeaway_zh: 长期维护考虑厂商平台。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Building Connect+ adv 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS043 | Mitsubishi Electric HVAC US official site
+- id: SS043
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: City Multi brochure
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.mitsubishicomfort.com/
+- source_name: Mitsubishi Electric HVAC US
+- published: 2020
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 产品册是别墅选型与分区叙事基础。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 三菱电机美国暖通官网是 City Multi VRF、集中控制器与连接平台相关产品的公开入口。别墅项目可由此进入控制资料，再经 Intesis/Crestron/BACnet 纳入四老牌中枢。 来源 Mitsubishi Electric HVAC US（E1），抓取日 2026-10-21。 产品册是别墅选型与分区叙事基础。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- key_points:
+  - "产品册"
+  - "VRF"
+- install_notes: null
+- app_takeaway_zh: 将「Mitsubishi Electric / City Multi brochure」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 City Multi brochure 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS044 | RS RS-Online ME ASCII HA interface datasheet
+- id: SS044
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: ASCII gateway
+- evidence_tier: E1
+- region: Global
+- source_url: https://assets.rs-online.com/v1675857704/Datasheets/4aad2a4be3969111edf89fb8a2058450.pdf
+- source_name: RS / Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: ASCII 网关对接 IP 家居自动化（含四老牌驱动生态）。
+- summary_zh: Domestic/Mr.Slim/City Multi 一体化 ASCII 接口说明。ASCII 网关对接 IP 家居自动化（含四老牌驱动生态）。要点：ASCII；多系列。来源为RS / Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：中小别墅可用 Domestic 接口。公开资料表明 Mitsubishi Electric 的 ASCII gateway 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "ASCII"
+  - "多系列"
+- install_notes: null
+- app_takeaway_zh: 中小别墅可用 Domestic 接口。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 ASCII gateway 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS045 | Lossnay ventilation brochure (MitsAir)
+- id: SS045
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Lossnay brochure
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.mitsair.com/wp-content/uploads/2024/02/Lossnay-ventilation-brochure.pdf
+- source_name: MitsAir / ME
+- published: 2024
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: Lossnay 与 City Multi 联锁，经 AE-200/BACnet 可进有线中枢。
+- summary_zh: 热回收原理、与集控/LonWorks/BACnet 兼容说明。Lossnay 与 City Multi 联锁，经 AE-200/BACnet 可进有线中枢。要点：Lossnay；热回收；BACnet。来源为MitsAir / ME（E1），地域标签 Global，抓取日 2026-10-21。应用提示：空+新联动写入场景。公开资料表明 Mitsubishi Electric 的 Lossnay brochure 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "Lossnay"
+  - "热回收"
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: 空+新联动写入场景。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Lossnay brochure 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS046 | CoolMasterNet driver for Savant news
+- id: SS046
+- category: hvac
+- brand: CoolAutomation
+- subsystem: Savant driver
+- evidence_tier: E1
+- region: Global
+- source_url: https://coolautomation.com/news/coolmasternet-driver-for-savant
+- source_name: CoolAutomation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Savant"]
+- control_layer_fit: 证明 Savant 亦可统一控多品牌 VRF（含三菱/大金等）。
+- summary_zh: 发布面向 Savant 的 CoolMasterNet IP 驱动。证明 Savant 亦可统一控多品牌 VRF（含三菱/大金等）。要点：Savant；驱动。来源为CoolAutomation（E1），地域标签 Global，抓取日 2026-10-21。应用提示：Savant 别墅用 CoolMaster 路径。公开资料表明 CoolAutomation 的 Savant driver 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "Savant"
+  - "驱动"
+- install_notes: null
+- app_takeaway_zh: Savant 别墅用 CoolMaster 路径。
+- training_snippet: 公开资料表明 CoolAutomation 的 Savant driver 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS047 | Lutron HomeWorks QS CoolMaster app note 048650
+- id: SS047
+- category: hvac
+- brand: CoolAutomation
+- subsystem: Lutron AppNote
+- evidence_tier: E1
+- region: Global
+- source_url: https://assets.lutron.com/a/documents/048650.pdf
+- source_name: Lutron
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Lutron"]
+- control_layer_fit: Lutron 官方应用笔记对接 CoolMasterNet，气候可进 HomeWorks 场景。
+- summary_zh: LAN TCP 10102 集成 HomeWorks QS/QSX/myRoom。Lutron 官方应用笔记对接 CoolMasterNet，气候可进 HomeWorks 场景。要点：HomeWorks；CoolMaster；AppNote。来源为Lutron（E1），地域标签 Global，抓取日 2026-10-21。应用提示：Lutron 照明中枢兼气候场景。公开资料表明 CoolAutomation 的 Lutron AppNote 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "HomeWorks"
+  - "CoolMaster"
+  - "AppNote"
+- install_notes: null
+- app_takeaway_zh: Lutron 照明中枢兼气候场景。
+- training_snippet: 公开资料表明 CoolAutomation 的 Lutron AppNote 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS048 | Control4 CoolAutomation driver search
+- id: SS048
+- category: hvac
+- brand: CoolAutomation
+- subsystem: Control4 drivers
+- evidence_tier: E1
+- region: Global
+- source_url: https://drivers.control4.com/solr/drivers/browse?fq=manufacturer%3A%22CoolAutomation%22&q=
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Control4 官方驱动库收录 CoolAutomation。
+- summary_zh: 驱动检索页列出 CoolMasterNet/CooLinkNet 等。Control4 官方驱动库收录 CoolAutomation。要点：C4驱动库。来源为Control4（E1），地域标签 Global，抓取日 2026-10-21。应用提示：装机前查官方驱动版本。公开资料表明 CoolAutomation 的 Control4 drivers 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "C4驱动库"
+- install_notes: null
+- app_takeaway_zh: 装机前查官方驱动版本。
+- training_snippet: 公开资料表明 CoolAutomation 的 Control4 drivers 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS049 | PhiusCon residential controls high-performance buildings PDF
+- id: SS049
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Phius controls
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://www.phius.org/sites/default/files/2022-11/David%20Holtzclaw%202022_PhiusCon_Controls_Final.pdf
+- source_name: Phius
+- published: 2022
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 高性能住宅控制讨论支撑有线中枢管 HVAC/通风。
+- summary_zh: 被动房/高性能住宅控制系统演讲材料。高性能住宅控制讨论支撑有线中枢管 HVAC/通风。要点：Phius；高性能。来源为Phius（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：节能别墅控制策略参考。公开资料表明 Mitsubishi Electric 的 Phius controls 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "Phius"
+  - "高性能"
+- install_notes: null
+- app_takeaway_zh: 节能别墅控制策略参考。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Phius controls 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS050 | BCNPHA VRF operations training PDF
+- id: SS050
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: VRF training
+- evidence_tier: E2
+- region: Canada
+- source_url: https://bcnpha.ca/wp-content/uploads/2025/12/BCNPHA-OpTraining-VRF-2025.pdf
+- source_name: BCNPHA
+- published: 2025
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 运维培训强化分区与控制理解，利于与中枢联调。
+- summary_zh: VRF 运行培训材料。运维培训强化分区与控制理解，利于与中枢联调。要点：运维培训。来源为BCNPHA（E2），地域标签 Canada，抓取日 2026-10-21。应用提示：将「Mitsubishi Electric / VRF training」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Mitsubishi Electric 的 VRF training 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "运维培训"
+- install_notes: null
+- app_takeaway_zh: 将「Mitsubishi Electric / VRF training」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 VRF training 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS051 | AutomatedNow Control4 Carrier Infinity driver
+- id: SS051
+- category: hvac
+- brand: Carrier
+- subsystem: Infinity C4 cloud
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://automatednow.com/control4-driver-carrier-infinity-bryant-evolution
+- source_name: AutomatedNow
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Carrier Infinity 云 OpenAPI 进 Control4，北美别墅主流风管机路径。
+- summary_zh: 介绍 C4 与 Infinity/Bryant Evolution 云集成能力。Carrier Infinity 云 OpenAPI 进 Control4，北美别墅主流风管机路径。要点：Infinity；云；Bryant。来源为AutomatedNow（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：北美风管别墅首选之一。安装边界：需账户与联网。
+- key_points:
+  - "Infinity"
+  - "云"
+  - "Bryant"
+- install_notes: "需账户与联网。"
+- app_takeaway_zh: 北美风管别墅首选之一。
+- training_snippet: 公开资料表明 Carrier 的 Infinity C4 cloud 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS052 | Carrier Infinity Master Driver doc PDF
+- id: SS052
+- category: hvac
+- brand: Carrier
+- subsystem: Infinity master PDF
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://drivercentral.io/images/companies/55/documentation/20250122/Carrier%20Infinity%20-%20Master%20Driver.pdf?1737602360633=
+- source_name: DriverCentral
+- published: 2025-01
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Master 驱动按 Location→System→Zone 自动导入，适配四老牌分区模型。
+- summary_zh: 详述 OpenAPI 账户、区域同步与不兼容 SAM 云路径说明。Master 驱动按 Location→System→Zone 自动导入，适配四老牌分区模型。要点：Master驱动；分区同步。来源为DriverCentral（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：云与 SAM 路径勿混用。安装边界：SAM 系统走本地串口路径。
+- key_points:
+  - "Master驱动"
+  - "分区同步"
+- install_notes: "SAM 系统走本地串口路径。"
+- app_takeaway_zh: 云与 SAM 路径勿混用。
+- training_snippet: 公开资料表明 Carrier 的 Infinity master PDF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS053 | Carrier Infinity Crestron Home local SAM driver
+- id: SS053
+- category: hvac
+- brand: Carrier
+- subsystem: Crestron SAM
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://digitalautomation.us/product/carrier-infinity-crestron-home-driver
+- source_name: Digital Automation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 本地 RS-232 SAM 模块路径，适合对云敏感的别墅。
+- summary_zh: Crestron Home 经 SAM 控模式/风速/设定点，无云依赖。本地 RS-232 SAM 模块路径，适合对云敏感的别墅。要点：SAM；RS-232；本地。来源为Digital Automation（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：隐私优先选本地 SAM。安装边界：Infinity Touch 需停在屏保页。
+- key_points:
+  - "SAM"
+  - "RS-232"
+  - "本地"
+- install_notes: "Infinity Touch 需停在屏保页。"
+- app_takeaway_zh: 隐私优先选本地 SAM。
+- training_snippet: 公开资料表明 Carrier 的 Crestron SAM 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS054 | Carrier Cloud Crestron Home driver
+- id: SS054
+- category: hvac
+- brand: Carrier
+- subsystem: Crestron cloud
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://digitalautomation.us/product/carrier-cloud-crestron-home-driver
+- source_name: Digital Automation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 云驱动覆盖无 SAM 的新系统。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 处理器与恒温器需持续联网，轮询同步。云驱动覆盖无 SAM 的新系统。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：云驱动。来源为Digital Automation（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：无 SAM 时用云驱动。安装边界：依赖互联网。
+- key_points:
+  - "云驱动"
+- install_notes: "依赖互联网。"
+- app_takeaway_zh: 无 SAM 时用云驱动。
+- training_snippet: 公开资料表明 Carrier 的 Crestron cloud 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS055 | Crestron drivers-api Carrier Infinity help
+- id: SS055
+- category: hvac
+- brand: Carrier
+- subsystem: Crestron API help
+- evidence_tier: E1
+- region: Global
+- source_url: https://drivers-api.crestron.io/help/driver/3960
+- source_name: Crestron
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 官方驱动帮助确认 SAM 硬件与区域限制。
+- summary_zh: 每 SAM 至 2 handler×8 zone，RS-232 直连。官方驱动帮助确认 SAM 硬件与区域限制。要点：官方帮助；分区上限。来源为Crestron（E1），地域标签 Global，抓取日 2026-10-21。应用提示：设计时算清 zone 数。公开资料表明 Carrier 的 Crestron API help 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "官方帮助"
+  - "分区上限"
+- install_notes: null
+- app_takeaway_zh: 设计时算清 zone 数。
+- training_snippet: 公开资料表明 Carrier 的 Crestron API help 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS056 | Carrier residential products hub
+- id: SS056
+- category: hvac
+- brand: Carrier
+- subsystem: Infinity overview
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.carrier.com/residential/en/us/products/
+- source_name: Carrier
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 官方恒温器/控制入口，后续接四老牌驱动。
+- summary_zh: Carrier 北美住宅产品中心，覆盖 Infinity 等控制系统与末端。别墅风管系统可经 OpenAPI/SAM 路径接入 Control4 或 Crestron Home。 来源 Carrier（E1），抓取日 2026-10-21。 官方恒温器/控制入口，后续接四老牌驱动。
+- key_points:
+  - "官方入口"
+- install_notes: null
+- app_takeaway_zh: 将「Carrier / Infinity overview」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Carrier 的 Infinity overview 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS057 | Trane Home 3rd party smart controller integration
+- id: SS057
+- category: hvac
+- brand: Trane
+- subsystem: 3rd party
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://support.tranehome.com/hc/en-us/articles/360054565752-3rd-Party-Smart-Home-Controller-Integration
+- source_name: Trane Home
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Trane 官方列出第三方智能控制器集成（含 Control4）。
+- summary_zh: 支持文说明第三方控制器集成前置条件与固件要求。Trane 官方列出第三方智能控制器集成（含 Control4）。要点：官方支持；第三方。来源为Trane Home（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：先查 Trane 官方兼容表。安装边界：固件版本须达标。
+- key_points:
+  - "官方支持"
+  - "第三方"
+- install_notes: "固件版本须达标。"
+- app_takeaway_zh: 先查 Trane 官方兼容表。
+- training_snippet: 公开资料表明 Trane 的 3rd party 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS058 | ComfortLink II XL950 user guide PDF
+- id: SS058
+- category: hvac
+- brand: Trane
+- subsystem: XL950 guide
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://support.tranehome.com/hc/en-us/article_attachments/21196777997837
+- source_name: Trane Home
+- published: 2013
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 经典沟通式恒温器，可经 Nexia/第三方进中枢。
+- summary_zh: 功能、日程、过敏清洁与 Nexia 概述。经典沟通式恒温器，可经 Nexia/第三方进中枢。要点：XL950；Nexia。来源为Trane Home（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Trane / XL950 guide」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Trane 的 XL950 guide 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "XL950"
+  - "Nexia"
+- install_notes: null
+- app_takeaway_zh: 将「Trane / XL950 guide」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Trane 的 XL950 guide 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS059 | Trane XL950 product note (EOL→XL1050)
+- id: SS059
+- category: hvac
+- brand: Trane
+- subsystem: XL950 shop
+- evidence_tier: E3
+- region: NorthAmerica
+- source_url: https://shop.rfwel.com/trane-comfortlink-ii-xl950-wi-fi-thermostat
+- source_name: RFWEL
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: EOL 说明指向 XL1050，升级路径清晰。
+- summary_zh: 产品描述与继任型号提示。EOL 说明指向 XL1050，升级路径清晰。要点：EOL；XL1050。来源为RFWEL（E3），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：改造项目核对继任型号。公开资料表明 Trane 的 XL950 shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "EOL"
+  - "XL1050"
+- install_notes: null
+- app_takeaway_zh: 改造项目核对继任型号。
+- training_snippet: 公开资料表明 Trane 的 XL950 shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS060 | Trane Symbio 700 BACnet Modbus integration PDF
+- id: SS060
+- category: hvac
+- brand: Trane
+- subsystem: BACnet Symbio
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/packaged-units-split-systems/rooftop/BAS-SVP085B-EN_11152024.pdf
+- source_name: Trane
+- published: 2024-11
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 轻商/大宅屋顶机可用 BACnet 进四老牌 BMS 框架。
+- summary_zh: Symbio 700 协议配置：BACnet MS/TP/IP、Modbus 等。轻商/大宅屋顶机可用 BACnet 进四老牌 BMS 框架。要点：Symbio；BACnet。来源为Trane（E1），地域标签 Global，抓取日 2026-10-21。应用提示：大宅屋顶机走 BACnet。公开资料表明 Trane 的 BACnet Symbio 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "Symbio"
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: 大宅屋顶机走 BACnet。
+- training_snippet: 公开资料表明 Trane 的 BACnet Symbio 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS061 | Trane commercial systems integration page
+- id: SS061
+- category: hvac
+- brand: Trane
+- subsystem: Systems integration
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/systems-integration.html
+- source_name: Trane
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 开放协议叙事支撑与有线中枢互操作。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Tracer 支持 BACnet/Modbus/LonTalk 等。开放协议叙事支撑与有线中枢互操作。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：Tracer；开放协议。来源为Trane（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：大系统引用 Tracer 集成能力。公开资料表明 Trane 的 Systems integration 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "Tracer"
+  - "开放协议"
+- install_notes: null
+- app_takeaway_zh: 大系统引用 Tracer 集成能力。
+- training_snippet: 公开资料表明 Trane 的 Systems integration 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS062 | Trane Control Concepts modules
+- id: SS062
+- category: hvac
+- brand: Trane
+- subsystem: Control Concepts
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://controlconcepts.net/manufacturers-modules-and-drivers/trane-downloads
+- source_name: Control Concepts
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron", "Control4"]
+- control_layer_fit: 第三方模块/驱动下载页服务 Crestron 等。
+- summary_zh: Trane 相关模块与驱动资源列表。第三方模块/驱动下载页服务 Crestron 等。要点：第三方模块。来源为Control Concepts（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Trane / Control Concepts」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Trane 的 Control Concepts 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "第三方模块"
+- install_notes: null
+- app_takeaway_zh: 将「Trane / Control Concepts」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Trane 的 Control Concepts 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS063 | BNet bNexia Control4 Nexia driver
+- id: SS063
+- category: hvac
+- brand: Trane
+- subsystem: bNexia
+- evidence_tier: E3
+- region: NorthAmerica
+- source_url: https://bnet4solutions.com/portfolio/bnexia
+- source_name: BNet Solutions
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 经 Nexia 云 API 把 Trane 恒温器进 Control4。
+- summary_zh: 每位置一个 bNexia，配合 bTstat。经 Nexia 云 API 把 Trane 恒温器进 Control4。要点：Nexia云；C4。来源为BNet Solutions（E3），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：Nexia 存量用此路径。安装边界：依赖云。
+- key_points:
+  - "Nexia云"
+  - "C4"
+- install_notes: "依赖云。"
+- app_takeaway_zh: Nexia 存量用此路径。
+- training_snippet: 公开资料表明 Trane 的 bNexia 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS064 | BNet bTstat thermostat proxy
+- id: SS064
+- category: hvac
+- brand: Trane
+- subsystem: bTstat
+- evidence_tier: E3
+- region: NorthAmerica
+- source_url: https://bnet4solutions.com/portfolio/btstat
+- source_name: BNet Solutions
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: ThermostatV2 代理便于场景与导航器。
+- summary_zh: 需配合 bNexia。ThermostatV2 代理便于场景与导航器。要点：ThermostatV2。来源为BNet Solutions（E3），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：与 C4 气候代理对齐。公开资料表明 Trane 的 bTstat 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "ThermostatV2"
+- install_notes: null
+- app_takeaway_zh: 与 C4 气候代理对齐。
+- training_snippet: 公开资料表明 Trane 的 bTstat 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS065 | C4 Forums Trane ComfortLink driver thread
+- id: SS065
+- category: hvac
+- brand: Trane
+- subsystem: C4 forum
+- evidence_tier: E4
+- region: Global
+- source_url: https://www.c4forums.com/forums/topic/37435-trane-comfortlink-driver
+- source_name: C4 Forums
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 社区讨论反映真实部署坑点。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 经销商讨论 ComfortLink 驱动可用性与经验。社区讨论反映真实部署坑点。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：社区；坑点。来源为C4 Forums（E4），地域标签 Global，抓取日 2026-10-21。应用提示：将「Trane / C4 forum」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：社区非官方承诺。
+- key_points:
+  - "社区"
+  - "坑点"
+- install_notes: "社区非官方承诺。"
+- app_takeaway_zh: 将「Trane / C4 forum」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Trane 的 C4 forum 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E4。
+
+### SS066 | Lennox residential thermostats / comfort controls hub (iComfort path)
+- id: SS066
+- category: hvac
+- brand: Lennox
+- subsystem: Control4 support
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/residential/products/comfort-controls/thermostats
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Lennox 官方支持中心文档对接 Control4。
+- summary_zh: Lennox 住宅恒温器与舒适控制产品中心页，是 iComfort S30/E30 等智能恒温器的官方选型入口。别墅项目可由此进入 iComfort 产品线，再经 Lennox 官方公布的 Control4 集成前置条件与经销商驱动，把气候层纳入 Control4 导航器与场景。本条强调「官方产品入口→平台集成」路径，证据层级 E1，抓取日 2026-10-21。
+- key_points:
+  - "官方入口"
+  - "iComfort"
+  - "C4路径"
+- install_notes: null
+- app_takeaway_zh: 从官方恒温器中心进入 iComfort，再核对接 Control4 的固件/账户前置条件。
+- training_snippet: Lennox 官方住宅恒温器入口支撑 iComfort 作为别墅气候子系统，上层可由 Control4 等有线中枢集成。
+
+### SS067 | Lennox FAQ Control4 prerequisites
+- id: SS067
+- category: hvac
+- brand: Lennox
+- subsystem: Prereq FAQ
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/residential/support/faqs/what-are-the-pre-requisites-for-integration-of-my-lennox-smart-thermostat-with-my-control-4
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 明确固件与账户前置条件。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: S30 固件与 Control4 OS 版本要求。明确固件与账户前置条件。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：固件；前置。来源为Lennox（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Lennox / Prereq FAQ」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：未达标勿联调。
+- key_points:
+  - "固件"
+  - "前置"
+- install_notes: "未达标勿联调。"
+- app_takeaway_zh: 将「Lennox / Prereq FAQ」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Lennox 的 Prereq FAQ 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS068 | LennoxPros iComfort smart home integrations
+- id: SS068
+- category: hvac
+- brand: Lennox
+- subsystem: Pros news
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennoxpros.com/news/icomfort-smart-home-integration
+- source_name: LennoxPros
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 经销商新闻宣传智能家居平台集成。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 宣布 iComfort 与多家平台集成。经销商新闻宣传智能家居平台集成。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：经销商；集成。来源为LennoxPros（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Lennox / Pros news」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Lennox 的 Pros news 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "经销商"
+  - "集成"
+- install_notes: null
+- app_takeaway_zh: 将「Lennox / Pros news」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Lennox 的 Pros news 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS069 | iComfort E30/S30 homeowner manual PDF
+- id: SS069
+- category: hvac
+- brand: Lennox
+- subsystem: S30 manual
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/literature/Lennox_iComfortS30_Homeowner_Manual.pdf
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 用户手册是场景设计与客户教育基础。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: S30/E30 功能与操作。用户手册是场景设计与客户教育基础。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：用户手册。来源为Lennox（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Lennox / S30 manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Lennox 的 S30 manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "用户手册"
+- install_notes: null
+- app_takeaway_zh: 将「Lennox / S30 manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Lennox 的 S30 manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS070 | Lennox S30 smart thermostat product
+- id: SS070
+- category: hvac
+- brand: Lennox
+- subsystem: S30 product
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/es/residential/products/comfort-controls/thermostats/icomforts30
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 产品页规格支撑 BOM。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: S30 特性与兼容系统。产品页规格支撑 BOM。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：产品页。来源为Lennox（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Lennox / S30 product」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Lennox 的 S30 product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "产品页"
+- install_notes: null
+- app_takeaway_zh: 将「Lennox / S30 product」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Lennox 的 S30 product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS071 | Intesis Fujitsu VRF to Home Automation
+- id: SS071
+- category: hvac
+- brand: Fujitsu
+- subsystem: Intesis HA
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in775fgl00mo000-wmp-fgl-fujitsu-vrf-systems-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Fujitsu AIRSTAGE 经 Intesis 进 Control4。
+- summary_zh: 至多 64 内机，HA 协议，SDDP。Fujitsu AIRSTAGE 经 Intesis 进 Control4。要点：AIRSTAGE；Intesis。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：富士通别墅标准化接入。公开资料表明 Fujitsu 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "AIRSTAGE"
+  - "Intesis"
+- install_notes: null
+- app_takeaway_zh: 富士通别墅标准化接入。
+- training_snippet: 公开资料表明 Fujitsu 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS072 | Fujitsu multi-protocol gateway bulletin PDF
+- id: SS072
+- category: hvac
+- brand: Fujitsu
+- subsystem: FJ-VRF-775
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.fujitsugeneral.com/shared/us/pdf-fcus-airstage-vrf-fj-vref-775-01.pdf
+- source_name: Fujitsu General
+- published: 2024-08
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 官方多协议网关（BACnet/Modbus/KNX/MQTT/HA）。
+- summary_zh: FJ-VRF-775 4/16/64 许可与特性、淘汰计划。官方多协议网关（BACnet/Modbus/KNX/MQTT/HA）。要点：多协议网关。来源为Fujitsu General（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：新项目用 775 系列。公开资料表明 Fujitsu 的 FJ-VRF-775 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "多协议网关"
+- install_notes: null
+- app_takeaway_zh: 新项目用 775 系列。
+- training_snippet: 公开资料表明 Fujitsu 的 FJ-VRF-775 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS073 | Fujitsu AIRSTAGE adapters converters index
+- id: SS073
+- category: hvac
+- brand: Fujitsu
+- subsystem: Adapters
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.fujitsu-general.com/us/products/vrf/adaptor/index.html
+- source_name: Fujitsu General
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 官方适配器目录含 BACnet/Modbus 等。
+- summary_zh: 适配器与转换器产品索引。官方适配器目录含 BACnet/Modbus 等。要点：适配器目录。来源为Fujitsu General（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Fujitsu / Adapters」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 Adapters 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "适配器目录"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / Adapters」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 Adapters 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS074 | Intesis IN775FGL user manual PDF
+- id: SS074
+- category: hvac
+- brand: Fujitsu
+- subsystem: Intesis manual
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/docs/default-source/products/intesis/manuals-and-guides---manuals/user_manual_in775fglxxxo000.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 手册支持 BACnet/Modbus 等，便于四老牌 BACnet 框架。
+- summary_zh: 700 Series Fujitsu 网关完整手册。手册支持 BACnet/Modbus 等，便于四老牌 BACnet 框架。要点：手册；扫描。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Fujitsu / Intesis manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 Intesis manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "手册"
+  - "扫描"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / Intesis manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 Intesis manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS075 | Fujitsu VRF integration Crestron CoolAutomation news
+- id: SS075
+- category: hvac
+- brand: Fujitsu
+- subsystem: CoolAuto news
+- evidence_tier: E2
+- region: Global
+- source_url: https://www.hvacinformed.com/news/fujitsu-vrf-integration-crestron-co-1573563412-ga-co-1581320551-ga.1590590635.html
+- source_name: HVAC Informed
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 贸易媒体报道 Fujitsu+Crestron 经 CoolAutomation。
+- summary_zh: 新闻简述双向实时反馈集成。贸易媒体报道 Fujitsu+Crestron 经 CoolAutomation。要点：媒体；Crestron。来源为HVAC Informed（E2），地域标签 Global，抓取日 2026-10-21。应用提示：将「Fujitsu / CoolAuto news」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 CoolAuto news 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "媒体"
+  - "Crestron"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / CoolAuto news」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 CoolAuto news 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS076 | LG ACP 5 PACP5A000 BACnet gateway
+- id: SS076
+- category: hvac
+- brand: LG VRF
+- subsystem: ACP 5
+- evidence_tier: E1
+- region: Europe/Global
+- source_url: https://www.lg.com/uk/business/hvac/control-solution/pacp5a000
+- source_name: LG
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: ACP5 提供 BACnet/IP+Modbus，四老牌可作客户端控 Multi V。
+- summary_zh: 至 256 内机中央控制器/网关，移动 Web 访问。ACP5 提供 BACnet/IP+Modbus，四老牌可作客户端控 Multi V。要点：ACP5；BACnet；256。来源为LG（E1），地域标签 Europe/Global，抓取日 2026-10-21。应用提示：大宅 Multi V 用 ACP5。公开资料表明 LG VRF 的 ACP 5 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "ACP5"
+  - "BACnet"
+  - "256"
+- install_notes: null
+- app_takeaway_zh: 大宅 Multi V 用 ACP5。
+- training_snippet: 公开资料表明 LG VRF 的 ACP 5 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS077 | LG AC Smart 5 PACS5A000
+- id: SS077
+- category: hvac
+- brand: LG VRF
+- subsystem: AC Smart 5
+- evidence_tier: E1
+- region: Europe/Global
+- source_url: https://www.lg.com/uk/business/hvac/control-solution/pacs5a000
+- source_name: LG
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: AC Smart5 至 128 内机，同样 BACnet/Modbus 出口。
+- summary_zh: 中央控制+网关功能。AC Smart5 至 128 内机，同样 BACnet/Modbus 出口。要点：AC Smart5；128。来源为LG（E1），地域标签 Europe/Global，抓取日 2026-10-21。应用提示：中大型别墅选 AC Smart5。公开资料表明 LG VRF 的 AC Smart 5 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "AC Smart5"
+  - "128"
+- install_notes: null
+- app_takeaway_zh: 中大型别墅选 AC Smart5。
+- training_snippet: 公开资料表明 LG VRF 的 AC Smart 5 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS078 | LG Controls Master Guide Specification PDF
+- id: SS078
+- category: hvac
+- brand: LG VRF
+- subsystem: Spec guide
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://legacy.lghvac.com/resource-service?filename=GS_Controls_Master_Guide_Specification.pdf
+- source_name: LG HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 主规格书供设计说明写入开放协议要求。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 控制系统主规范，含网关能力描述。主规格书供设计说明写入开放协议要求。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：规格书。来源为LG HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「LG VRF / Spec guide」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 LG VRF 的 Spec guide 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "规格书"
+- install_notes: null
+- app_takeaway_zh: 将「LG VRF / Spec guide」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 LG VRF 的 Spec guide 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS079 | LG UK business hub (HVAC entry)
+- id: SS079
+- category: hvac
+- brand: LG VRF
+- subsystem: Gateway leaflet
+- evidence_tier: E1
+- region: Europe
+- source_url: https://www.lg.com/uk/business/
+- source_name: LG UK
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 网关折页含云/Modbus 等小系统选项。
+- summary_zh: LG 英国商业站点入口，可导航到 Multi V 与集控/网关方案。欧洲别墅常经 BACnet/Modbus 集控，由 Crestron 等有线中枢作客户端。 来源 LG UK（E1），抓取日 2026-10-21。 网关折页含云/Modbus 等小系统选项。
+- key_points:
+  - "网关折页"
+- install_notes: null
+- app_takeaway_zh: 将「LG VRF / Gateway leaflet」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 LG VRF 的 Gateway leaflet 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS080 | LG Global central controller hub
+- id: SS080
+- category: hvac
+- brand: LG VRF
+- subsystem: Central controller
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.lg.com/global/business/hvac/control-solutions/central-controller
+- source_name: LG Global
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 全球控制解决方案入口。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 中央控制器产品家族。全球控制解决方案入口。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：入口。来源为LG Global（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「LG VRF / Central controller」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 LG VRF 的 Central controller 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "入口"
+- install_notes: null
+- app_takeaway_zh: 将「LG VRF / Central controller」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 LG VRF 的 Central controller 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS081 | Samsung HVAC Intesis AC Interfaces
+- id: SS081
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Intesis page
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/controls/intesis-ac-interfaces
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 三星官方推荐 Intesis，进而进 Control4 等。
+- summary_zh: 列出 Intesis 接口产品线。三星官方推荐 Intesis，进而进 Control4 等。要点：官方Intesis。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：DVM-S 优先 Intesis。公开资料表明 Samsung HVAC 的 Intesis page 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "官方Intesis"
+- install_notes: null
+- app_takeaway_zh: DVM-S 优先 Intesis。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Intesis page 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS082 | Samsung Intesis BACnet interfaces
+- id: SS082
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Intesis BACnet
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/intesis/intesis-bacnet_0
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: BACnet 接口便于四老牌 BACnet 恒温器。
+- summary_zh: BACnet 型号说明页。BACnet 接口便于四老牌 BACnet 恒温器。要点：BACnet。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：走 BACnet 对象映射。公开资料表明 Samsung HVAC 的 Intesis BACnet 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: 走 BACnet 对象映射。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Intesis BACnet 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS083 | Samsung MIM-A60UN thermostat adapter
+- id: SS083
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Thermostat adapter
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/Controls-Thermostat%20Adapters/mim-a60un
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 24VAC 恒温器适配可接传统/有线恒温器策略。
+- summary_zh: F3/F4 线适配器；与部分集控互斥注意。24VAC 恒温器适配可接传统/有线恒温器策略。要点：24VAC适配。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：传统恒温器改造选项。安装边界：装适配器时集控可能仅监控。本条收录品牌「Samsung HVAC」子系统「Thermostat adapter」公开页面《Samsung MIM-A60UN thermostat adapter》，供别墅有线智能家居控制层融合方案与本地模型训练检索。
+- key_points:
+  - "24VAC适配"
+- install_notes: "装适配器时集控可能仅监控。"
+- app_takeaway_zh: 传统恒温器改造选项。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Thermostat adapter 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS084 | Samsung HVAC central controls
+- id: SS084
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Central controls
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/controls/central-controls
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 集控是 Intesis/CoolMaster 并联对象。
+- summary_zh: 中央控制产品入口。集控是 Intesis/CoolMaster 并联对象。要点：集控。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：保留集控+网关并联。公开资料表明 Samsung HVAC 的 Central controls 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "集控"
+- install_notes: null
+- app_takeaway_zh: 保留集控+网关并联。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Central controls 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS085 | Intesis IN770 Samsung user manual PDF
+- id: SS085
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Intesis manual
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/docs/default-source/products/intesis/manuals-and-guides---manuals/user-manual-in770samxxxo000.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: R1/R2 总线网关手册，HA/BACnet 等。
+- summary_zh: 700 Series Samsung 完整手册。R1/R2 总线网关手册，HA/BACnet 等。要点：R1/R2；手册。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Samsung HVAC / Intesis manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Samsung HVAC 的 Intesis manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "R1/R2"
+  - "手册"
+- install_notes: null
+- app_takeaway_zh: 将「Samsung HVAC / Intesis manual」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Intesis manual 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS086 | Bosch Home Comfort interfaces
+- id: SS086
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: Interfaces
+- evidence_tier: E1
+- region: Europe/Global
+- source_url: https://www.bosch-homecomfort.com/global/en/interfaces
+- source_name: Bosch
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 热泵接口族含未来 KNX，可与有线中枢/ KNX 骨干融合。
+- summary_zh: 介绍联网与第三方接口策略。热泵接口族含未来 KNX，可与有线中枢/ KNX 骨干融合。要点：热泵接口。来源为Bosch（E1），地域标签 Europe/Global，抓取日 2026-10-21。应用提示：欧洲别墅热泵+KNX/四老牌。公开资料表明 Bosch Thermotechnology 的 Interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "热泵接口"
+- install_notes: null
+- app_takeaway_zh: 欧洲别墅热泵+KNX/四老牌。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 Interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS087 | Bosch DE 接口与扇区耦合
+- id: SS087
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: DE interfaces
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.bosch-homecomfort.com/de/de/wohngebaeude/wissen/sektorenkopplung/schnittstellen%20von%20Bosch
+- source_name: Bosch
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 德文官方接口说明，含智能家居耦合。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 扇区耦合与接口知识页。德文官方接口说明，含智能家居耦合。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：德语；扇区耦合。来源为Bosch（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / DE interfaces」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 DE interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "德语"
+  - "扇区耦合"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / DE interfaces」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 DE interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS088 | Wärmepumpe vernetzen Smart Home
+- id: SS088
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: Heat pump SH
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.bosch-homecomfort.com/de/de/wohngebaeude/wissen/heizungsratgeber/waermepumpe/waermepumpe-smart-home
+- source_name: Bosch
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 热泵联网智能家居官方指南。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 如何将热泵纳入智能家居。热泵联网智能家居官方指南。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：热泵；智能家居。来源为Bosch（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / Heat pump SH」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 Heat pump SH 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "热泵"
+  - "智能家居"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / Heat pump SH」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 Heat pump SH 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS089 | Buderus Gateway KNX 20
+- id: SS089
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: Buderus KNX20
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.buderus.de/de/produkte/knx-20-gateway-109534
+- source_name: Buderus/Bosch
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: KNX20 把热泵挂上 KNX，再经 KNX 网关进 Control4/Crestron。
+- summary_zh: EMS plus 热泵至 KNX，最多四回路等。KNX20 把热泵挂上 KNX，再经 KNX 网关进 Control4/Crestron。要点：KNX20；EMS。来源为Buderus/Bosch（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：欧式：热泵→KNX→四老牌。公开资料表明 Bosch Thermotechnology 的 Buderus KNX20 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "KNX20"
+  - "EMS"
+- install_notes: null
+- app_takeaway_zh: 欧式：热泵→KNX→四老牌。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 Buderus KNX20 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS090 | Buderus KNX20 flyer PDF
+- id: SS090
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: KNX20 flyer
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.buderus.de/resource/blob/109532/fedb6a457288b662b11396af0840367d/flyer-gateway-knx-20-data.pdf
+- source_name: Buderus
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 折页规格便于 BOM。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: KNX20 功能与兼容机型。折页规格便于 BOM。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：折页；规格。来源为Buderus（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / KNX20 flyer」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 KNX20 flyer 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "折页"
+  - "规格"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / KNX20 flyer」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 KNX20 flyer 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS091 | Buderus Presse KNX20
+- id: SS091
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: KNX20 PR
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.buderus.de/resource/blob/113304/ca2920181f02b4cb87bc4b26e6c9d201/Buderus-Presseinformation_Gateway-KNX20.pdf
+- source_name: Buderus
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 新闻稿确立产品上市叙事。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: KNX20 发布信息。新闻稿确立产品上市叙事。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：新闻稿。来源为Buderus（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / KNX20 PR」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 KNX20 PR 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "新闻稿"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / KNX20 PR」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 KNX20 PR 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS092 | Buderus Schnittstellen overview
+- id: SS092
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: Buderus interfaces
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.buderus.de/de/heiztechnik-verstehen/schnittstellen-buderus-108842
+- source_name: Buderus
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 接口总览含智能家居与光伏优化。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Buderus 接口家族说明。接口总览含智能家居与光伏优化。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：接口总览。来源为Buderus（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / Buderus interfaces」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 Buderus interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "接口总览"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / Buderus interfaces」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 Buderus interfaces 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS093 | Buderus Konnektivität für Ihr Haus
+- id: SS093
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: Connectivity
+- evidence_tier: E1
+- region: Germany
+- source_url: https://www.buderus.de/de/produkte/produkte-uebersicht/konnektivitaet-fuer-ihr-haus-15434
+- source_name: Buderus
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 住宅连接产品集合页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 网关与连接产品概览。住宅连接产品集合页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：连接产品。来源为Buderus（E1），地域标签 Germany，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / Connectivity」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 Connectivity 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "连接产品"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / Connectivity」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 Connectivity 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS094 | Intesis York VRF to Home Automation PDF
+- id: SS094
+- category: hvac
+- brand: York/JCI
+- subsystem: Intesis HA
+- evidence_tier: E1
+- region: Global
+- source_url: https://media.hms-networks.com/image/upload/v1751557655/Documents/Generated_Datasheets/Production/en/hms-IN770AIR00SO000_WMP_YRK-en-York-VRF-systems-to-Home-Automation-Application.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: York VRF 经 Intesis 进 Control4 等。
+- summary_zh: 至 16 内机 HA 应用数据表。York VRF 经 Intesis 进 Control4 等。要点：York VRF；HA。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：JCI/York 别墅 VRF 路径。公开资料表明 York/JCI 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "York VRF"
+  - "HA"
+- install_notes: null
+- app_takeaway_zh: JCI/York 别墅 VRF 路径。
+- training_snippet: 公开资料表明 York/JCI 的 Intesis HA 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS095 | Samsung HVAC official home
+- id: SS095
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Smart Gateway
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: CBN02 面向 BACnet/Metasys，大宅可进 BACnet 中枢。
+- summary_zh: 三星北美 HVAC 官网入口，可进入 DVM-S 控制、Intesis 接口与集控资料。别墅多联机经 Intesis/CoolMaster 接入四老牌。 来源 Samsung HVAC（E1），抓取日 2026-10-21。 CBN02 面向 BACnet/Metasys，大宅可进 BACnet 中枢。
+- key_points:
+  - "CBN02"
+  - "BACnet"
+- install_notes: null
+- app_takeaway_zh: BAS 向大宅选用。
+- training_snippet: 公开资料表明 York/JCI 的 Smart Gateway 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS096 | Fujitsu GENERAL US home (AIRSTAGE entry)
+- id: SS096
+- category: hvac
+- brand: Fujitsu
+- subsystem: Gateway guide
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.fujitsu-general.com/us/
+- source_name: Fujitsu General
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 用户指南介绍点位与远程能力。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Fujitsu GENERAL 美国站入口，导航 AIRSTAGE VRF 与多协议网关资料。别墅项目可经 FJ-VRF-775/Intesis 进入 Control4/Crestron。 来源 Fujitsu General（E1），抓取日 2026-10-21。 用户指南介绍点位与远程能力。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- key_points:
+  - "用户指南"
+- install_notes: null
+- app_takeaway_zh: 将「York/JCI / Gateway guide」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 York/JCI 的 Gateway guide 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS097 | York residential thermostats
+- id: SS097
+- category: hvac
+- brand: York/JCI
+- subsystem: Thermostats
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.york.com/residential-equipment/residential-thermostats
+- source_name: York
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 住宅恒温器线可再经第三方驱动进四老牌。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 可编程恒温器产品入口。住宅恒温器线可再经第三方驱动进四老牌。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：恒温器。来源为York（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「York/JCI / Thermostats」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 York/JCI 的 Thermostats 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "恒温器"
+- install_notes: null
+- app_takeaway_zh: 将「York/JCI / Thermostats」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 York/JCI 的 Thermostats 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS098 | York VRF catalog PDF
+- id: SS098
+- category: hvac
+- brand: York/JCI
+- subsystem: VRF catalog
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.miller-picking.com/-/media/project/jci-global/york-sites/united-states-york/commercial/files/jchna_cat_york-vrf-catalog_20211021.pdf
+- source_name: York/JCI
+- published: 2021
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 产品目录支撑别墅 VRF 选型。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: York VRF 目录。产品目录支撑别墅 VRF 选型。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：目录。来源为York/JCI（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「York/JCI / VRF catalog」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 York/JCI 的 VRF catalog 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "目录"
+- install_notes: null
+- app_takeaway_zh: 将「York/JCI / VRF catalog」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 York/JCI 的 VRF catalog 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS099 | Rheem EcoNet Control4 driver (water heater)
+- id: SS099
+- category: hvac
+- brand: Rheem
+- subsystem: EcoNet C4
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://drivercentral.io/platforms/control4-drivers/climate-fan-fireplace/rheem-econet-water-heater
+- source_name: DriverCentral
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: EcoNet 云 API 已进 Control4（热水），证明生态可扩展到气候。
+- summary_zh: Gen5 热泵热水器 C4 驱动页。EcoNet 云 API 已进 Control4（热水），证明生态可扩展到气候。要点：EcoNet；热水器。来源为DriverCentral（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：同账号生态可扩恒温器。安装边界：当前公开主推热水。
+- key_points:
+  - "EcoNet"
+  - "热水器"
+- install_notes: "当前公开主推热水。"
+- app_takeaway_zh: 同账号生态可扩恒温器。
+- training_snippet: 公开资料表明 Rheem 的 EcoNet C4 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS100 | Control4 climate drivers page listing
+- id: SS100
+- category: hvac
+- brand: Rheem
+- subsystem: DriverCentral climate
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://drivercentral.io/platforms/control4-drivers/climate-fan-fireplace/page-3
+- source_name: DriverCentral
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 气候驱动目录含 Rheem 等品牌入口。
+- summary_zh: C4 气候类驱动分页列表。气候驱动目录含 Rheem 等品牌入口。要点：驱动目录。来源为DriverCentral（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：查 Rheem/其他驱动。公开资料表明 Rheem 的 DriverCentral climate 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "驱动目录"
+- install_notes: null
+- app_takeaway_zh: 查 Rheem/其他驱动。
+- training_snippet: 公开资料表明 Rheem 的 DriverCentral climate 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS101 | Harness Automation Rheem EcoNet docs
+- id: SS101
+- category: hvac
+- brand: Rheem
+- subsystem: Harness
+- evidence_tier: E3
+- region: Global
+- source_url: https://docs.harnessautomation.com/gem/admin/drivers/rheem_econet
+- source_name: Harness Automation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 第三方平台文档描述 EcoNet REST/能力。
+- summary_zh: 恒温器模式/设定点/风速等 API 能力说明。第三方平台文档描述 EcoNet REST/能力。要点：API；EcoNet。来源为Harness Automation（E3），地域标签 Global，抓取日 2026-10-21。应用提示：非 C4 原生时评估云 API。公开资料表明 Rheem 的 Harness 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "API"
+  - "EcoNet"
+- install_notes: null
+- app_takeaway_zh: 非 C4 原生时评估云 API。
+- training_snippet: 公开资料表明 Rheem 的 Harness 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS102 | Hubitat Rheem EcoNet community drivers
+- id: SS102
+- category: hvac
+- brand: Rheem
+- subsystem: Hubitat
+- evidence_tier: E4
+- region: Global
+- source_url: https://community.hubitat.com/t/release-rheem-econet-thermostat-water-heater-drivers/163127
+- source_name: Hubitat Community
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 社区驱动证明 EcoNet 恒温器可被自动化平台控制。
+- summary_zh: 发布恒温器+热水器驱动讨论。社区驱动证明 EcoNet 恒温器可被自动化平台控制。要点：社区；EcoNet。来源为Hubitat Community（E4），地域标签 Global，抓取日 2026-10-21。应用提示：将「Rheem / Hubitat」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：社区非厂商支持。
+- key_points:
+  - "社区"
+  - "EcoNet"
+- install_notes: "社区非厂商支持。"
+- app_takeaway_zh: 将「Rheem / Hubitat」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Rheem 的 Hubitat 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E4。
+
+### SS103 | Works with Crestron Home documentation
+- id: SS103
+- category: hvac
+- brand: Rheem
+- subsystem: Crestron works
+- evidence_tier: E1
+- region: Global
+- source_url: https://docs.crestron.com/en-us/8525/Content/CP4R/Appendix/Works-With-Crestron-Home/Works-with-Crestron-Home.htm
+- source_name: Crestron
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: Crestron Home 兼容设备总册，气候类可对照。
+- summary_zh: 官方 Works-with 列表文档。Crestron Home 兼容设备总册，气候类可对照。要点：兼容列表。来源为Crestron（E1），地域标签 Global，抓取日 2026-10-21。应用提示：查是否已有 Rheem/HVAC 项。公开资料表明 Rheem 的 Crestron works 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "兼容列表"
+- install_notes: null
+- app_takeaway_zh: 查是否已有 Rheem/HVAC 项。
+- training_snippet: 公开资料表明 Rheem 的 Crestron works 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS104 | iTM BACnet Server Gateway option product page
+- id: SS104
+- category: hvac
+- brand: Daikin
+- subsystem: iTM product
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/products/commercial-systems/commercial-controls/itm-bacnet--server-gateway-option
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 产品页补充 PDF 设计指南。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: iTM BACnet 选项概述。产品页补充 PDF 设计指南。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：iTM产品页。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / iTM product」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 iTM product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "iTM产品页"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / iTM product」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 iTM product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS105 | Intesis Fujitsu HA S capacity
+- id: SS105
+- category: hvac
+- brand: Fujitsu
+- subsystem: Intesis S
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/p/in775fgl00so000-wmp-fgl-fujitsu-vrf-systems-to-home-automation-application
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: S 许可档富士通 HA 网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 较小容量 HA 应用页。S 许可档富士通 HA 网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：S许可。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Fujitsu / Intesis S」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 Intesis S 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "S许可"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / Intesis S」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 Intesis S 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS106 | Intesis IN485FGL001I000 manual PDF
+- id: SS106
+- category: hvac
+- brand: Fujitsu
+- subsystem: CN gateway
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.hms-networks.com/docs/default-source/products/intesis/manuals-and-guides---manuals/user_manual_in485fgl001i000.pdf
+- source_name: HMS/Intesis
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 单内机 CN 接头 BACnet/Modbus，适合改造单室。
+- summary_zh: CN 连接网关手册。单内机 CN 接头 BACnet/Modbus，适合改造单室。要点：单机；CN。来源为HMS/Intesis（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Fujitsu / CN gateway」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 CN gateway 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "单机"
+  - "CN"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / CN gateway」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 CN gateway 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS107 | Control4 Wireless Thermostat by Aprilaire datasheet
+- id: SS107
+- category: hvac
+- brand: Aprilaire
+- subsystem: C4 thermostat DS
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://docs.control4.com/docs/product/control4-wireless-thermostat-by-aprilaire/data-sheet/english/latest/control4-wireless-thermostat-by-aprilaire-data-sheet-rev-b.pdf
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: Control4 自有品牌恒温器（Aprilaire OEM），原生气候中枢。
+- summary_zh: 支持通风/加湿/除湿控制位。Control4 自有品牌恒温器（Aprilaire OEM），原生气候中枢。要点：C4恒温器；通风位。来源为Control4（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：无 VRF 时用原生恒温器+通风。公开资料表明 Aprilaire 的 C4 thermostat DS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "C4恒温器"
+  - "通风位"
+- install_notes: null
+- app_takeaway_zh: 无 VRF 时用原生恒温器+通风。
+- training_snippet: 公开资料表明 Aprilaire 的 C4 thermostat DS 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS108 | Control4 Aprilaire thermostat install guide
+- id: SS108
+- category: hvac
+- brand: Aprilaire
+- subsystem: C4 install
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://docs.control4.com/docs/product/control4-wireless-thermostat-by-aprilaire/installation-guide/english/latest/control4-wireless-thermostat-by-aprilaire-installation-guide-rev-b.pdf
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 安装指南含通风继电器配置。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 安全与安装、Fresh Air 设置。安装指南含通风继电器配置。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：通风继电器。来源为Control4（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：配置 Fresh Air 选项。安装边界：低压控制线由持证人员。
+- key_points:
+  - "通风继电器"
+- install_notes: "低压控制线由持证人员。"
+- app_takeaway_zh: 配置 Fresh Air 选项。
+- training_snippet: 公开资料表明 Aprilaire 的 C4 install 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS109 | Control4 Smart Thermostat solution page
+- id: SS109
+- category: hvac
+- brand: Aprilaire
+- subsystem: C4 product
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.control4.com/solutions/products/thermostat
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 四老牌之一官方气候产品页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 智能恒温器解决方案。四老牌之一官方气候产品页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：官方产品。来源为Control4（E1），地域标签 Global，抓取日 2026-10-21。应用提示：C4 气候叙事入口。公开资料表明 Aprilaire 的 C4 product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "官方产品"
+- install_notes: null
+- app_takeaway_zh: C4 气候叙事入口。
+- training_snippet: 公开资料表明 Aprilaire 的 C4 product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS110 | AprilAire S86WMUPR Crestron Home guide PDF
+- id: SS110
+- category: hvac
+- brand: Aprilaire
+- subsystem: ControlWorks S86
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://store.controlworks.com/product_resources/documentation/ControlWorks_HVAC_Aprilaire_S86WMUPR_TCP-IP-help.pdf
+- source_name: ControlWorks
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: Crestron Home 经 TCP/IP 控 Aprilaire Wi-Fi 恒温器。
+- summary_zh: 应用指南与帮助。Crestron Home 经 TCP/IP 控 Aprilaire Wi-Fi 恒温器。要点：Crestron Home；Wi-Fi恒温器。来源为ControlWorks（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：Crestron+Aprilaire 路径。公开资料表明 Aprilaire 的 ControlWorks S86 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "Crestron Home"
+  - "Wi-Fi恒温器"
+- install_notes: null
+- app_takeaway_zh: Crestron+Aprilaire 路径。
+- training_snippet: 公开资料表明 Aprilaire 的 ControlWorks S86 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS111 | Aprilaire WiFi thermostats Crestron module shop
+- id: SS111
+- category: hvac
+- brand: Aprilaire
+- subsystem: ControlWorks shop
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://store.controlworks.com/products/Aprilaire-WiFi-thermostats
+- source_name: ControlWorks
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 商城页确认模块可售与功能范围。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Crestron 模块产品页。商城页确认模块可售与功能范围。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：模块销售。来源为ControlWorks（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Aprilaire / ControlWorks shop」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Aprilaire 的 ControlWorks shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "模块销售"
+- install_notes: null
+- app_takeaway_zh: 将「Aprilaire / ControlWorks shop」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 ControlWorks shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS112 | AprilAire 88XX Crestron Home driver
+- id: SS112
+- category: hvac
+- brand: Aprilaire
+- subsystem: 88xx Crestron
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://digitalautomation.us/product/aprilaire-88xx-series-crestron-home-driver
+- source_name: Digital Automation
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Crestron"]
+- control_layer_fit: 串口 88xx 系列进 Crestron Home，含湿度。
+- summary_zh: 8810/8820 等驱动说明。串口 88xx 系列进 Crestron Home，含湿度。要点：88xx；湿度。来源为Digital Automation（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Aprilaire / 88xx Crestron」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Aprilaire 的 88xx Crestron 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "88xx"
+  - "湿度"
+- install_notes: null
+- app_takeaway_zh: 将「Aprilaire / 88xx Crestron」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 88xx Crestron 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS113 | Control4 certified Aprilaire drivers search
+- id: SS113
+- category: hvac
+- brand: Aprilaire
+- subsystem: C4 drivers search
+- evidence_tier: E1
+- region: Global
+- source_url: https://drivers.control4.com/solr/drivers/browse?fq=certified%3A%22true%22&fq=manufacturer%3A%22Aprilaire%22&q=
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 官方认证驱动列表。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Aprilaire 认证驱动检索。官方认证驱动列表。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：认证驱动。来源为Control4（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Aprilaire / C4 drivers search」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Aprilaire 的 C4 drivers search 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "认证驱动"
+- install_notes: null
+- app_takeaway_zh: 将「Aprilaire / C4 drivers search」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 C4 drivers search 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS114 | Aprilaire 8800/8870 extended C4 driver
+- id: SS114
+- category: hvac
+- brand: Aprilaire
+- subsystem: Domosapiens
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://drivercentral.io/platforms/control4-drivers/climate-fan-fireplace/aprilaire-8800-8700-extended-serial-driver-by-domosapiens
+- source_name: DriverCentral/Domosapiens
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 扩展串口驱动含日程/湿度等。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 经 8811 适配器。扩展串口驱动含日程/湿度等。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：扩展驱动。来源为DriverCentral/Domosapiens（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：复杂气候用扩展驱动。公开资料表明 Aprilaire 的 Domosapiens 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "扩展驱动"
+- install_notes: null
+- app_takeaway_zh: 复杂气候用扩展驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 Domosapiens 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS115 | Aprilaire Wi-Fi thermostats SmartIAQ brochure
+- id: SS115
+- category: hvac
+- brand: Aprilaire
+- subsystem: SmartIAQ brochure
+- evidence_tier: E2
+- region: NorthAmerica
+- source_url: https://www.homecontrols.com/cdn/shop/files/Aprilaire-Wi-Fi-Thermostats-with-SmartlAQ-Brochure.pdf
+- source_name: HomeControls/Aprilaire
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: SmartIAQ 通风/空气质量叙事，可被中枢场景调用。
+- summary_zh: Wi-Fi 恒温器与 IAQ 宣传册。SmartIAQ 通风/空气质量叙事，可被中枢场景调用。要点：SmartIAQ；通风。来源为HomeControls/Aprilaire（E2），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Aprilaire / SmartIAQ brochure」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Aprilaire 的 SmartIAQ brochure 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+- key_points:
+  - "SmartIAQ"
+  - "通风"
+- install_notes: null
+- app_takeaway_zh: 将「Aprilaire / SmartIAQ brochure」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 SmartIAQ brochure 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E2。
+
+### SS116 | Control4 climate and comfort solutions
+- id: SS116
+- category: hvac
+- brand: Control4
+- subsystem: Climate solution
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.control4.com/solutions/climate-and-comfort
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: 四老牌官方气候舒适解决方案总述。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 气候与舒适自动化方案页。四老牌官方气候舒适解决方案总述。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：官方方案。来源为Control4（E1），地域标签 Global，抓取日 2026-10-21。应用提示：将「Control4 / Climate solution」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Control4 的 Climate solution 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "官方方案"
+- install_notes: null
+- app_takeaway_zh: 将「Control4 / Climate solution」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Control4 的 Climate solution 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS117 | Control4 CoolAutomation thermostatV2 drivers
+- id: SS117
+- category: hvac
+- brand: CoolAutomation
+- subsystem: Control4 solr thermostat
+- evidence_tier: E1
+- region: Global
+- source_url: https://drivers.control4.com/solr/drivers/browse?fq=manufacturer%3A%22CoolAutomation%22&fq=primaryProxy%3A%22thermostatV2%22&q=
+- source_name: Control4
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: ["Control4"]
+- control_layer_fit: ThermostatV2 代理驱动列表，便于场景引擎。
+- summary_zh: 筛选 CoolAutomation+thermostatV2。ThermostatV2 代理驱动列表，便于场景引擎。要点：ThermostatV2。来源为Control4（E1），地域标签 Global，抓取日 2026-10-21。应用提示：优先 ThermostatV2 驱动。公开资料表明 CoolAutomation 的 Control4 solr thermostat 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "ThermostatV2"
+- install_notes: null
+- app_takeaway_zh: 优先 ThermostatV2 驱动。
+- training_snippet: 公开资料表明 CoolAutomation 的 Control4 solr thermostat 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS118 | Fujitsu BACnet Modbus CN gateway shop listing
+- id: SS118
+- category: hvac
+- brand: Fujitsu
+- subsystem: Elmark IN485 shop
+- evidence_tier: E3
+- region: Europe
+- source_url: https://elmark-automation.com/shop/intesis/in485fgl001i000
+- source_name: Elmark
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 零售页确认单机网关可采购，改造项目可用。
+- summary_zh: IN485FGL001I000 商品说明。零售页确认单机网关可采购，改造项目可用。要点：采购；单机网关。来源为Elmark（E3），地域标签 Europe，抓取日 2026-10-21。应用提示：将「Fujitsu / Elmark IN485 shop」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 Elmark IN485 shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "采购"
+  - "单机网关"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / Elmark IN485 shop」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 Elmark IN485 shop 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS119 | Samsung thermostat adapters category
+- id: SS119
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Thermostat adapters hub
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/controls/thermostat-adapter
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 恒温器适配器品类页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 适配器产品入口。恒温器适配器品类页。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：适配器。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Samsung HVAC / Thermostat adapters hub」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Samsung HVAC 的 Thermostat adapters hub 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "适配器"
+- install_notes: null
+- app_takeaway_zh: 将「Samsung HVAC / Thermostat adapters hub」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Thermostat adapters hub 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS120 | Bosch Buderus heat pump EMS-ESP smart home docs
+- id: SS120
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: EMS-ESP community
+- evidence_tier: E4
+- region: Europe
+- source_url: https://bosch-buderus-wp.github.io/en/docs/smarthome
+- source_name: Community docs
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 开源 EMS-ESP 证明热泵数据可进自动化；别墅正式方案仍建议 KNX/厂商网关+四老牌。
+- summary_zh: REST/MQTT 接入 HA/OpenHAB 等说明。开源 EMS-ESP 证明热泵数据可进自动化；别墅正式方案仍建议 KNX/厂商网关+四老牌。要点：EMS-ESP；MQTT。来源为Community docs（E4），地域标签 Europe，抓取日 2026-10-21。应用提示：正式项目走 KNX20。安装边界：社区方案非厂商质保。
+- key_points:
+  - "EMS-ESP"
+  - "MQTT"
+- install_notes: "社区方案非厂商质保。"
+- app_takeaway_zh: 正式项目走 KNX20。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 EMS-ESP community 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E4。
+
+### SS121 | Daikin DKN Plus brochure PDF
+- id: SS121
+- category: hvac
+- brand: Daikin
+- subsystem: DKN PDF
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/docs/default-source/dkn-plus-interface/pf-dknplus-01-21.pdf
+- source_name: Daikin Comfort
+- published: 2021
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 折页强化单机开放协议叙事。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: DKN Plus 能力宣传册。折页强化单机开放协议叙事。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：折页。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / DKN PDF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 DKN PDF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "折页"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / DKN PDF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 DKN PDF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS122 | Lossnay LGH installation instructions NZ/UK style PDF
+- id: SS122
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Lossnay UK install
+- evidence_tier: E1
+- region: Global
+- source_url: https://www.mitsubishi-electric.co.nz/materials/ventilation/manuals/lossnay/lgh-rvs-e/2_installation/im_lgh50-100rvs-e_876h63801_en.pdf
+- source_name: Mitsubishi Electric
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 安装手册界定暖通边界，中枢只做联锁。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 风管、电气隔离等安装要求。安装手册界定暖通边界，中枢只做联锁。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：安装。来源为Mitsubishi Electric（E1），地域标签 Global，抓取日 2026-10-21。应用提示：联调前确认安装完成。安装边界：仅持证人员。
+- key_points:
+  - "安装"
+- install_notes: "仅持证人员。"
+- app_takeaway_zh: 联调前确认安装完成。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Lossnay UK install 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS123 | ME UK Lossnay LGH-RVX3 library download page ref
+- id: SS123
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Lossnay UK library
+- evidence_tier: E1
+- region: Europe
+- source_url: https://library.mitsubishielectric.co.uk/pdf/download_full/4832
+- source_name: Mitsubishi Electric UK
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 官方资料库入口获取完整技术手册。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: LGH-RVX3 系列文档下载项。官方资料库入口获取完整技术手册。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：资料库。来源为Mitsubishi Electric UK（E1），地域标签 Europe，抓取日 2026-10-21。应用提示：将「Mitsubishi Electric / Lossnay UK library」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Mitsubishi Electric 的 Lossnay UK library 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "资料库"
+- install_notes: null
+- app_takeaway_zh: 将「Mitsubishi Electric / Lossnay UK library」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Lossnay UK library 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS124 | ME UK Lossnay Control PDF library
+- id: SS124
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Lossnay control
+- evidence_tier: E1
+- region: Europe
+- source_url: https://library.mitsubishielectric.co.uk/pdf/download_full/2523
+- source_name: Mitsubishi Electric UK
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 控制手册说明干接点/M-NET，便于中枢联锁。
+- summary_zh: Lossnay 控制技术说明。控制手册说明干接点/M-NET，便于中枢联锁。要点：控制；干接点。来源为Mitsubishi Electric UK（E1），地域标签 Europe，抓取日 2026-10-21。应用提示：用干接点做增强通风场景。公开资料表明 Mitsubishi Electric 的 Lossnay control 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "控制"
+  - "干接点"
+- install_notes: null
+- app_takeaway_zh: 用干接点做增强通风场景。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Lossnay control 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS125 | ME UK Technical Manual Controls
+- id: SS125
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: Controls tech
+- evidence_tier: E1
+- region: Europe
+- source_url: https://library.mitsubishielectric.co.uk/pdf/download_full/2127
+- source_name: Mitsubishi Electric UK
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 总控制技术手册。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 控制系统技术手册入口。总控制技术手册。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：技术手册。来源为Mitsubishi Electric UK（E1），地域标签 Europe，抓取日 2026-10-21。应用提示：将「Mitsubishi Electric / Controls tech」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Mitsubishi Electric 的 Controls tech 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "技术手册"
+- install_notes: null
+- app_takeaway_zh: 将「Mitsubishi Electric / Controls tech」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 Controls tech 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS126 | Trane XL950 operation manual mirror
+- id: SS126
+- category: hvac
+- brand: Trane
+- subsystem: XL950 ops
+- evidence_tier: E3
+- region: NorthAmerica
+- source_url: https://tranethermostatmanual.com/Trane-XL950-Thermostat-Operation-Manual.php
+- source_name: Third-party mirror
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 操作说明补充存量调试经验。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: XL950 设置与高级功能。操作说明补充存量调试经验。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：操作。来源为Third-party mirror（E3），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Trane / XL950 ops」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。安装边界：非官方镜像，以厂家为准。
+- key_points:
+  - "操作"
+- install_notes: "非官方镜像，以厂家为准。"
+- app_takeaway_zh: 将「Trane / XL950 ops」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Trane 的 XL950 ops 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS127 | Lennox iComfort S30 English product page
+- id: SS127
+- category: hvac
+- brand: Lennox
+- subsystem: S30 EN product
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/residential/products/comfort-controls/thermostats/icomforts30
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 英文产品页（相对西语页）。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: S30 特性与规格。英文产品页（相对西语页）。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：产品页EN。来源为Lennox（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：BOM 链接用英文页。公开资料表明 Lennox 的 S30 EN product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "产品页EN"
+- install_notes: null
+- app_takeaway_zh: BOM 链接用英文页。
+- training_snippet: 公开资料表明 Lennox 的 S30 EN product 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS128 | York residential equipment hub
+- id: SS128
+- category: hvac
+- brand: York/JCI
+- subsystem: Residential equipment
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.york.com/residential-equipment
+- source_name: York
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 住宅设备总入口含暖通。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 住宅产品导航。住宅设备总入口含暖通。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：入口。来源为York（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「York/JCI / Residential equipment」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 York/JCI 的 Residential equipment 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "入口"
+- install_notes: null
+- app_takeaway_zh: 将「York/JCI / Residential equipment」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 York/JCI 的 Residential equipment 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS129 | Rheem EcoNet smart products hub
+- id: SS129
+- category: hvac
+- brand: Rheem
+- subsystem: EcoNet brand
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.rheem.com/econet
+- source_name: Rheem
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: EcoNet 生态总页，恒温器/热水可被中枢云驱。
+- summary_zh: EcoNet 平台介绍。EcoNet 生态总页，恒温器/热水可被中枢云驱。要点：EcoNet平台。来源为Rheem（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：确认设备是否 EcoNet。公开资料表明 Rheem 的 EcoNet brand 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "EcoNet平台"
+- install_notes: null
+- app_takeaway_zh: 确认设备是否 EcoNet。
+- training_snippet: 公开资料表明 Rheem 的 EcoNet brand 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS130 | Daikin VRV Life residential positioning
+- id: SS130
+- category: hvac
+- brand: Daikin
+- subsystem: VRV Life
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/products/residential-systems
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 住宅系统入口含 VRV Life，常接 One+/网关。
+- summary_zh: 住宅产品家族。住宅系统入口含 VRV Life，常接 One+/网关。要点：VRV Life。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / VRV Life」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 VRV Life 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "VRV Life"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / VRV Life」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 VRV Life 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS131 | Daikin commercial controls hub
+- id: SS131
+- category: hvac
+- brand: Daikin
+- subsystem: OpenAPI token flow already
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://daikincomfort.com/products/commercial-systems/commercial-controls
+- source_name: Daikin Comfort
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 商业控制产品中心，含各类网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 控制产品导航。商业控制产品中心，含各类网关。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：控制中心。来源为Daikin Comfort（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Daikin / OpenAPI token flow already」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Daikin 的 OpenAPI token flow already 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "控制中心"
+- install_notes: null
+- app_takeaway_zh: 将「Daikin / OpenAPI token flow already」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Daikin 的 OpenAPI token flow already 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS132 | MitsAir Lossnay solutions host
+- id: SS132
+- category: hvac
+- brand: Mitsubishi Electric
+- subsystem: MitsAir home
+- evidence_tier: E3
+- region: Global
+- source_url: https://www.mitsair.com
+- source_name: MitsAir
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 渠道商站点承载 Lossnay 资料。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 三菱通风渠道首页。渠道商站点承载 Lossnay 资料。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：渠道。来源为MitsAir（E3），地域标签 Global，抓取日 2026-10-21。应用提示：下载 brochure。公开资料表明 Mitsubishi Electric 的 MitsAir home 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+- key_points:
+  - "渠道"
+- install_notes: null
+- app_takeaway_zh: 下载 brochure。
+- training_snippet: 公开资料表明 Mitsubishi Electric 的 MitsAir home 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E3。
+
+### SS133 | Fujitsu GENERAL US AIRSTAGE VRF hub
+- id: SS133
+- category: hvac
+- brand: Fujitsu
+- subsystem: GENERAL US VRF
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.fujitsu-general.com/us/products/vrf/index.html
+- source_name: Fujitsu General
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: AIRSTAGE VRF 产品中心。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: VRF 产品导航。AIRSTAGE VRF 产品中心。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：AIRSTAGE。来源为Fujitsu General（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Fujitsu / GENERAL US VRF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Fujitsu 的 GENERAL US VRF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "AIRSTAGE"
+- install_notes: null
+- app_takeaway_zh: 将「Fujitsu / GENERAL US VRF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Fujitsu 的 GENERAL US VRF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS134 | LG UK business HVAC hub
+- id: SS134
+- category: hvac
+- brand: LG VRF
+- subsystem: UK business HVAC
+- evidence_tier: E1
+- region: Europe
+- source_url: https://www.lg.com/uk/business/hvac
+- source_name: LG
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 英国业务 HVAC 入口。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 产品与控制导航。英国业务 HVAC 入口。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：UK。来源为LG（E1），地域标签 Europe，抓取日 2026-10-21。应用提示：将「LG VRF / UK business HVAC」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 LG VRF 的 UK business HVAC 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "UK"
+- install_notes: null
+- app_takeaway_zh: 将「LG VRF / UK business HVAC」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 LG VRF 的 UK business HVAC 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS135 | Samsung HVAC controls hub
+- id: SS135
+- category: hvac
+- brand: Samsung HVAC
+- subsystem: Controls hub
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.samsunghvac.com/controls
+- source_name: Samsung HVAC
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 控制产品总汇。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Controls 导航。控制产品总汇。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：控制总汇。来源为Samsung HVAC（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：从总汇找 Intesis。公开资料表明 Samsung HVAC 的 Controls hub 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "控制总汇"
+- install_notes: null
+- app_takeaway_zh: 从总汇找 Intesis。
+- training_snippet: 公开资料表明 Samsung HVAC 的 Controls hub 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS136 | Bosch CH 采暖控制知识
+- id: SS136
+- category: hvac
+- brand: Bosch Thermotechnology
+- subsystem: CH Heizungssteuerung
+- evidence_tier: E1
+- region: Switzerland
+- source_url: https://www.bosch-homecomfort.com/ch/de/wohngebaeude/wissen/heizungssteuerung
+- source_name: Bosch
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 瑞士德语区采暖控制说明。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 采暖控制知识页。瑞士德语区采暖控制说明。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：瑞士。来源为Bosch（E1），地域标签 Switzerland，抓取日 2026-10-21。应用提示：将「Bosch Thermotechnology / CH Heizungssteuerung」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Bosch Thermotechnology 的 CH Heizungssteuerung 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "瑞士"
+- install_notes: null
+- app_takeaway_zh: 将「Bosch Thermotechnology / CH Heizungssteuerung」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Bosch Thermotechnology 的 CH Heizungssteuerung 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS137 | Trane Home support center
+- id: SS137
+- category: hvac
+- brand: Trane
+- subsystem: Home support
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://support.tranehome.com/hc/en-us
+- source_name: Trane Home
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 支持中心可检索第三方集成文章。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Trane Home Zendesk。支持中心可检索第三方集成文章。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：支持中心。来源为Trane Home（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Trane / Home support」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Trane 的 Home support 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "支持中心"
+- install_notes: null
+- app_takeaway_zh: 将「Trane / Home support」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Trane 的 Home support 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS138 | Lennox residential support hub
+- id: SS138
+- category: hvac
+- brand: Lennox
+- subsystem: Residential support
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.lennox.com/residential/support
+- source_name: Lennox
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 支持中心含 Control4 FAQ。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 住宅支持导航。支持中心含 Control4 FAQ。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：支持。来源为Lennox（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Lennox / Residential support」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Lennox 的 Residential support 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "支持"
+- install_notes: null
+- app_takeaway_zh: 将「Lennox / Residential support」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Lennox 的 Residential support 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS139 | AprilAire healthy air official
+- id: SS139
+- category: hvac
+- brand: Aprilaire
+- subsystem: Brand healthy air
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.aprilaire.com
+- source_name: AprilAire
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 健康空气品牌总站，通风/加湿子系统。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: 官网首页。健康空气品牌总站，通风/加湿子系统。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：IAQ品牌。来源为AprilAire（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「Aprilaire / Brand healthy air」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 Aprilaire 的 Brand healthy air 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "IAQ品牌"
+- install_notes: null
+- app_takeaway_zh: 将「Aprilaire / Brand healthy air」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 Aprilaire 的 Brand healthy air 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+
+### SS140 | York commercial ductless VRF hub
+- id: SS140
+- category: hvac
+- brand: York/JCI
+- subsystem: Commercial VRF
+- evidence_tier: E1
+- region: NorthAmerica
+- source_url: https://www.york.com/commercial-equipment/ductless-and-vrf-systems
+- source_name: York
+- published: unknown
+- fetched_on: 2026-10-21
+- mentions_legacy_brands: []
+- control_layer_fit: 商用/轻商 VRF 入口，大别墅常用。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。
+- summary_zh: Ductless & VRF 导航。商用/轻商 VRF 入口，大别墅常用。 别墅有线中枢（Control4/Crestron/Savant/Lutron）适合作为统一 UI/场景层，经 BACnet、厂商网关、串口/云驱动或 KNX 桥接本子系统。要点：VRF入口。来源为York（E1），地域标签 NorthAmerica，抓取日 2026-10-21。应用提示：将「York/JCI / Commercial VRF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。公开资料表明 York/JCI 的 Commercial VRF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。
+- key_points:
+  - "VRF入口"
+- install_notes: null
+- app_takeaway_zh: 将「York/JCI / Commercial VRF」作为气候或新风子系统写入方案库，控制层优先评估开放协议或官方驱动。
+- training_snippet: 公开资料表明 York/JCI 的 Commercial VRF 可通过网关或开放协议纳入别墅有线控制中枢；证据层级 E1。

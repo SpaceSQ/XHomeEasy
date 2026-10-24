@@ -1,0 +1,161 @@
+{
+  "brand": "Control4",
+  "dictionary_layer": "official",
+  "updated_on": "2026-10-21",
+  "item_count": 17,
+  "items": [
+    {
+      "id": "c4-ov-001",
+      "category": "overview",
+      "title": "Control4 官方门户地图",
+      "source_url": "https://www.control4.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/01-overview/portal-map.md",
+      "notes": "公开入口汇总；含目录/服务/找商/文档/登录缺口"
+    },
+    {
+      "id": "c4-ov-002",
+      "category": "overview",
+      "title": "Control4 access-gaps",
+      "source_url": "https://customer.control4.com/software/downloads",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/01-overview/access-gaps.md",
+      "notes": "Customer Portal/Dealer/部分 docs 登录墙"
+    },
+    {
+      "id": "c4-prod-001",
+      "category": "products",
+      "title": "Product Catalog",
+      "source_url": "https://www.control4.com/solutions/catalog",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/02-products/product-index.md",
+      "notes": "品类：控制器/触控/遥控/照明/温控/安防/Triad等；raw HTML 已存"
+    },
+    {
+      "id": "c4-prod-002",
+      "category": "products",
+      "title": "CORE 1 Controller datasheet",
+      "source_url": "https://docs.control4.com/docs/product/core-1/data-sheet/english/latest/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/core1-datasheet.pdf",
+      "notes": "C4-CORE1；PoE+；OvrC Pro；IR/串口；Ryff"
+    },
+    {
+      "id": "c4-prod-003",
+      "category": "products",
+      "title": "CORE 3 Controller datasheet",
+      "source_url": "https://docs.control4.com/docs/product/core-3/data-sheet/english/revision/C/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/core3-datasheet.pdf",
+      "notes": "公开 PDF"
+    },
+    {
+      "id": "c4-prod-004",
+      "category": "products",
+      "title": "CORE 5 Controller datasheet",
+      "source_url": "https://docs.control4.com/docs/product/core-5/data-sheet/english/revision/A/core-5-data-sheet-rev-a.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/core5-datasheet.pdf",
+      "notes": "机架型；多区音频；Zigbee/Z-Wave天线说明"
+    },
+    {
+      "id": "c4-prod-005",
+      "category": "products",
+      "title": "EA-5 Controller datasheet",
+      "source_url": "https://docs.control4.com/docs/product/ea-5/data-sheet/english/revision/D/ea-5-data-sheet-rev-d.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/ea5-datasheet.pdf",
+      "notes": "前代机架控制器公开规格"
+    },
+    {
+      "id": "c4-prod-006",
+      "category": "products",
+      "title": "T4 Series Touchscreen datasheet",
+      "source_url": "https://docs.control4.com/docs/product/t4-series-touchscreen/data-sheet/english/latest/t4-series-touchscreen-data-sheet-rev-d.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/t4-datasheet.pdf",
+      "notes": "8/10寸触控规格"
+    },
+    {
+      "id": "c4-prod-007",
+      "category": "products",
+      "title": "CORE 5 Dealer Installation Guide",
+      "source_url": "https://docs.control4.com/docs/product/core-5/dealer-installation-guide/english/latest/core-5-installation-guide-rev-b.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/core5-install.pdf",
+      "notes": "安装指南缓存；摘要层不写市电接线步骤"
+    },
+    {
+      "id": "c4-arch-001",
+      "category": "architecture",
+      "title": "OS3 / CORE 架构要点",
+      "source_url": "https://www.control4.com/solutions/catalog",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/03-architecture/os3-core-overview.md",
+      "notes": "IP/IR/串口/Zigbee；OvrC；订阅远程"
+    },
+    {
+      "id": "c4-inst-001",
+      "category": "install",
+      "title": "安装文档索引（安全边界）",
+      "source_url": "https://docs.control4.com/docs/product/core-5/dealer-installation-guide/english/latest/core-5-installation-guide-rev-b.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/04-install-wiring/install-docs-index.md",
+      "notes": "仅索引+安全边界"
+    },
+    {
+      "id": "c4-prog-001",
+      "category": "programming",
+      "title": "OvrC Dealer of Record / Change Smart Home Pro",
+      "source_url": "https://help.snapone.com/ovrc-ug/Content/C4CA/Dealer%20of%20Record%20Change.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/05-programming-handover/ovrc-dealer-of-record.md",
+      "notes": "业主换集成商公开流程；移交范围"
+    },
+    {
+      "id": "c4-prog-002",
+      "category": "programming",
+      "title": "SnapAV 更新换商流程新闻",
+      "source_url": "https://news.snapav.com/post/updated-process-to-change-the-dealer-of-record",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/control4/snapav-dorc-news.html",
+      "notes": "现场 System Takeover / OvrC Pro Hub"
+    },
+    {
+      "id": "c4-ops-001",
+      "category": "ops",
+      "title": "Connect / Assist 服务页",
+      "source_url": "https://www.control4.com/services",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/06-ops-remote/connect-assist-ovrc.md",
+      "notes": "订阅与厂商远程支持营销"
+    },
+    {
+      "id": "c4-part-001",
+      "category": "partner",
+      "title": "Integrator Search / Become Integrator",
+      "source_url": "https://www.control4.com/integrator-search",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/07-partner-network/integrator-locator.md",
+      "notes": "找商+成为集成商"
+    },
+    {
+      "id": "c4-price-001",
+      "category": "pricing",
+      "title": "公开价格说明（未公开价目）",
+      "source_url": "https://www.control4.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/08-pricing-public/pricing-note.md",
+      "notes": "无消费级MSRP"
+    },
+    {
+      "id": "c4-train-001",
+      "category": "training",
+      "title": "Learning Paths PDF",
+      "source_url": "https://docs.control4.com/docs/product/sharpen-your-skills/all-dealer-learning/english/latest/sharpen-your-skills-learning-rev-a.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "01-Control4/09-training-cert/learning-paths.md",
+      "notes": "Education Portal / Snap University 主题列表"
+    }
+  ]
+}

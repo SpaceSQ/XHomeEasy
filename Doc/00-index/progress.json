@@ -1,0 +1,108 @@
+{
+  "status": "phase-E-complete-2026-10-24",
+  "phase": "E",
+  "started_on": "2026-10-21",
+  "completed_on": "2026-10-21",
+  "updated_at": "2026-10-24T08:00:27+08:00",
+  "timezone": "Asia/Shanghai",
+  "target_hours": 24,
+  "brands": [
+    "Control4",
+    "Crestron",
+    "Savant",
+    "Lutron"
+  ],
+  "manifest_counts": {
+    "phase_A_official": 80,
+    "phase_B_internet_cases": 30,
+    "phase_C_unified_partners": 1132,
+    "phase_C_control4_file": 1108,
+    "phase_C_crestron_file": 11,
+    "phase_C_savant_file": 10,
+    "phase_C_lutron_file": 13,
+    "fusion_hybrid": 194,
+    "subsystems": 564,
+    "subsystems_unique_urls": 557,
+    "phase_E1_niche_wired": 125,
+    "phase_E2_wireless_intercept": 150
+  },
+  "phase_A": "complete",
+  "phase_B": "complete_round1",
+  "phase_C": "complete_sample_not_full_directory",
+  "mac_sync": "deferred_to_parent",
+  "notes": "Phase B: 30 public case/design/experience summaries. Phase C: Control4 E1 metro API sample (~1101 unique) + curated E3/E1 for other brands; CEDIA E2=0; not a complete global directory. Handoff package built 2026-10-21: fusion 194, subsystems 564, channel 1132; Doc copied into deliverables (no nested old tgz).",
+  "fusion_hybrid": {
+    "count": 194,
+    "round2_added": 63,
+    "path": "06-internet-cases/fusion-hybrid/",
+    "europe_mideast_casebook": "06-internet-cases/fusion-hybrid/europe-mideast-casebook.md",
+    "by_region": {
+      "Europe": 70,
+      "MiddleEast": 32,
+      "Other": 92
+    }
+  },
+  "subsystems": {
+    "count": 564,
+    "unique_url_count": 557,
+    "path": "08-subsystems/",
+    "master_corpus": "08-subsystems/00-index/master.corpus.jsonl",
+    "by_category": {
+      "hvac": 140,
+      "ventilation-erv": 84,
+      "luxury-av": 163,
+      "security": 103,
+      "shades-climate-aux": 74
+    }
+  },
+  "handoff_package": {
+    "created_at": "2026-10-21T23:56:24+08:00",
+    "timezone": "Asia/Shanghai",
+    "directory": "/workspace/x-home-easy/deliverables/XHomeEasy-DevHandoff-2026-10-21/",
+    "tarball": "/workspace/x-home-easy/deliverables/XHomeEasy-DevHandoff-2026-10-21.tar.gz",
+    "download_txt": "/workspace/x-home-easy/deliverables/DOWNLOAD.txt",
+    "handoff_doc": "00-交底书-开发部门.md",
+    "sha256": "958d56f23231f8a3ec025257e364c4294e4ec3dbd4f3d26a762519724f390a1b",
+    "bytes": 57337741,
+    "includes_suite_related": true,
+    "excludes_legacy_tgz": [
+      "Doc-ABC-2026-10-21.tgz",
+      "Doc-phaseA-2026-10-21.tgz",
+      "Doc-skeleton-2026-10-21.tgz"
+    ],
+    "human_size": "55M",
+    "sha256_note": "Authoritative tarball sha256 is in /workspace/x-home-easy/deliverables/DOWNLOAD.txt after pack."
+  },
+  "phase_E1": {
+    "status": "complete",
+    "path": "10-niche-wired-systems/",
+    "total": 125,
+    "counts": {
+      "01-legacy-plc-bus": 38,
+      "02-security-managed-platforms": 30,
+      "03-hems-smart-panels": 25,
+      "04-poe-ecommerce-hybrid": 32
+    },
+    "id_range": [
+      "NW001",
+      "NW125"
+    ],
+    "corpus_sha256": "7858148567c4df53c6eafab0100df1e7cf429a0a0397d282ff0c56893e61b1f7",
+    "completed_on": "2026-10-24"
+  },
+  "phase_E": {
+    "status": "complete",
+    "completed_on": "2026-10-24",
+    "e1_niche_wired": 125,
+    "e2_wireless_intercept": 150,
+    "paths": {
+      "10": "Doc/10-niche-wired-systems/",
+      "11": "Doc/11-wireless-interception-catalog/"
+    },
+    "sha256": {
+      "niche_wired_corpus": "7858148567c4df53c6eafab0100df1e7cf429a0a0397d282ff0c56893e61b1f7",
+      "wireless_intercept_corpus": "fc4a954429962accea8298a9f4d3ecfa430c5edeb68f89455da4499cebbd93e1"
+    }
+  },
+  "previous_local_status": "phase-A-started"
+}

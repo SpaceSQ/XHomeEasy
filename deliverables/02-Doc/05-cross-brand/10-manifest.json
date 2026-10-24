@@ -1,0 +1,71 @@
+{
+  "brand": "Cross",
+  "dictionary_layer": "official",
+  "updated_on": "2026-10-21",
+  "item_count": 7,
+  "items": [
+    {
+      "id": "xb-cedia-001",
+      "category": "partner",
+      "title": "CEDIA Hiring Guide",
+      "source_url": "https://cedia.org/en-us/homeowners/knowledge/smart-home-professional-hiring-guide/",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/cedia/hiring-guide-summary.md",
+      "notes": "雇集成商指南；认证与避坑"
+    },
+    {
+      "id": "xb-cedia-002",
+      "category": "architecture",
+      "title": "CEDIA ANSI Standards page",
+      "source_url": "https://cedia.org/en-us/smart-home-professionals/advocacy/standards-best-practices/",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/cedia/standards-ansi-summary.md",
+      "notes": "ANSI认可过程说明"
+    },
+    {
+      "id": "xb-cedia-003",
+      "category": "install",
+      "title": "CEDIA Wiring Guide 入口",
+      "source_url": "https://cedia.org/en-us/smart-home-professionals/news/the-ultimate-smart-home-wiring-guide/",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/cedia/wiring-guide-note.md",
+      "notes": "布线最佳实践入口"
+    },
+    {
+      "id": "xb-cedia-004",
+      "category": "partner",
+      "title": "CEDIA Find a Pro",
+      "source_url": "https://cedia.org/en-us/homeowners/find-a-smart-home-professional/",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/cedia/find-a-pro.md",
+      "notes": "跨品牌找商"
+    },
+    {
+      "id": "xb-mat-001",
+      "category": "partner",
+      "title": "四品牌+CEDIA找集成商对比",
+      "source_url": "https://www.control4.com/integrator-search",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/matrix/find-integrator-comparison.md",
+      "notes": "locator形态差异"
+    },
+    {
+      "id": "xb-mat-002",
+      "category": "overview",
+      "title": "阶段A覆盖快照",
+      "source_url": "file:///workspace/x-home-easy/Doc/05-cross-brand/matrix/official-docs-coverage.md",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/matrix/official-docs-coverage.md",
+      "notes": "四品牌覆盖表"
+    },
+    {
+      "id": "xb-dist-001",
+      "category": "partner",
+      "title": "Snap One / ADI 公开层说明",
+      "source_url": "https://help.snapone.com/ovrc-ug/Content/C4CA/Dealer%20of%20Record%20Change.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "05-cross-brand/distribution/snap-one-adi-note.md",
+      "notes": "OvrC公开；订购目录登录墙"
+    }
+  ]
+}

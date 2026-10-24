@@ -1,0 +1,24 @@
+# XHomeEasy Project Cursor Rules
+
+## 1. 项目定位与核心铁律
+你正在开发 **XHomeEasy** —— 面向北美（美国/加拿大）别墅与大宅业主、建筑师/室内设计师的**中立有线智能家居方案设计与集成商选择推荐平台（iOS/iPadOS SwiftUI + Next.js 15 + Supabase）**。
+- 核心范围：Control4、Crestron、Savant、Lutron（照明/遮阳底座）四大品牌，兼顾 Josh.ai 语音层及 5 大别墅子系统（HVAC、新风 ERV、豪华影音、安防、遮阳泳池）。
+- 市场边界：仅限北美（美加）专业集成市场（CEDIA 渠道），不包含中国市场。
+
+## 2. 零幻觉与证据分级强制规范 (Evidence Tier E1-E4)
+- **严禁由 LLM 计算价格、兼容性或换商政策**：所有适配打分（M1）、拓扑组合（M3）、预算分项带宽（M4）、报价单对齐预警（M7）、分品牌移交检查（M8）必须调用 `packages/core-engine` 或 Swift `XHomeEasyEngines` 下的确定性函数。
+- **反锁定准确表述铁律**：严禁在 UI 或文案中笼统声称“Control4/Savant/Crestron 项目全部锁死在经销商手中”。必须按 X05 分品牌实现：Control4 在 OvrC 移交后支持客户在 customer.control4.com 自助更换 Smart Home Pro；Crestron 区分 Crestron Home 配置包与 SIMPL 源码；Savant 约定 Host 与 Essentials 订阅移交。
+- **预算不确定性铁律**：严禁输出单一精确报价数字。所有预算展示必须为区间带宽，并挂载免责：“数据源自服务商/媒体公开口径（2026-10-21 核实），非厂商官方 MSRP，最终以本地持证集成商现场勘测报价为准”。
+- **E1–E4 证据徽章**：品牌能力、融合方案、子系统方案、渠道商信息必须渲染 `evidence_tier` 徽章和可点击的 `source_url`。E4 默认折叠，不得作为规格事实。
+
+## 3. 安全边界与法律合规硬拦截
+- **绝对禁止 DIY 高压/机柜接线教程**。遇到此类提问，顾问必须拒绝并导向持证电工与授权集成商。
+- **绝对禁止软件破解**。严禁提供绕过 Composer Pro、Configure Pro、Savant Dealer 工具的说明。
+- **CCPA/CPRA 与 FTC**：赞助位必须标 `Sponsored`。排序看证据与匹配，不按佣金。名录必须声明公开抽样、非全美或 CEDIA 全量，执照只展示核验时间戳。AI 首次对话必须声明正在与顾问交互，输出不构成法律或施工签证意见。
+
+## 4. 本地素材包接入红线
+- 只导入 `deliverables/01-PRD/` 与 `deliverables/02-Doc/01` 至 `08` 的清洗后数据。
+- **严禁读取或打包 `02-Doc/99-raw/`**。
+- **严禁把 `03-suite-related/` 的 Matter / KNX 需求混入本项目核心业务逻辑**。
+- `FH001–FH131` 的 `app_takeaway_zh` 为空时，回退到 `summary_zh` 的第一句。
+- `channel-partners-master.csv` 走本地检索或数据库分页，严禁整表塞进 LLM Prompt。

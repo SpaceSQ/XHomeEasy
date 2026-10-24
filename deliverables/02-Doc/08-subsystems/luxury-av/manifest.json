@@ -1,0 +1,72 @@
+{
+  "corpus": "luxury-av",
+  "fetched_on": "2026-10-21",
+  "id_range": [
+    "SS281",
+    "SS443"
+  ],
+  "entry_count": 163,
+  "unique_urls": 163,
+  "brands": {
+    "JBL Synthesis": 21,
+    "Meridian": 18,
+    "StormAudio": 18,
+    "Kaleidescape": 16,
+    "Trinnov": 14,
+    "Screen Innovations": 12,
+    "Procella": 10,
+    "madVR": 9,
+    "Sonance": 7,
+    "Lumagen": 6,
+    "Crestron AV infrastructure": 5,
+    "Stewart Filmscreen": 5,
+    "Barco": 4,
+    "Wisdom Audio": 4,
+    "AudioControl": 3,
+    "Industry / CEDIA": 3,
+    "Triad Speakers": 3,
+    "Bang & Olufsen": 2,
+    "Origin Acoustics": 2,
+    "Monitor Audio": 1
+  },
+  "evidence_tiers": {
+    "E1": 117,
+    "E3": 24,
+    "E2": 22
+  },
+  "region_top_level": {
+    "global": 73,
+    "Europe": 40,
+    "Asia": 7,
+    "North America": 31,
+    "Oceania": 10,
+    "Middle East": 2
+  },
+  "gaps_notes": [
+    "Savant 深度影院长文仍少于 Control4/Crestron（多嵌在 Storm/Kaleidescape/madVR 官方集成文）。",
+    "Origin Acoustics / Triad 独立厂商案例页少，多依赖渠道媒体与 Control4 生态报道。",
+    "Sony 住宅投影多出现在集成商案，较少单独厂商别墅长文。",
+    "AudioControl 官网现偏车载信息架构，住宅 Director 资料多在支持门户与旧 PDF。",
+    "Trinnov 博客列表页对部分自动化抓取不稳定，已用已知案例 URL 补齐。"
+  ],
+  "sample_ids": [
+    "SS281",
+    "SS297",
+    "SS313",
+    "SS329",
+    "SS345",
+    "SS361",
+    "SS377",
+    "SS393",
+    "SS409",
+    "SS425"
+  ],
+  "paths": {
+    "corpus_md": "/workspace/x-home-easy/Doc/08-subsystems/luxury-av/corpus.md",
+    "corpus_jsonl": "/workspace/x-home-easy/Doc/08-subsystems/luxury-av/corpus.jsonl",
+    "manifest": "/workspace/x-home-easy/Doc/08-subsystems/luxury-av/manifest.json"
+  },
+  "total_count": 163,
+  "md_heading_count": 163,
+  "category": "luxury-av"
+}

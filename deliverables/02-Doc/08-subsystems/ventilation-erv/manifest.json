@@ -1,0 +1,52 @@
+{
+  "category": "ventilation-erv",
+  "total_count": 84,
+  "id_range": "SS181-SS264",
+  "by_brand": {
+    "Zehnder": 25,
+    "RenewAire": 13,
+    "Broan-NuTone": 11,
+    "Panasonic Ventilation": 10,
+    "UltimateAir": 7,
+    "ERV/HRV generic villa": 6,
+    "Venmar": 5,
+    "Aprilaire": 4,
+    "Mitsubishi Electric": 2,
+    "Control4": 1
+  },
+  "by_tier": {
+    "E1": 60,
+    "E3": 13,
+    "E2": 10,
+    "E4": 1
+  },
+  "by_region": {
+    "Europe": 8,
+    "NorthAmerica": 61,
+    "UK": 5,
+    "Germany": 2,
+    "Italy": 1,
+    "Netherlands": 2,
+    "Global": 3,
+    "Oceania": 1,
+    "Canada": 1
+  },
+  "collected_at": "2026-10-21T23:55:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "paths": {
+    "corpus_md": "08-subsystems/ventilation-erv/corpus.md",
+    "corpus_jsonl": "08-subsystems/ventilation-erv/corpus.jsonl",
+    "manifest": "08-subsystems/ventilation-erv/manifest.json"
+  },
+  "gaps": [
+    "Some vendor helpdesks/CDNs (CoolAutomation Zendesk, Zehnder America, Swidget, Lutron assets) return 403 to automated clients; URLs retained from WebSearch discovery.",
+    "Rheem EcoNet public Control4 thermostat driver still thinner than water-heater driver.",
+    "Savant-native brand HVAC pages rarer than Control4/Crestron; often via CoolAutomation/Intesis."
+  ],
+  "notes": [
+    "URLs from public WebSearch 2026-10-21; no fabricated URLs.",
+    "Automated 404s replaced with alternate live public pages where needed.",
+    "control_layer_fit explains Fit with Control4/Crestron/Savant/Lutron even when article omits them."
+  ],
+  "md_heading_count": 84
+}

@@ -1,0 +1,73 @@
+{
+  "total_count": 103,
+  "id_range": "SS451-SS553",
+  "by_brand": {
+    "Alarm.com": 24,
+    "Resideo": 15,
+    "ADT": 12,
+    "Qolsys": 12,
+    "2GIG": 10,
+    "Axis": 9,
+    "DSC": 8,
+    "Bosch Security": 8,
+    "Crestron": 2,
+    "Somfy": 2,
+    "Screen Innovations": 1
+  },
+  "by_tier": {
+    "E1": 73,
+    "E2": 17,
+    "E3": 10,
+    "E4": 3
+  },
+  "by_region": {
+    "NorthAmerica": 51,
+    "Global": 47,
+    "Europe": 3,
+    "Oceania": 2
+  },
+  "by_subsystem": {
+    "intrusion-panel": 33,
+    "monitored-security": 12,
+    "vms-cameras": 9,
+    "security-platform": 6,
+    "video": 3,
+    "video-analytics": 2,
+    "geo-services": 2,
+    "scenes": 2,
+    "platform": 2,
+    "total-connect": 2,
+    "vista-panel": 2,
+    "alarmcom": 2,
+    "smart-home": 2,
+    "catalog": 2,
+    "community": 2,
+    "install": 2,
+    "monitoring": 1,
+    "shades-cross": 1,
+    "dealer-compare": 1,
+    "ta-homa": 1,
+    "hardware": 1,
+    "zwave": 1,
+    "emea": 1,
+    "security-locks": 1,
+    "edge": 1,
+    "works-with": 1,
+    "wellness": 1,
+    "water": 1,
+    "outdoor": 1,
+    "locks-garage": 1,
+    "control4": 1,
+    "security-cross": 1,
+    "shades-security-cross": 1,
+    "bms": 1
+  },
+  "collected_at": "2026-10-21T23:59:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "paths": {
+    "corpus_md": "/workspace/x-home-easy/Doc/08-subsystems/security/corpus.md",
+    "corpus_jsonl": "/workspace/x-home-easy/Doc/08-subsystems/security/corpus.jsonl"
+  },
+  "md_heading_count": 103,
+  "category": "security"
+}

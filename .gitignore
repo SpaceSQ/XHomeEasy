@@ -1,0 +1,17 @@
+node_modules/
+.next/
+.DS_Store
+DerivedData/
+.swiftpm/
+xcuserdata/
+*.xcuserstate
+apps/apple-client/build/
+packages/apple-engines/.build/
+**/99-raw/
+*.tar.gz
+*.tgz
+.cursor/
+*.pem
+.env
+.env.*
+!.env.example

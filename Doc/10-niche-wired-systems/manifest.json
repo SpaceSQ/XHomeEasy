@@ -1,0 +1,38 @@
+{
+  "phase": "E1",
+  "title": "XHomeEasy North America Niche/Legacy Wired Systems Corpus",
+  "generated_at": "2026-10-24T07:54:20+08:00",
+  "timezone": "Asia/Shanghai",
+  "total_records": 125,
+  "id_range": {
+    "first": "NW001",
+    "last": "NW125",
+    "min_num": 1,
+    "max_num": 125
+  },
+  "counts_by_section": {
+    "01-legacy-plc-bus": 38,
+    "02-security-managed-platforms": 30,
+    "03-hems-smart-panels": 25,
+    "04-poe-ecommerce-hybrid": 32
+  },
+  "status_enum_counts": {
+    "LEGACY_MAINTENANCE": 17,
+    "ACTIVE_NICHE": 51,
+    "ACTIVE_MAIN": 56,
+    "DISCONTINUED": 1
+  },
+  "evidence_tier_counts": {
+    "E2": 61,
+    "E3": 42,
+    "E1": 19,
+    "E4": 3
+  },
+  "schema_version": "1.0.0",
+  "paths": {
+    "corpus": "niche-wired.corpus.jsonl",
+    "handbook": "niche-wired-handbook.md",
+    "raw_notes": "RAW_NOTES.md"
+  },
+  "corpus_sha256": "7858148567c4df53c6eafab0100df1e7cf429a0a0397d282ff0c56893e61b1f7"
+}

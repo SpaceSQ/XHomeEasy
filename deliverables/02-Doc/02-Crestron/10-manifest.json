@@ -1,0 +1,188 @@
+{
+  "brand": "Crestron",
+  "dictionary_layer": "official",
+  "updated_on": "2026-10-21",
+  "item_count": 20,
+  "items": [
+    {
+      "id": "cr-ov-001",
+      "category": "overview",
+      "title": "Crestron 官方门户地图",
+      "source_url": "https://www.crestron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/01-overview/portal-map.md",
+      "notes": "Resource Library/住宅产品/找商/文档"
+    },
+    {
+      "id": "cr-ov-002",
+      "category": "overview",
+      "title": "Crestron access-gaps",
+      "source_url": "https://www.crestron.com/Support/Resource-Library",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/01-overview/access-gaps.md",
+      "notes": "Pro Portal/myCrestron/工具链登录"
+    },
+    {
+      "id": "cr-prod-001",
+      "category": "products",
+      "title": "Crestron Home 方案页",
+      "source_url": "https://www.crestron.com/Products/Featured-Solutions/Crestron-Home",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/home.html",
+      "notes": "OS更新营销信息"
+    },
+    {
+      "id": "cr-prod-002",
+      "category": "products",
+      "title": "CP4-R 产品页",
+      "source_url": "https://www.crestron.com/Products/Catalog/Control-and-Management/Control-System/Residential/CP4-R",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/cp4-r.html",
+      "notes": "4-Series 住宅控制器"
+    },
+    {
+      "id": "cr-prod-003",
+      "category": "products",
+      "title": "MC4-R 产品页",
+      "source_url": "https://www.crestron.com/Products/Catalog/Control-and-Management/Control-System/Residential/MC4-R",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/mc4-r.html",
+      "notes": "Crestron Home OS 控制器"
+    },
+    {
+      "id": "cr-prod-004",
+      "category": "products",
+      "title": "MC4-R Spec Sheet PDF",
+      "source_url": "https://www.crestron.com/getmedia/4d8d0637-d472-4e20-9fc7-98eef36acba2/ss_MC4-R",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/mc4-r-ss.pdf",
+      "notes": "完整规格 PDF"
+    },
+    {
+      "id": "cr-prod-005",
+      "category": "products",
+      "title": "HR-310 DO Guide",
+      "source_url": "https://www.crestron.com/getmedia/caa01a50-f4c7-4738-9d27-e72135f427f9/mg_do_hr-310",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/hr-310-do.pdf",
+      "notes": "手持遥控"
+    },
+    {
+      "id": "cr-prod-006",
+      "category": "products",
+      "title": "HR-310-I-B 产品页",
+      "source_url": "https://www.crestron.com/Products/Catalog/Control-and-Management/User-Interfaces/Handheld-Remote/HR-310-I-B",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/hr-310.html",
+      "notes": "产品目录页"
+    },
+    {
+      "id": "cr-prod-007",
+      "category": "products",
+      "title": "TSR-310 产品页",
+      "source_url": "https://www.crestron.com/Products/Catalog/Control-and-Management/User-Interfaces/Handheld-Remote/TSR-310",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/tsr-310.html",
+      "notes": "检索提示可能停产"
+    },
+    {
+      "id": "cr-prod-008",
+      "category": "products",
+      "title": "TSW-1070R-W 触控屏",
+      "source_url": "https://www.crestron.com/Products/Catalog/Control-and-Management/User-Interfaces/Touchscreen/TSW-1070R-W",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/tsw-1070.html",
+      "notes": "检索提示可能停产"
+    },
+    {
+      "id": "cr-prod-009",
+      "category": "products",
+      "title": "Works With Crestron Home — Remotes",
+      "source_url": "https://docs.crestron.com/en-us/8525/Content/CP4R/Appendix/Works-With-Crestron-Home/Remotes.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/works-with-remotes.html",
+      "notes": "兼容遥控列表"
+    },
+    {
+      "id": "cr-prod-010",
+      "category": "products",
+      "title": "Works With — infiNET EX Gateways",
+      "source_url": "https://docs.crestron.com/en-us/8525/Content/CP4R/Appendix/Works-With-Crestron-Home/infiNET-EX-Gateways.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/works-with-gateways.html",
+      "notes": "CEN-GWEXER等"
+    },
+    {
+      "id": "cr-prod-011",
+      "category": "products",
+      "title": "Residential End User Guide PDF",
+      "source_url": "https://help.crestron.com/cds/main/Crestron_Residential_End_User_Guide.pdf",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/crestron/residential-end-user.pdf",
+      "notes": "终端用户指南大文件"
+    },
+    {
+      "id": "cr-arch-001",
+      "category": "architecture",
+      "title": "Crestron Home OS 架构要点",
+      "source_url": "https://docs.crestron.com/en-us/8525/Content/CP4R/Appendix/Works-With-Crestron-Home/Remotes.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/03-architecture/crestron-home-os.md",
+      "notes": "infiNET EX；Home OS"
+    },
+    {
+      "id": "cr-inst-001",
+      "category": "install",
+      "title": "安装文档索引",
+      "source_url": "https://www.crestron.com/getmedia/4d8d0637-d472-4e20-9fc7-98eef36acba2/ss_MC4-R",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/04-install-wiring/install-docs-index.md",
+      "notes": "规格级；安全边界"
+    },
+    {
+      "id": "cr-prog-001",
+      "category": "programming",
+      "title": "编程与移交说明（公开层弱）",
+      "source_url": "https://docs.crestron.com/en-us/9599/Content/myCrestron.htm",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/05-programming-handover/programming-note.md",
+      "notes": "无业主自助换商专页"
+    },
+    {
+      "id": "cr-ops-001",
+      "category": "ops",
+      "title": "XiO Cloud / myCrestron",
+      "source_url": "https://www.crestron.com/Products/Control-and-Management/Enterprise/XiO-Cloud",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/06-ops-remote/xio-mycrestron.md",
+      "notes": "运维云+住宅监控文档"
+    },
+    {
+      "id": "cr-part-001",
+      "category": "partner",
+      "title": "Find a Service Provider",
+      "source_url": "https://www.crestron.com/How-To-Buy/find-a-dealer-or-partner/Find-a-Service-Provider",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/07-partner-network/find-dealer.md",
+      "notes": "找商+展厅"
+    },
+    {
+      "id": "cr-price-001",
+      "category": "pricing",
+      "title": "公开价格说明",
+      "source_url": "https://www.crestron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/08-pricing-public/pricing-note.md",
+      "notes": "无MSRP"
+    },
+    {
+      "id": "cr-train-001",
+      "category": "training",
+      "title": "CTI LMS 迁移公开信号",
+      "source_url": "https://www.crestron.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "02-Crestron/09-training-cert/training-note.md",
+      "notes": "课程本体需账号"
+    }
+  ]
+}

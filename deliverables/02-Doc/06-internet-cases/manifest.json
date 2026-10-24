@@ -1,0 +1,487 @@
+{
+  "phase": "B",
+  "generated_on": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "item_count": 30,
+  "by_category": {
+    "project_case": 18,
+    "design": 6,
+    "experience": 6
+  },
+  "by_brand": {
+    "Control4": 17,
+    "Lutron": 13,
+    "KNX": 2,
+    "Crestron": 12,
+    "Savant": 12
+  },
+  "items": [
+    {
+      "id": "c4-newport-coast-daisy-adi-2026",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-newport-coast-daisy-adi-2026.md",
+      "title": "Control4 Integration Transforms Newport Coast Residence (Daisy OC / ADI)",
+      "source_url": "https://www.adiglobal.com/company-news/control4-integration-transforms-newport-coast-residence-with-advanced-smart-home-systems",
+      "category": "project_case",
+      "brands": [
+        "Control4",
+        "Lutron"
+      ],
+      "geography": "Newport Coast, California, USA",
+      "quality_notes": "Official ADI/Control4 channel PR; concrete BOM and dual-mode theater detail",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "c4-west-palm-beach-etc-florida-2025",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-west-palm-beach-etc-florida-2025.md",
+      "title": "West Palm Beach Mansion Future-Proof Control4 System (ETC Florida)",
+      "source_url": "https://www.cepro.com/projects/future-proofing-a-florida-mansions-home-automation-system/620086/",
+      "category": "project_case",
+      "brands": [
+        "Control4"
+      ],
+      "geography": "West Palm Beach, Florida, USA",
+      "quality_notes": "CE Pro 2025 报道；2024 Home of the Year runner-up",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "c4-whitecraigs-glasgow-1080-solutions",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-whitecraigs-glasgow-1080-solutions.md",
+      "title": "Whitecraigs Residence Full Control4 Rebuild (1080 Solutions, Glasgow)",
+      "source_url": "https://www.control4.com/inspiration-gallery/whitecraigs-residence",
+      "category": "project_case",
+      "brands": [
+        "Control4"
+      ],
+      "geography": "Whitecraigs, Glasgow, UK",
+      "quality_notes": "Control4 Inspiration Gallery 官方案例；系统接管重建",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "c4-lytham-ribble-av-knx-lutron-2025",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-lytham-ribble-av-knx-lutron-2025.md",
+      "title": "Lytham St Annes Whole Home: KNX + Control4 + Lutron Blinds (Ribble AV)",
+      "source_url": "https://www.ribbleav.co.uk/portfolio/whole-home-automation-system",
+      "category": "project_case",
+      "brands": [
+        "Control4",
+        "Lutron",
+        "KNX"
+      ],
+      "geography": "Lytham St Annes, UK",
+      "quality_notes": "集成商作品集；混合总线案例，利于合围产品对照",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "c4-emirates-hills-homecontrol-dubai-2025",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-emirates-hills-homecontrol-dubai-2025.md",
+      "title": "Emirates Hills 15,000 sq ft Villa Control4 + Lutron RA3 (HomeControl Dubai)",
+      "source_url": "https://homecontrol.ae/case-studies/emirates-hills-smart-villa-project/",
+      "category": "project_case",
+      "brands": [
+        "Control4",
+        "Lutron"
+      ],
+      "geography": "Emirates Hills, Dubai, UAE",
+      "quality_notes": "集成商案例；给出投资额与工期，宜标注为声称数据",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "c4-samborondon-domulab-ra3-retrofit-2026",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/c4-samborondon-domulab-ra3-retrofit-2026.md",
+      "title": "Samborondón Villa Finished-Home Retrofit: Control4 + RadioRA 3 (DomuLab)",
+      "source_url": "https://www.domulab.com/en/blog/case-study-villa-samborondon-smart-home/",
+      "category": "project_case",
+      "brands": [
+        "Control4",
+        "Lutron"
+      ],
+      "geography": "Samborondón, Ecuador",
+      "quality_notes": "成品房不开墙改造方法论清晰；场景编程范例好",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "cr-mediterranean-oasis-henri-2024",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/cr-mediterranean-oasis-henri-2024.md",
+      "title": "A Modern Oasis in the Mediterranean — Crestron (HENRI)",
+      "source_url": "https://www.crestron.com/News/Case-Studies/2024/A-Modern-Oasis-in-the-Mediterranean",
+      "category": "project_case",
+      "brands": [
+        "Crestron"
+      ],
+      "geography": "French Riviera / Mediterranean island",
+      "quality_notes": "Crestron 官方案例；Technology Meets Design 获奖；11 连体屋",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "cr-dubai-custom-controls-estate",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/cr-dubai-custom-controls-estate.md",
+      "title": "Award-Winning Crestron Estate Dubai (Custom Controls)",
+      "source_url": "https://www.customcontrols.co.uk/case-studies/huge-crestron-installation-dubai/",
+      "category": "project_case",
+      "brands": [
+        "Crestron",
+        "KNX"
+      ],
+      "geography": "Dubai, UAE",
+      "quality_notes": "Crestron Integration Award Best International EMEA；规模数据详实",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "cr-villa-formentor-halo-mallorca-2023",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/cr-villa-formentor-halo-mallorca-2023.md",
+      "title": "Villa Formentor Smart Home — Crestron Home + Lutron Shades (Halo)",
+      "source_url": "https://avithalo.com/projects/villa-formentor-smart-home",
+      "category": "project_case",
+      "brands": [
+        "Crestron",
+        "Lutron"
+      ],
+      "geography": "Formentor, Palma de Mallorca, Spain",
+      "quality_notes": "Crestron Home（非全定制 SIMPL）+ Lutron 遮阳 34 路",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "cr-grand-prix-villa-henri-insideci",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/cr-grand-prix-villa-henri-insideci.md",
+      "title": "Grand Prix Villa Crestron DigitalMedia Integration (HENRI / Inside CI)",
+      "source_url": "https://www.insideci.co.uk/crestron/crestron-connects-stunning-grand-prix-villa.aspx",
+      "category": "project_case",
+      "brands": [
+        "Crestron"
+      ],
+      "geography": "France (Paris region)",
+      "quality_notes": "2017 报道；展示 DigitalMedia 与多 UI 密度；年代较旧但架构仍代表性",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "cr-beekbergen-hoog-crestron-home",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/cr-beekbergen-hoog-crestron-home.md",
+      "title": "Dutch Cottage Beekbergen Whole-Home Crestron Home (De Opera Domotica)",
+      "source_url": "https://www.hoog.design/en/look-inside/whole-home-automation-villa",
+      "category": "project_case",
+      "brands": [
+        "Crestron"
+      ],
+      "geography": "Beekbergen, Netherlands",
+      "quality_notes": "HOOG.design 设计向报道；Crestron Home 日常动线（含大门）",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "sv-farmhouse-torch-lake-spire",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/sv-farmhouse-torch-lake-spire.md",
+      "title": "Classic Farmhouse Meets Smart Home — Savant (Spire, Torch Lake MI)",
+      "source_url": "https://savant.com/case-studies/farmhouse/",
+      "category": "project_case",
+      "brands": [
+        "Savant"
+      ],
+      "geography": "Torch Lake, Michigan, USA",
+      "quality_notes": "Savant 官方案例；强调隐蔽科技与单一界面",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "sv-holladay-haven-tym-utah",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/sv-holladay-haven-tym-utah.md",
+      "title": "Holladay Haven Open-Concept Theater — Savant (TYM Smart Homes, Utah)",
+      "source_url": "https://www.savant.com/case-studies/tymholladay/",
+      "category": "project_case",
+      "brands": [
+        "Savant"
+      ],
+      "geography": "Holladay / Sandy, Utah, USA",
+      "quality_notes": "官方案例；开放式影院无后墙的声学/采光挑战",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "sv-osterville-mjf-power-cape-cod",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/sv-osterville-mjf-power-cape-cod.md",
+      "title": "Osterville Residence — Savant Power + Solar/Battery/Generator (MJF)",
+      "source_url": "https://www.savant.com/case-studies/osterville/",
+      "category": "project_case",
+      "brands": [
+        "Savant"
+      ],
+      "geography": "Osterville, Cape Cod, Massachusetts, USA",
+      "quality_notes": "官方；Savant Power 差异化（能源/负荷管理）最清晰案例",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "sv-midnight-sun-iceland-mdu-tsp",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/sv-midnight-sun-iceland-mdu-tsp.md",
+      "title": "Austurhöfn 71-Apartment MDU — Savant (TSP / Nordic Smart Spaces)",
+      "source_url": "https://www.savant.com/case-studies/midnight-sun/",
+      "category": "project_case",
+      "brands": [
+        "Savant"
+      ],
+      "geography": "Reykjavik, Iceland",
+      "quality_notes": "官方 MDU 案例；可扩展基础包模式",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "sv-case-studies-index-savant",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/sv-case-studies-index-savant.md",
+      "title": "Savant Official Case Studies Index (Catalog Snapshot)",
+      "source_url": "https://www.savant.com/case-studies/",
+      "category": "design",
+      "brands": [
+        "Savant"
+      ],
+      "geography": "Multi",
+      "quality_notes": "索引页；列出 Afloat Naples、Osterville、Farmhouse、Hamptons 等入口",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "lt-wiltshire-homeworks-qs-twentytwo",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/lt-wiltshire-homeworks-qs-twentytwo.md",
+      "title": "Wiltshire / Cotswolds 15,000 sq ft HomeWorks QS (TwentyTwo Integration)",
+      "source_url": "https://assets.lutron.com/a/documents/3685398-TwentyTwoIntegrationCotswoldsUKCaseStudy_English.pdf",
+      "category": "project_case",
+      "brands": [
+        "Lutron"
+      ],
+      "geography": "Wiltshire / Cotswolds, UK",
+      "quality_notes": "Lutron 官方 PDF 案例；350 回路、Palladiom、园景 DALI",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "lt-central-park-south-springboard-homeworks",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/lt-central-park-south-springboard-homeworks.md",
+      "title": "Central Park South — Lutron HomeWorks 400+ Zones (Springboard Automation)",
+      "source_url": "https://www.springboardautomation.com/portfolio-central-park-south",
+      "category": "project_case",
+      "brands": [
+        "Lutron"
+      ],
+      "geography": "Central Park South, New York, USA",
+      "quality_notes": "集成商作品集；400+ 区、0.1% 调光叙事",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "lt-homeworks-qsx-vs-radiora3-cavegroup",
+      "subdir": "design",
+      "path": "06-internet-cases/design/lt-homeworks-qsx-vs-radiora3-cavegroup.md",
+      "title": "HomeWorks QSX vs RadioRA 3 for a Luxury Estate (Cave Group)",
+      "source_url": "https://cavegroupllc.com/blog/homeworks-qsx-vs-radiora-3",
+      "category": "design",
+      "brands": [
+        "Lutron"
+      ],
+      "geography": "USA (advisor article)",
+      "quality_notes": "经销商对比文；决策树素材",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "lt-cedia-zio-lakefront-control4-homeworks-2025",
+      "subdir": "projects",
+      "path": "06-internet-cases/projects/lt-cedia-zio-lakefront-control4-homeworks-2025.md",
+      "title": "Modern Lakefront Intelligent Estate — CEDIA 2025 Best Integrated Home (ZIO)",
+      "source_url": "https://www.hiddenwires.co.uk/case-studies/article/inside-the-modern-lakefront-intelligent-estate-in-florida-usa",
+      "category": "project_case",
+      "brands": [
+        "Control4",
+        "Lutron"
+      ],
+      "geography": "Florida, USA",
+      "quality_notes": "CEDIA Americas 2025 Best Integrated Home / Global；13.5+ 英里线缆",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "x-cepro-brands-hoty-2025",
+      "subdir": "design",
+      "path": "06-internet-cases/design/x-cepro-brands-hoty-2025.md",
+      "title": "Most Popular Brands Among 2025 Home of the Year Winners (CE Pro)",
+      "source_url": "https://www.cepro.com/news/the-most-popular-brands-among-2025s-home-of-the-year-award-winners/623581/",
+      "category": "design",
+      "brands": [
+        "Lutron",
+        "Control4",
+        "Crestron",
+        "Savant"
+      ],
+      "geography": "USA / CEDIA channel",
+      "quality_notes": "基于写稿提及频次，非完整 BOM 统计",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "x-crestron-vs-c4-vs-savant-ideal-2026",
+      "subdir": "design",
+      "path": "06-internet-cases/design/x-crestron-vs-c4-vs-savant-ideal-2026.md",
+      "title": "Crestron vs Control4 vs Savant Compared (Ideal Automation, Oct 2026)",
+      "source_url": "https://www.myidealav.com/blog/crestron-vs-control4-vs-savant",
+      "category": "design",
+      "brands": [
+        "Crestron",
+        "Control4",
+        "Savant"
+      ],
+      "geography": "USA (Arizona dealer perspective)",
+      "quality_notes": "授权 Crestron+Control4 经销商撰文；声明非 Savant 经销商",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "x-firebird-control-system-comparison",
+      "subdir": "design",
+      "path": "06-internet-cases/design/x-firebird-control-system-comparison.md",
+      "title": "Crestron vs Control4 vs Savant vs RTI/URC/Elan — Firebird AV Guide",
+      "source_url": "https://firebirdav.com/guides/crestron-vs-control4-vs-savant/",
+      "category": "design",
+      "brands": [
+        "Crestron",
+        "Control4",
+        "Savant"
+      ],
+      "geography": "USA",
+      "quality_notes": "集成商长文对比；含更广控制品牌语境",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "x-audioadvice-c4-crestron-savant",
+      "subdir": "design",
+      "path": "06-internet-cases/design/x-audioadvice-c4-crestron-savant.md",
+      "title": "Which Smart Home System is Best? Control4 vs Crestron vs Savant (Audio Advice)",
+      "source_url": "https://www.audioadvice.com/blogs/expert-advice/control4-vs-crestron-vs-savant",
+      "category": "design",
+      "brands": [
+        "Control4",
+        "Crestron",
+        "Savant"
+      ],
+      "geography": "USA",
+      "quality_notes": "零售/集成商教育文；强调本地服务连续性",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-control4-rack-planning-sentry",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-control4-rack-planning-sentry.md",
+      "title": "Control4 Equipment-Rack Planning: Space, Cooling, Power, Service Access",
+      "source_url": "https://sentryaudiovideo.com/control4-equipment-rack-planning-space-cooling-power-and-service-access/",
+      "category": "experience",
+      "brands": [
+        "Control4"
+      ],
+      "geography": "USA",
+      "quality_notes": "集成商机柜规划实践",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-act-low-voltage-standards",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-act-low-voltage-standards.md",
+      "title": "Low Voltage Standards for Trade Partners (ACT Installs)",
+      "source_url": "https://actinstalls.com/for-professionals/low-voltage-standards/",
+      "category": "experience",
+      "brands": [
+        "Control4",
+        "Crestron",
+        "Savant",
+        "Lutron"
+      ],
+      "geography": "USA",
+      "quality_notes": "总包/分包弱电标准；跨品牌布线纪律",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-cedia-ultimate-wiring-guide",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-cedia-ultimate-wiring-guide.md",
+      "title": "The Ultimate Smart Home Wiring Guide (CEDIA)",
+      "source_url": "https://cedia.org/en-us/smart-home-professionals/news/the-ultimate-smart-home-wiring-guide/",
+      "category": "experience",
+      "brands": [
+        "Control4",
+        "Crestron",
+        "Savant",
+        "Lutron"
+      ],
+      "geography": "Global / CEDIA",
+      "quality_notes": "协会级布线指南入口；权威引用源",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-control4-change-dealer-dana",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-control4-change-dealer-dana.md",
+      "title": "Changing Your Control4 Dealer / Dealer Closed — Dana Smart Homes",
+      "source_url": "https://www.danasmarthomes.com/can-i-change-my-control4-dealer/",
+      "category": "experience",
+      "brands": [
+        "Control4"
+      ],
+      "geography": "USA",
+      "quality_notes": "换商实操；与 OvrC 官方流程互补；另见 dealer-closed 文",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-control4-dor-change-snapone",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-control4-dor-change-snapone.md",
+      "title": "Off-site Control4 Dealer of Record (Smart Home Pro) Change Process (OvrC)",
+      "source_url": "https://help.snapone.com/ovrc-ug/Content/C4CA/Dealer%20of%20Record%20Change.htm",
+      "category": "experience",
+      "brands": [
+        "Control4"
+      ],
+      "geography": "USA / Global Control4",
+      "quality_notes": "Snap One 官方帮助；阶段 A 已有相关条目，此处作经验交叉引用",
+      "fetched_on": "2026-10-21"
+    },
+    {
+      "id": "xp-ise-2025-home-control-cepro",
+      "subdir": "experience",
+      "path": "06-internet-cases/experience/xp-ise-2025-home-control-cepro.md",
+      "title": "ISE 2025 Product Recap: Home Control (Control4 X4, Savant Apple, Crestron)",
+      "source_url": "https://www.cepro.com/news/ise-2025-product-recap-home-control-gets-smarter-and-sleeker/146754/",
+      "category": "experience",
+      "brands": [
+        "Control4",
+        "Savant",
+        "Crestron",
+        "Lutron"
+      ],
+      "geography": "Europe trade show / global products",
+      "quality_notes": "产业方向：Control4 X4 小部件/HomeKit；Savant Siri/Shortcuts；Lutron Vierti EU",
+      "fetched_on": "2026-10-21"
+    }
+  ],
+  "fusion_hybrid": {
+    "subdir": "fusion-hybrid",
+    "path": "06-internet-cases/fusion-hybrid/",
+    "corpus_md": "06-internet-cases/fusion-hybrid/corpus.md",
+    "corpus_jsonl": "06-internet-cases/fusion-hybrid/corpus.jsonl",
+    "manifest": "06-internet-cases/fusion-hybrid/manifest.json",
+    "item_count": 194,
+    "themes": [
+      "KNX x Control4/Crestron/Savant/Lutron hybrid",
+      "Matter/Zigbee retrofit into legacy systems",
+      "New-build hybrid with KNX multi-protocol gateways",
+      "Install topology experience (public-level)"
+    ],
+    "fetched_on": "2026-10-21",
+    "notes": "Specialized corpus for fusion-trend advice and local LLM training; Round2 Europe/ME deepen to 194 public URL entries.",
+    "europe_mideast_casebook": "06-internet-cases/fusion-hybrid/europe-mideast-casebook.md",
+    "round2_added": 63
+  },
+  "extensions": [
+    "fusion-hybrid"
+  ]
+}

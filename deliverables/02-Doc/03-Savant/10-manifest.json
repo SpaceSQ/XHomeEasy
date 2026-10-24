@@ -1,0 +1,161 @@
+{
+  "brand": "Savant",
+  "dictionary_layer": "official",
+  "updated_on": "2026-10-21",
+  "item_count": 17,
+  "items": [
+    {
+      "id": "sv-ov-001",
+      "category": "overview",
+      "title": "Savant 官方门户地图",
+      "source_url": "https://www.savant.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/01-overview/portal-map.md",
+      "notes": "Home/Power/Host/资源/找商"
+    },
+    {
+      "id": "sv-ov-002",
+      "category": "overview",
+      "title": "Savant access-gaps",
+      "source_url": "https://www.savant.com/support/savant-pro/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/01-overview/access-gaps.md",
+      "notes": "Dealer Community/专业目录登录"
+    },
+    {
+      "id": "sv-prod-001",
+      "category": "products",
+      "title": "Savant 首页",
+      "source_url": "https://www.savant.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/savant/home.html",
+      "notes": "Home+Power 定位"
+    },
+    {
+      "id": "sv-prod-002",
+      "category": "products",
+      "title": "Savant Host 家族",
+      "source_url": "https://www.savant.com/host/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/02-products/product-index.md",
+      "notes": "Built-in/Smart/Pro/Super Pro；Essentials订阅"
+    },
+    {
+      "id": "sv-prod-003",
+      "category": "products",
+      "title": "Host 产品页 raw",
+      "source_url": "https://www.savant.com/host/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/savant/host.html",
+      "notes": "分层营销文案"
+    },
+    {
+      "id": "sv-prod-004",
+      "category": "products",
+      "title": "Resources Smart Living/Remote",
+      "source_url": "https://www.savant.com/resources-remote/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/savant/resources.html",
+      "notes": "规格书/手册索引"
+    },
+    {
+      "id": "sv-prod-005",
+      "category": "products",
+      "title": "Resources Smart Power",
+      "source_url": "https://www.savant.com/resources-energy/",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/savant/resources-energy.html",
+      "notes": "Storage20/50 EV Smart Panel"
+    },
+    {
+      "id": "sv-prod-006",
+      "category": "products",
+      "title": "Power Storage / EV / Smart Panel（资源列表）",
+      "source_url": "https://www.savant.com/resources-energy/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/02-products/product-index.md",
+      "notes": "索引级条目"
+    },
+    {
+      "id": "sv-prod-007",
+      "category": "products",
+      "title": "Lighting/Climate/Music 资源指引",
+      "source_url": "https://www.savant.com/resources-remote/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/02-products/product-index.md",
+      "notes": "官方列名；PDF多在登录或镜像"
+    },
+    {
+      "id": "sv-prod-008",
+      "category": "products",
+      "title": "Savant Power Help Center 入口",
+      "source_url": "https://support.savant.com/power/s/topic/0TO4u000000f50dGAA/savant-power-system",
+      "fetched_on": "2026-10-21",
+      "local_path": "99-raw/savant/support-power.html",
+      "notes": "Salesforce帮助中心标题页"
+    },
+    {
+      "id": "sv-arch-001",
+      "category": "architecture",
+      "title": "平台架构要点",
+      "source_url": "https://www.savant.com/host/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/03-architecture/platform-overview.md",
+      "notes": "Host核心；Power分路；GE Lighting关系"
+    },
+    {
+      "id": "sv-inst-001",
+      "category": "install",
+      "title": "安装文档索引（弱）",
+      "source_url": "https://www.savant.com/resources-energy/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/04-install-wiring/install-docs-index.md",
+      "notes": "详细部署指南多在登录区"
+    },
+    {
+      "id": "sv-prog-001",
+      "category": "programming",
+      "title": "移交说明",
+      "source_url": "https://www.savant.com/find-a-dealer/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/05-programming-handover/handover-note.md",
+      "notes": "无业主自助换商专页"
+    },
+    {
+      "id": "sv-ops-001",
+      "category": "ops",
+      "title": "运维与 Essentials",
+      "source_url": "https://www.savant.com/host/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/06-ops-remote/ops-note.md",
+      "notes": "订阅营销；部分coming soon"
+    },
+    {
+      "id": "sv-part-001",
+      "category": "partner",
+      "title": "Find a Dealer",
+      "source_url": "https://www.savant.com/find-a-dealer/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/07-partner-network/find-dealer.md",
+      "notes": "表单匹配非即时地图"
+    },
+    {
+      "id": "sv-price-001",
+      "category": "pricing",
+      "title": "公开价格说明",
+      "source_url": "https://www.savant.com/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/08-pricing-public/pricing-note.md",
+      "notes": "无MSRP"
+    },
+    {
+      "id": "sv-train-001",
+      "category": "training",
+      "title": "培训缺口",
+      "source_url": "https://www.savant.com/support/savant-pro/",
+      "fetched_on": "2026-10-21",
+      "local_path": "03-Savant/09-training-cert/training-note.md",
+      "notes": "需Become a Dealer"
+    }
+  ]
+}

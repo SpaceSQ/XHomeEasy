@@ -1,0 +1,56 @@
+{
+  "category": "hvac",
+  "total_count": 140,
+  "id_range": "SS001-SS140",
+  "by_brand": {
+    "Daikin": 24,
+    "Mitsubishi Electric": 17,
+    "Hitachi": 15,
+    "Trane": 11,
+    "Fujitsu": 10,
+    "Bosch Thermotechnology": 10,
+    "Aprilaire": 10,
+    "Samsung HVAC": 8,
+    "Lennox": 7,
+    "Carrier": 6,
+    "LG VRF": 6,
+    "Rheem": 6,
+    "York/JCI": 5,
+    "CoolAutomation": 4,
+    "Control4": 1
+  },
+  "by_tier": {
+    "E2": 23,
+    "E1": 105,
+    "E3": 9,
+    "E4": 3
+  },
+  "by_region": {
+    "Global": 49,
+    "NorthAmerica": 66,
+    "China": 5,
+    "Europe": 8,
+    "Canada": 1,
+    "Europe/Global": 3,
+    "Germany": 7,
+    "Switzerland": 1
+  },
+  "collected_at": "2026-10-21T23:55:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "paths": {
+    "corpus_md": "08-subsystems/hvac/corpus.md",
+    "corpus_jsonl": "08-subsystems/hvac/corpus.jsonl",
+    "manifest": "08-subsystems/hvac/manifest.json"
+  },
+  "gaps": [
+    "Some vendor helpdesks/CDNs (CoolAutomation Zendesk, Zehnder America, Swidget, Lutron assets) return 403 to automated clients; URLs retained from WebSearch discovery.",
+    "Rheem EcoNet public Control4 thermostat driver still thinner than water-heater driver.",
+    "Savant-native brand HVAC pages rarer than Control4/Crestron; often via CoolAutomation/Intesis."
+  ],
+  "notes": [
+    "URLs from public WebSearch 2026-10-21; no fabricated URLs.",
+    "Automated 404s replaced with alternate live public pages where needed.",
+    "control_layer_fit explains Fit with Control4/Crestron/Savant/Lutron even when article omits them."
+  ],
+  "md_heading_count": 140
+}

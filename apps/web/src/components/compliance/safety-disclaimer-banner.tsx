@@ -1,7 +1,8 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 export async function SafetyDisclaimerBanner() {
   const t = await getTranslations('Safety');
+  const locale = await getLocale();
 
   return (
     <section
@@ -23,9 +24,8 @@ export async function SafetyDisclaimerBanner() {
           <p>{t('nav')}</p>
           <p>{t('partP')}</p>
           <p>{t('boundary')}</p>
-          <p>{t('disclaimerDe')}</p>
-          <p lang="en">{t('disclaimerEn')}</p>
-          <p lang="en" className="text-sm text-muted">
+          <p>{locale === 'zh' ? t('disclaimerZh') : t('disclaimerEn')}</p>
+          <p className="text-sm text-muted">
             {t('trademark')}
           </p>
         </div>

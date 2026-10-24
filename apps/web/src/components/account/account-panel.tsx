@@ -174,7 +174,7 @@ export function AccountPanel({ accessToken, userId }: { accessToken: string; use
       .update({
         role: draft.role,
         full_name: draft.fullName.trim() || null,
-        locale: locale === 'de' ? 'de-DE' : 'en-US',
+        locale: locale === 'zh' ? 'zh-CN' : 'en-US',
         country_code: draft.countryCode,
         postal_code: draft.postalCode.trim(),
         city: draft.city.trim() || null,

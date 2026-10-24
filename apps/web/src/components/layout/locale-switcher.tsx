@@ -5,7 +5,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 
 const locales = [
   { id: 'en', hrefLang: 'en-US', labelKey: 'en' },
-  { id: 'de', hrefLang: 'de-DE', labelKey: 'de' }
+  { id: 'zh', hrefLang: 'zh-CN', labelKey: 'zh' }
 ] as const;
 
 export function LocaleSwitcher() {

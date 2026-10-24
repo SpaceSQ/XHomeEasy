@@ -59,7 +59,7 @@ function formatVerifiedAt(value: string, locale: string): string {
     return value;
   }
 
-  return new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-US', {
+  return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',

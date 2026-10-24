@@ -1,8 +1,10 @@
-import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 export async function SiteFooter({ databaseReady }: { databaseReady: boolean }) {
   const t = await getTranslations('Home');
   const safety = await getTranslations('Safety');
+  const locale = await getLocale();
 
   return (
     <footer className="border-t border-line">
@@ -11,8 +13,16 @@ export async function SiteFooter({ databaseReady }: { databaseReady: boolean }) 
           <img src="/logo.png" alt="" width={28} height={28} className="h-7 w-7 object-contain" />
           {t('eyebrow')}
         </p>
+        <nav aria-label="App Store" className="flex flex-wrap gap-4 font-semibold text-ink">
+          <Link href="/support" className="underline decoration-ink/30 underline-offset-4">
+            {locale === 'zh' ? '支持' : 'Support'}
+          </Link>
+          <Link href="/privacy" className="underline decoration-ink/30 underline-offset-4">
+            {locale === 'zh' ? '隐私' : 'Privacy'}
+          </Link>
+        </nav>
         <p lang="en">{safety('trademark')}</p>
-        <p>{safety('disclaimerEn')}</p>
+        <p>{safety(locale === 'zh' ? 'disclaimerZh' : 'disclaimerEn')}</p>
         <p>{databaseReady ? t('dbReady') : t('dbAwaitingKey')}</p>
       </div>
     </footer>

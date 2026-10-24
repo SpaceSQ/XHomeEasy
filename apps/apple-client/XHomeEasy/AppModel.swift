@@ -250,6 +250,8 @@ final class AppModel {
         clearWorkingCopy()
         chinese = false
         UserDefaults.standard.set(false, forKey: Self.deviceChineseKey)
+        WebsiteAccountStore.clear()
+        WebsiteSession.clear()
         cover = nil
         studioTab = .advisor
         dockTick += 1

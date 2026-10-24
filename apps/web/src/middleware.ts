@@ -48,7 +48,7 @@ export default async function middleware(request: NextRequest) {
 }
 
 function deny(request: NextRequest, response: NextResponse) {
-  const locale = request.nextUrl.pathname.startsWith('/de') ? 'de' : 'en';
+  const locale = request.nextUrl.pathname.startsWith('/zh') ? 'zh' : 'en';
   const denied = new NextResponse(staffDeniedHtml(locale), {
     status: 403,
     headers: {

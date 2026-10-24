@@ -72,6 +72,8 @@ The subscription radar is a checklist for Control4 Connect, Assist, Savant Essen
 
 Sign in with Apple. The name and email arrive only on the first authorization.
 
+The website uses an email and password saved in Settings. Apple sign-in does not open the website. After the details are saved, Settings shows the linked email and address under the language control, and that row opens the same form for edits.
+
 Sign out ends the session. That account’s plan remains on this iPhone.
 
 Delete account removes the on-device sign-in record and that account’s plan, consult, quote drafts, and settings on this iPhone. It does not delete the Apple ID, and this iPhone cannot restore the deleted plan.

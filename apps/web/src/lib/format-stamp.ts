@@ -6,7 +6,7 @@ export function formatStamp(value: string | null, locale: string): string {
   if (Number.isNaN(date.getTime())) {
     return '';
   }
-  return new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-US', {
+  return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
     dateStyle: 'medium',
     timeStyle: 'short'
   }).format(date);

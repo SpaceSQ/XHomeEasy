@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
 import { SafetyDisclaimerBanner } from '@/components/compliance/safety-disclaimer-banner';
 import { PricingTables } from '@/components/help/pricing-tables';
 import { WorkFlow } from '@/components/help/work-flow';
@@ -41,6 +41,7 @@ export default async function HelpPage({ params }: { params: { locale: string } 
   setRequestLocale(params.locale);
   const t = await getTranslations('Help');
   const safety = await getTranslations('Safety');
+  const locale = await getLocale();
   const supabase = await getSupabaseServerClient();
 
   return (
@@ -83,8 +84,7 @@ export default async function HelpPage({ params }: { params: { locale: string } 
             <p className="mt-4 leading-7">{t(`bodies.${topic}`)}</p>
             {topic === 'handover' ? (
               <div className="mt-4 space-y-2 text-sm leading-6 text-muted">
-                <p>{safety('disclaimerDe')}</p>
-                <p lang="en">{safety('disclaimerEn')}</p>
+                <p>{locale === 'zh' ? safety('disclaimerZh') : safety('disclaimerEn')}</p>
               </div>
             ) : null}
           </section>

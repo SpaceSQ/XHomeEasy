@@ -25,7 +25,7 @@ export async function generateMetadata({
     alternates: {
       languages: {
         'en-US': '/',
-        'de-DE': '/de'
+        'zh-CN': '/zh'
       }
     }
   };

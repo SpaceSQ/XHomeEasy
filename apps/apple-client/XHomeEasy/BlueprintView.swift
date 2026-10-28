@@ -64,6 +64,11 @@ struct BlueprintView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     TextField(model.t("房间", "Room"), text: roomText(room.id, \.name))
                         .font(.headline)
+                    if room.aiGenerated {
+                        Text(model.t("模型从对话里读出的房间，只是建议。", "Read from the conversation by the on-device model. A suggestion."))
+                            .font(.caption2)
+                            .foregroundStyle(Studio.bronze)
+                    }
                     chipRow(model.t("灯光", "Light"), roomBool(room.id, \.lighting))
                     chipRow(model.t("遮阳", "Shades"), roomBool(room.id, \.shades))
                     chipRow(model.t("音频", "Audio"), roomBool(room.id, \.audio))

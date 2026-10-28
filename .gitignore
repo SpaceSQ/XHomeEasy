@@ -15,3 +15,6 @@ packages/apple-engines/.build/
 .env
 .env.*
 !.env.example
+
+# On-device weights stay on the phone. The llama binary is a symlink, not a copy.
+*.gguf

@@ -102,6 +102,7 @@ struct SettingsView: View {
                         }
                         .buttonStyle(.plain)
                     }
+                    LocalModelSettings(chinese: model.chinese)
                     StudioCard {
                         Toggle(model.t("界面用中文", "Chinese interface"), isOn: $model.chinese)
                             .onChange(of: model.chinese) { _, _ in

@@ -8,15 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		B20000000000000000000002 /* XHomeEasyEngines in Frameworks */ = {isa = PBXBuildFile; productRef = B20000000000000000000001 /* XHomeEasyEngines */; };
+		B30000000000000000000001 /* llama.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* llama.xcframework */; };
+		B30000000000000000000002 /* llama.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* llama.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B30000000000000000000004 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B30000000000000000000002 /* llama.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B10000000000000000000002 /* XHomeEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHomeEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30000000000000000000003 /* llama.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = llama.xcframework; path = Vendor/llama.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B30000000000000000000005 /* Exceptions for "XHomeEasy" folder in "XHomeEasy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B10000000000000000000008 /* XHomeEasy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B10000000000000000000003 /* XHomeEasy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B30000000000000000000005 /* Exceptions for "XHomeEasy" folder in "XHomeEasy" target */,
+			);
 			path = XHomeEasy;
 			sourceTree = "<group>";
 		};
@@ -28,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20000000000000000000002 /* XHomeEasyEngines in Frameworks */,
+				B30000000000000000000001 /* llama.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B10000000000000000000003 /* XHomeEasy */,
+				B30000000000000000000003 /* llama.xcframework */,
 				B10000000000000000000007 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +92,7 @@
 				B10000000000000000000009 /* Sources */,
 				B10000000000000000000005 /* Frameworks */,
 				B1000000000000000000000B /* Resources */,
+				B30000000000000000000004 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,8 +218,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YQX3N6Q3Y6;
 				DEVELOPMENT_ASSET_PATHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XHomeEasy/Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_CFBundleDisplayName = "X Home Easy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -218,8 +253,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YQX3N6Q3Y6;
 				DEVELOPMENT_ASSET_PATHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XHomeEasy/Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_CFBundleDisplayName = "X Home Easy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";

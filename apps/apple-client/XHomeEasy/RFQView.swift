@@ -59,6 +59,15 @@ enum RFQPDF {
             lines.append(Line(text: model.t("房屋", "House"), heading: true))
             lines.append(Line(text: "\(intake.sqft.rawValue) · \(intake.stage.rawValue) · \(intake.budget.rawValue)", heading: false))
         }
+        if model.designFromModel {
+            lines.append(Line(text: model.t("部分字段由这台 iPhone 上的模型从对话读出，只是建议。路径分数和价格带宽仍由固定计算给出。", "Some fields were read by a model on this iPhone. They are suggestions. Path scores and price bands still come from the fixed calculator."), heading: false))
+        }
+        if !model.designConstraints.isEmpty {
+            lines.append(Line(text: model.t("对话里的约束", "Constraints from the conversation"), heading: true))
+            for item in model.designConstraints {
+                lines.append(Line(text: item, heading: false))
+            }
+        }
         if let note = model.consult.installedSystemNote?.trimmingCharacters(in: .whitespacesAndNewlines), !note.isEmpty {
             lines.append(Line(text: model.t("业主提到的存量系统", "Systems the owner named"), heading: true))
             lines.append(Line(text: note, heading: false))
@@ -87,7 +96,8 @@ enum RFQPDF {
                 room.climate ? model.t("气候", "climate") : nil,
                 room.security ? model.t("安防", "security") : nil,
             ].compactMap { $0 }.joined(separator: ", ")
-            lines.append(Line(text: "\(room.name): \(flags). \(room.note)", heading: false))
+            let mark = room.aiGenerated ? model.t("（模型读出）", " (read by the on-device model)") : ""
+            lines.append(Line(text: "\(room.name): \(flags). \(room.note)\(mark)", heading: false))
         }
         lines.append(Line(text: model.t("必须回答的移交条款", "Handover clauses that need an answer"), heading: true))
         for item in model.handoverItems {

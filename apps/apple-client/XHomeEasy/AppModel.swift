@@ -38,6 +38,55 @@ struct RoomCard: Codable, Identifiable, Hashable {
     var security: Bool
     var note: String
     var photoPath: String?
+    var aiGenerated: Bool
+
+    private enum CodingKeys: String, CodingKey {
+        case id, name, lighting, shades, audio, cinema, climate, security, note, photoPath, aiGenerated
+    }
+
+    init(id: UUID, name: String, lighting: Bool, shades: Bool, audio: Bool, cinema: Bool, climate: Bool, security: Bool, note: String, photoPath: String?, aiGenerated: Bool = false) {
+        self.id = id
+        self.name = name
+        self.lighting = lighting
+        self.shades = shades
+        self.audio = audio
+        self.cinema = cinema
+        self.climate = climate
+        self.security = security
+        self.note = note
+        self.photoPath = photoPath
+        self.aiGenerated = aiGenerated
+    }
+
+    init(from decoder: Decoder) throws {
+        let box = try decoder.container(keyedBy: CodingKeys.self)
+        id = try box.decode(UUID.self, forKey: .id)
+        name = try box.decode(String.self, forKey: .name)
+        lighting = try box.decode(Bool.self, forKey: .lighting)
+        shades = try box.decode(Bool.self, forKey: .shades)
+        audio = try box.decode(Bool.self, forKey: .audio)
+        cinema = try box.decode(Bool.self, forKey: .cinema)
+        climate = try box.decode(Bool.self, forKey: .climate)
+        security = try box.decode(Bool.self, forKey: .security)
+        note = try box.decode(String.self, forKey: .note)
+        photoPath = try box.decodeIfPresent(String.self, forKey: .photoPath)
+        aiGenerated = try box.decodeIfPresent(Bool.self, forKey: .aiGenerated) ?? false
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var box = encoder.container(keyedBy: CodingKeys.self)
+        try box.encode(id, forKey: .id)
+        try box.encode(name, forKey: .name)
+        try box.encode(lighting, forKey: .lighting)
+        try box.encode(shades, forKey: .shades)
+        try box.encode(audio, forKey: .audio)
+        try box.encode(cinema, forKey: .cinema)
+        try box.encode(climate, forKey: .climate)
+        try box.encode(security, forKey: .security)
+        try box.encode(note, forKey: .note)
+        try box.encodeIfPresent(photoPath, forKey: .photoPath)
+        try box.encode(aiGenerated, forKey: .aiGenerated)
+    }
 
     static func starter() -> [RoomCard] {
         [
@@ -113,6 +162,37 @@ struct ChatLine: Codable, Identifiable, Hashable {
     var isUser: Bool
     var text: String
     var citations: [AdvisorCitation]
+    var aiGenerated: Bool
+
+    private enum CodingKeys: String, CodingKey {
+        case id, isUser, text, citations, aiGenerated
+    }
+
+    init(id: UUID, isUser: Bool, text: String, citations: [AdvisorCitation], aiGenerated: Bool = false) {
+        self.id = id
+        self.isUser = isUser
+        self.text = text
+        self.citations = citations
+        self.aiGenerated = aiGenerated
+    }
+
+    init(from decoder: Decoder) throws {
+        let box = try decoder.container(keyedBy: CodingKeys.self)
+        id = try box.decode(UUID.self, forKey: .id)
+        isUser = try box.decode(Bool.self, forKey: .isUser)
+        text = try box.decode(String.self, forKey: .text)
+        citations = try box.decodeIfPresent([AdvisorCitation].self, forKey: .citations) ?? []
+        aiGenerated = try box.decodeIfPresent(Bool.self, forKey: .aiGenerated) ?? false
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var box = encoder.container(keyedBy: CodingKeys.self)
+        try box.encode(id, forKey: .id)
+        try box.encode(isUser, forKey: .isUser)
+        try box.encode(text, forKey: .text)
+        try box.encode(citations, forKey: .citations)
+        try box.encode(aiGenerated, forKey: .aiGenerated)
+    }
 }
 
 struct LegacyRetrofitItem: Codable, Identifiable, Hashable {
@@ -145,6 +225,10 @@ struct ProjectSnapshot: Codable {
     var chat: [ChatLine]
     var claimInterests: [String]
     var legacyRetrofits: [LegacyRetrofitItem]?
+    var aiFilledSlots: [String]? = nil
+    var designConstraints: [String]? = nil
+    var designDisagreements: [String]? = nil
+    var designFromModel: Bool? = nil
 }
 
 @MainActor
@@ -168,6 +252,11 @@ final class AppModel {
     var inheritedChecks: Set<String> = []
     var chat: [ChatLine] = []
     var claimInterests: Set<String> = []
+    var aiFilledSlots: [String] = []
+    var designConstraints: [String] = []
+    var designDisagreements: [String] = []
+    var designFromModel = false
+    var advisorBusy = false
     var hiddenDemoIDs: Set<String> = []
     var activeDemoID: String?
     var referenceCaseID: String?
@@ -330,6 +419,11 @@ final class AppModel {
         inheritedChecks = []
         chat = []
         claimInterests = []
+        aiFilledSlots = []
+        designConstraints = []
+        designDisagreements = []
+        designFromModel = false
+        advisorBusy = false
         hiddenDemoIDs = []
         activeDemoID = nil
         referenceCaseID = nil
@@ -446,7 +540,11 @@ final class AppModel {
             inheritedChecks: Array(inheritedChecks),
             chat: chat,
             claimInterests: Array(claimInterests),
-            legacyRetrofits: legacyRetrofits
+            legacyRetrofits: legacyRetrofits,
+            aiFilledSlots: aiFilledSlots,
+            designConstraints: designConstraints,
+            designDisagreements: designDisagreements,
+            designFromModel: designFromModel
         )
         guard let data = try? JSONEncoder().encode(snapshot), let text = String(data: data, encoding: .utf8) else { return }
         let rows = (try? context.fetch(FetchDescriptor<EstateProject>())) ?? []
@@ -480,6 +578,10 @@ final class AppModel {
         chat = snapshot.chat
         claimInterests = Set(snapshot.claimInterests)
         legacyRetrofits = snapshot.legacyRetrofits
+        aiFilledSlots = snapshot.aiFilledSlots ?? []
+        designConstraints = snapshot.designConstraints ?? []
+        designDisagreements = snapshot.designDisagreements ?? []
+        designFromModel = snapshot.designFromModel ?? false
     }
 
     func hideDemo(_ id: String) {
@@ -531,6 +633,10 @@ final class AppModel {
         consult = ConsultDraft()
         handoverUnderstood = false
         status = .draft
+        aiFilledSlots = []
+        designConstraints = []
+        designDisagreements = []
+        designFromModel = false
         save()
     }
 
@@ -573,12 +679,128 @@ final class AppModel {
 
     func ask(_ query: String) {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return }
+        guard !trimmed.isEmpty, !advisorBusy else { return }
         chat.append(ChatLine(id: UUID(), isUser: true, text: trimmed, citations: []))
+        advisorBusy = true
         let documents = advisorDocuments()
-        let reply = AdvisorEngine.reply(query: trimmed, documents: documents)
-        chat.append(ChatLine(id: UUID(), isUser: false, text: reply.text.text(chinese: chinese), citations: reply.citations))
-        save()
+        let history = chat
+        let slots = houseSlots()
+        let chinese = self.chinese
+        Task {
+            let turn = await AdvisorSession.reply(query: trimmed, chinese: chinese, documents: documents, history: history, slots: slots)
+            advisorBusy = false
+            chat.append(ChatLine(id: UUID(), isUser: false, text: turn.text, citations: turn.citations, aiGenerated: turn.aiGenerated))
+            if let design = turn.design {
+                applyDesign(design)
+            }
+            save()
+        }
+    }
+
+    private func houseSlots() -> HouseSlotState {
+        HouseSlotState(
+            sqft: consult.sqft,
+            stage: consult.stage,
+            rackRoom: consult.rackRoom,
+            budget: consult.budget,
+            cinema: consult.cinema,
+            multiRoomAudio: consult.multiRoomAudio,
+            shades: consult.shades,
+            pool: consult.pool,
+            hvacZones: consult.hvacZones,
+            legacy: consult.legacy,
+            children: consult.children,
+            pets: consult.pets,
+            largeGarden: consult.largeGarden,
+            elderCare: consult.elderCare,
+            simpleAlarmOnly: consult.simpleAlarmOnly,
+            multiBuilding: consult.multiBuilding,
+            outdoorLiving: consult.outdoorLiving,
+            hospitality: consult.hospitality,
+            energyPriority: consult.energyPriority,
+            keypad: consult.keypad,
+            drywallUnconfirmed: consult.drywallUnconfirmed,
+            featureChoicesLocked: consult.step >= 5,
+            city: city,
+            stateCode: stateCode,
+            zip: zip,
+            controlOverride: controlOverride,
+            roomNames: rooms.map(\.name),
+            step: consult.step
+        )
+    }
+
+    private func applyDesign(_ design: DesignApplication) {
+        let slots = design.slots
+        consult.sqft = slots.sqft
+        consult.stage = slots.stage
+        consult.rackRoom = slots.rackRoom
+        consult.budget = slots.budget
+        consult.cinema = slots.cinema
+        consult.multiRoomAudio = slots.multiRoomAudio
+        consult.shades = slots.shades
+        consult.pool = slots.pool
+        consult.hvacZones = slots.hvacZones
+        consult.legacy = slots.legacy
+        consult.children = slots.children
+        consult.pets = slots.pets
+        consult.largeGarden = slots.largeGarden
+        consult.elderCare = slots.elderCare
+        consult.simpleAlarmOnly = slots.simpleAlarmOnly
+        consult.multiBuilding = slots.multiBuilding
+        consult.outdoorLiving = slots.outdoorLiving
+        consult.hospitality = slots.hospitality
+        consult.energyPriority = slots.energyPriority
+        consult.keypad = slots.keypad
+        consult.drywallUnconfirmed = slots.drywallUnconfirmed
+        consult.step = max(consult.step, slots.step)
+        if (consult.installedSystemNote ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+           let legacy = slots.legacy, legacy != LegacySystem.none {
+            consult.installedSystemNote = legacy.rawValue
+        }
+        if controlOverride == nil {
+            controlOverride = slots.controlOverride
+        }
+        if city.trimmingCharacters(in: .whitespaces).isEmpty { city = slots.city }
+        if zip.trimmingCharacters(in: .whitespaces).isEmpty, city == slots.city {
+            if stateCode == "CA", !slots.stateCode.isEmpty { stateCode = slots.stateCode }
+            zip = slots.zip
+        }
+        for room in design.enrichedRooms {
+            guard let index = rooms.firstIndex(where: { $0.name == room.name }) else { continue }
+            if room.lighting { rooms[index].lighting = true }
+            if room.shades { rooms[index].shades = true }
+            if room.audio { rooms[index].audio = true }
+            if room.cinema { rooms[index].cinema = true }
+            if room.climate { rooms[index].climate = true }
+            if room.security { rooms[index].security = true }
+            if rooms[index].note.isEmpty { rooms[index].note = room.note }
+        }
+        for room in design.addedRooms {
+            rooms.append(RoomCard(
+                id: UUID(),
+                name: room.name,
+                lighting: room.lighting,
+                shades: room.shades,
+                audio: room.audio,
+                cinema: room.cinema,
+                climate: room.climate,
+                security: room.security,
+                note: room.note,
+                photoPath: nil,
+                aiGenerated: true
+            ))
+        }
+        for slot in design.filledSlots where !aiFilledSlots.contains(slot) {
+            aiFilledSlots.append(slot)
+        }
+        for item in design.constraints where !designConstraints.contains(item) {
+            designConstraints.append(item)
+        }
+        for item in design.disagreements where !designDisagreements.contains(item) {
+            designDisagreements.append(item)
+        }
+        if design.fromModel { designFromModel = true }
     }
 
     func loadSampleQuotes() {

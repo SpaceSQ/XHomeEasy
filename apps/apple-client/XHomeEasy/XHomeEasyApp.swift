@@ -1,5 +1,6 @@
 import SwiftData
 import SwiftUI
+import UIKit
 
 enum AppCover: String, Identifiable {
     case settings, help
@@ -185,8 +186,26 @@ struct RootView: View {
     }
 }
 
+final class XHomeEasyAppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        LocalLLMController.shared.reconnectDownloads()
+        LocalLLMController.shared.scheduleScan()
+        return true
+    }
+
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        guard identifier == ModelDownloadManager.sessionIdentifier else { return }
+        MainActor.assumeIsolated {
+            BackgroundDownloadEvents.pending = completionHandler
+            LocalLLMController.shared.reconnectDownloads()
+        }
+    }
+}
+
 @main
 struct XHomeEasyApp: App {
+    @UIApplicationDelegateAdaptor(XHomeEasyAppDelegate.self) private var appDelegate
+
     var body: some Scene {
         WindowGroup {
             RootView()
